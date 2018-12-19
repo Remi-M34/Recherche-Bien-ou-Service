@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b1e996f5-1d05-46fe-8110-1c4a2a159b6f" name="Serveur Webhost" url="http://185.224.138.195">
+        <fileTransfer host="185.224.138.195" port="21" rootFolder="/domains/projet211.online/public_html">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
