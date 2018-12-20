@@ -1,24 +1,35 @@
 <?php
 
-//include("class/utilisateur.php");
-require_once("controllers/config.php");
-session_start();
 
 
 /**
  * Created by PhpStorm.
- * User: Remi
+ * User: Remi MATTEI
+ * Numéro étudiant: 21516143
  * Date: 15/11/2018
  * Time: 15:58
  */
 
-function distance($lat1, $lon1, $lat2, $lon2, $unit) {
+require_once("controllers/config.php");
+session_start();
+
+
+
+/**
+ * @param $lat1
+ * @param $lon1
+ * @param $lat2
+ * @param $lon2
+ * @param $unit
+ * @return float|int la distance dans l'unité précisée
+ */
+function distance($lat1, $lon1, $lat2, $lon2, $unit)
+{
     if (($lat1 == $lat2) && ($lon1 == $lon2)) {
         return 0;
-    }
-    else {
+    } else {
         $theta = $lon1 - $lon2;
-        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) + cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
         $dist = acos($dist);
         $dist = rad2deg($dist);
         $miles = $dist * 60 * 1.1515;
@@ -53,33 +64,22 @@ if (isset($_GET['lat']) && $_GET['lat'] != "") {
         $rayon = $_GET['rayon'] * 1000;
     }
 }
-$sql = "SELECT *, ".$distance." AS distance FROM {$type} WHERE 1  ";
-if (isset($_GET['keywords']) && $_GET['keywords']!= "")
-{
+$sql = "SELECT *, " . $distance . " AS distance FROM {$type} WHERE 1  ";
+if (isset($_GET['keywords']) && $_GET['keywords'] != "") {
     $sql .= " AND MATCH (titre, description, mots) AGAINST ('" . $_GET['keywords'] . "')";
 }
 
-if ($rayon != 0)
-{
-    $sql .= " AND st_distance_sphere(Point(".$_GET['lat'].",".$_GET['lng']."),Point(lat,lng)) <=".$rayon . " ";
+if ($rayon != 0) {
+    $sql .= " AND st_distance_sphere(Point(" . $_GET['lat'] . "," . $_GET['lng'] . "),Point(lat,lng)) <=" . $rayon . " ";
 }
 if (isset($_GET['categorie'])) {
     $sql .= " AND categorie = " . $_GET['categorie'];
 }
-//foreach ($sql_cond as $key => $value) {
-//    $sql .= " AND " . $key . " = :" . $key;
-//    $sql_array[":" . $key] = $value;
-//}
-
 $GLOBALS['items'] = $pdo->prepare($sql);
 $GLOBALS['items']->execute($sql_array);
 $_SESSION['requete'] = serialize($sql);
 $_SESSION['sql_array'] = serialize($sql_array);
 
-//echo $sql;
-//echo print_r($sql_array);
-
-//$thisuser = unserialize($_SESSION['user']);
 
 $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->fetchAll(PDO::FETCH_UNIQUE);
 ?>
@@ -90,19 +90,17 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
 <head>
 
     <title>Rechercher</title>
-    <link rel="stylesheet" type="text/css" href="css/booking.css" />
-    <link rel="stylesheet" type="text/css" href="css/popbox.css" />
+    <link rel="stylesheet" type="text/css" href="css/booking.css"/>
+    <link rel="stylesheet" type="text/css" href="css/popbox.css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/pretty-checkbox.css">
-    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css"/>
 
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.ico"/>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier/1.0.3/oms.min.js"></script>-->
 
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/markerclusterer.js" type="text/javascript"></script>
@@ -113,16 +111,14 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
 
     <script>
         if (GET("adresse") || GET("categorie"))
-        window.location.href = "#trouver_map";
-
-        var popbox =   new Popbox({
-            blur:true,
+            window.location.href = "#trouver_map";
+        var popbox = new Popbox({
+            blur: true,
         });
 
 
         function supp(event) {
             event.stopPropagation();
-
             var id = $(this).attr('id').split("_")[3];
             var type = $(this).attr('id').split("_")[2];
             var myid = $(this).attr('id').split("_")[4];
@@ -146,7 +142,7 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
         }
 
 
-        function notif(message, type){
+        function notif(message, type) {
             var CurrentDate = moment();
 
 
@@ -199,7 +195,7 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
         var $_GET = {};
         for (var i = 0; i < parts.length; i++) {
             var temp = parts[i].split("=");
-            $_GET[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]).replace('+',' ');
+            $_GET[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]).replace('+', ' ');
         }
 
 
@@ -219,8 +215,7 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
             $("#recherche_avancee_select_cat").val(id);
         }
 
-        function selectType()
-        {
+        function selectType() {
             $("#recherche_avancee_block_choix_cat").text("CATEGORIE");
             $("#recherche_avancee_select_cat").val("CATEGORIE");
 
@@ -242,18 +237,16 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
             }
         }
 
-        function initCat(){
-            if (GET("type") && GET('type') === "services")
-            {
-                $(".recherche_avancee_services").css("display","inline-block");
-                $(".recherche_avancee_biens").css("display","none");
+        function initCat() {
+            if (GET("type") && GET('type') === "services") {
+                $(".recherche_avancee_services").css("display", "inline-block");
+                $(".recherche_avancee_biens").css("display", "none");
             }
         }
 
-        function reservation(){
+        function reservation() {
 
-            if ($("#reserver_cout_total").val() == "")
-            {
+            if ($("#reserver_cout_total").val() == "") {
                 alert("Veuillez choisir une date!");
                 return;
             }
@@ -263,12 +256,10 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
             var id_emprunte = $("#reservation_id_emprunte").val();
             var date_debut = $("#reserver_calendrier").val().split(" - ")[0];
             var date_fin = $("#reserver_calendrier").val().split(" - ")[1];
-            var heure_debut = $("#heureDebut").val().substr(0,$("#heureDebut").val().length -3);
-            var heure_fin = $("#heureFin").val().substr(0,$("#heureFin").val().length -3);
+            var heure_debut = $("#heureDebut").val().substr(0, $("#heureDebut").val().length - 3);
+            var heure_fin = $("#heureFin").val().substr(0, $("#heureFin").val().length - 3);
             var cout = $("#reserver_cout").val().split(" ")[0];
             var cout_total = $("#reserver_cout_total").val().split(" ")[0];
-
-            // var blocObjet = "#trouver_"+type+"_"+id+"_"+id_emprunte;
 
             $.ajax({
                 type: "POST",
@@ -287,8 +278,7 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
                     }
             }).done(function (msg) {
 
-                if (msg == "ok")
-                {
+                if (msg == "ok") {
                     // $(blocObjet).removeClass("trouver_selectionne");
                     // popbox.close('mypopbox1');
                     $("#reserver_cout_total").val("");
@@ -296,29 +286,20 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
                     notif("Emprunt effectué avec succès !<br>", "notice_success");
                     $('*').click(false);
 
-                    setTimeout(function(){
-
+                    setTimeout(function () {
                         window.location.href = "https://recherchebienouservice.fr/mesemprunts.php";
+                    }, 2000)
 
-
-                    },2000)
-
-                }
-                else
-                {
+                } else {
                     notif("Erreur(s) : <br>" + msg, "notice_danger");
                 }
 
-
             });
-
-
         }
 
-
-        function reserver(){
+        function reserver() {
             if (!($("#infosUid")[0])) {
-                notif("Inscription nécessaire"  ,"notice_danger");
+                notif("Inscription nécessaire", "notice_danger");
                 return;
             }
             var id_emprunte = $(this).attr('id').split("_")[3];
@@ -326,12 +307,12 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
 
 
             if (id_emprunte == id_emprunteur) {
-                notif("Impossible d'emprunter à vous-même!"  ,"notice_danger");
+                notif("Impossible d'emprunter à vous-même!", "notice_danger");
                 return;
             }
 
-            var popbox =   new Popbox({
-                blur:true,
+            var popbox = new Popbox({
+                blur: true,
             });
 
             var id = $(this).attr('id').split("_")[2];
@@ -342,107 +323,102 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
 
             $(blocObjet).addClass("trouver_selectionne");
 
-            $("#reservation_id").html("<h1> "+typeAffichage.substr(0,typeAffichage.length -1) + " n° " + id+" </h1>");
+            $("#reservation_id").html("<h1> " + typeAffichage.substr(0, typeAffichage.length - 1) + " n° " + id + " </h1>");
             $("#reservation_id_emprunte").val(id_emprunte);
             if (type == "biens")
-            $("#heuresServices").css("display","none");
+                $("#heuresServices").css("display", "none");
             else
-                $("#heuresServices").css("display","inline-block");
+                $("#heuresServices").css("display", "inline-block");
 
             $.ajax({
                 type: "POST",
                 url: "controllers/reserver.php",
                 data:
                     {
-                    'type': type,
-                    'id': id
+                        'type': type,
+                        'id': id
                     }
             }).done(function (data) {
                 if (data.msg == "ok") {
                     popbox.open("mypopbox1");
 
-                        var datesInvalides = [];
-                        datesInvalides = data.datesInvalides;
+                    var datesInvalides = [];
+                    datesInvalides = data.datesInvalides;
 
-                        document.getElementById("reserver_dates").innerHTML =  '<input type="text" readonly="readonly"  name="daterange-reserver" value="Date" class="form-control" id="reserver_calendrier" />';
+                    document.getElementById("reserver_dates").innerHTML = '<input type="text" readonly="readonly"  name="daterange-reserver" value="Date" class="form-control" id="reserver_calendrier" />';
 
-                        if (data.prix_neuf == null)
-                        {
-                            data['prix_neuf'] = 5
-                        }
+                    if (data.prix_neuf == null) {
+                        data['prix_neuf'] = 5
+                    }
                     if (type == "biens") {
                         $("#reserver_prix_neuf").val(data.prix_neuf + " €");
                         $("#reserver_cout").val(Math.round((data.prix_neuf / 150) * 100) / 100 + " €");
-                    }
-                    else
-                    {
-                        $(".reserver_prix_neuf_bloc").css("display","none");
-                        $(".reserver_cout_journalalier_infos").css("display","none");
+                    } else {
+                        $(".reserver_prix_neuf_bloc").css("display", "none");
+                        $(".reserver_cout_journalalier_infos").css("display", "none");
                         $(".reserver_cout_journalier_label").html("Coût horaire");
                         $("#reserver_cout").val("12 €");
                     }
-                    $("#reserver_deja_emprunte").val(data.emprunte+" fois");
+                    $("#reserver_deja_emprunte").val(data.emprunte + " fois");
 
 
                     var optionsServices = (type == "services");
 
-                            $('input[name="daterange-reserver"]').daterangepicker({
-                                // "singleDatePicker": optionsServices,
+                    $('input[name="daterange-reserver"]').daterangepicker({
+                        // "singleDatePicker": optionsServices,
 
-                                "timePicker": optionsServices,
-                                "timePicker24Hour": optionsServices,
-                                "timePickerIncrement": 60,
-                                "showWeekNumbers": true,
-                                "autoApply": true,
-                                datesInvalides: datesInvalides,
-                                "locale": {
-                                    "format": "DD/MM/YYYY",
-                                    "separator": " - ",
-                                    "applyLabel": "Valider",
-                                    "cancelLabel": "Annuler",
-                                    "fromLabel": "De",
-                                    "toLabel": "à",
-                                    "customRangeLabel": "Custom",
-                                    "weekLabel": "S",
-                                    "daysOfWeek": [
-                                        "Di",
-                                        "Lu",
-                                        "Ma",
-                                        "Me",
-                                        "Je",
-                                        "Ve",
-                                        "Sa"
-                                    ],
-                                    "monthNames": [
-                                        "Janvier",
-                                        "Février",
-                                        "Mars",
-                                        "Avril",
-                                        "Mai",
-                                        "Juin",
-                                        "Juillet",
-                                        "Août",
-                                        "Septembre",
-                                        "Octobre",
-                                        "Novembre",
-                                        "Décembre"
-                                    ],
-                                    "firstDay": 1
-                                },
-                                "alwaysShowCalendars": true,
-                                "showCustomRangeLabel": true,
-                                "startDate": moment(),
-                                "endDate": moment(),
-                                "minDate": moment()
-                            }, function(start, end, label) {
-                                // console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-
-                            });
+                        "timePicker": optionsServices,
+                        "timePicker24Hour": optionsServices,
+                        "timePickerIncrement": 60,
+                        "showWeekNumbers": true,
+                        "autoApply": true,
+                        datesInvalides: datesInvalides,
+                        "locale": {
+                            "format": "DD/MM/YYYY",
+                            "separator": " - ",
+                            "applyLabel": "Valider",
+                            "cancelLabel": "Annuler",
+                            "fromLabel": "De",
+                            "toLabel": "à",
+                            "customRangeLabel": "Custom",
+                            "weekLabel": "S",
+                            "daysOfWeek": [
+                                "Di",
+                                "Lu",
+                                "Ma",
+                                "Me",
+                                "Je",
+                                "Ve",
+                                "Sa"
+                            ],
+                            "monthNames": [
+                                "Janvier",
+                                "Février",
+                                "Mars",
+                                "Avril",
+                                "Mai",
+                                "Juin",
+                                "Juillet",
+                                "Août",
+                                "Septembre",
+                                "Octobre",
+                                "Novembre",
+                                "Décembre"
+                            ],
+                            "firstDay": 1
+                        },
+                        "alwaysShowCalendars": true,
+                        "showCustomRangeLabel": true,
+                        "startDate": moment(),
+                        "endDate": moment(),
+                        "minDate": moment()
+                    }, function (start, end, label) {
+                    });
 
 
+                } else {
+                    notif("Erreur!" + data.erreur, "notice_warning");
                 }
-                else
-                {notif("Erreur!" + data.erreur, "notice_warning");}
 
             });
         }
@@ -458,35 +434,17 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
             $('.box').on('click', reserver);
             $('div:not(.recherche_avancee_block_choix)').on('click', cacherMenu);
             $('.trouver_supprimer').on('click', supp);
-            // $('img').hover(function(){
-            //     $(this).addClass("rechercher_image_zoom");
-            //     $(this).removeClass("rechercher_image_zoom");
-            // });
-            // $('#geolocate').on('click', geolocateme);
-
-            // $(".reserve").hover(function(){
-            //     alert("ok");
-            // },
-            //     function(){
-            //         alert("ok");
-            //     }
-            // );
 
             $('input[name="type"]').change(function () {
                 if (this.id.includes("bien")) {
                     $('.recherche_avancee_biens').css("display", "inline-block");
                     $('.recherche_avancee_services').css("display", "none");
-                }
-                else {
+                } else {
                     $('.recherche_avancee_biens').css("display", "none");
                     $('.recherche_avancee_services').css("display", "inline-block");
                 }
             })
-
         });
-
-
-
 
     </script>
 
@@ -495,18 +453,7 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
 
 
 <?php
-
-
 include("header.php");
-
-
-// Page inaccessible pour les invités
-//if (!isset($_SESSION['user'])) {
-//    header ('location: inscription.php');
-////    exit();
-//}
-
-
 ?>
 
 <div class="trouver_bloc_recherche">
@@ -515,9 +462,11 @@ include("header.php");
     <div class="row">
         <div class="col-md-8 col-md-offset-2  effect6 box3">
             <p>
-                Recherchez un bien ou un service par mots-clés, catégorie, emplacement, rayon et date de disponibilité (à venir).
-<br>
-                Pour obtenir plus d'informations et pour emprunter un bien, cliquez dessus (pour les utilisateurs connectés uniquement)
+                Recherchez un bien ou un service par mots-clés, catégorie, emplacement, rayon et date de disponibilité
+                (à venir).
+                <br>
+                Pour obtenir plus d'informations et pour emprunter un bien, cliquez dessus (pour les utilisateurs
+                connectés uniquement)
                 <br>Les dates futures barrées lors de la réservation représentent les jours d'indisponibilité du bien.
                 <br>
                 Les mots-clés sont recherchés dans les titres, les descriptions et les mots-clés.
@@ -587,12 +536,12 @@ include("header.php");
 
 
                                 foreach ($cat_all as $c) {
-                                    if (strpos($c['path'], 'bien') !== false && $c['id']>2)
-                                    echo "<li class='recherche_avancee_cat' id='recherche_avancee_cat_" . $c['id'] . "'>" . $c['nom'] . "</li>";
+                                    if (strpos($c['path'], 'bien') !== false && $c['id'] > 2)
+                                        echo "<li class='recherche_avancee_cat' id='recherche_avancee_cat_" . $c['id'] . "'>" . $c['nom'] . "</li>";
                                 }
                                 echo "</ul><ul class='recherche_avancee_services'>";
                                 foreach ($cat_all as $c) {
-                                    if (strpos($c['path'], 'service') !== false   && $c['id']>2)
+                                    if (strpos($c['path'], 'service') !== false && $c['id'] > 2)
                                         echo "<li class='recherche_avancee_cat' id='recherche_avancee_cat_" . $c['id'] . "'>" . $c['nom'] . "</li>";
                                 }
                                 echo "</ul>";
@@ -602,15 +551,8 @@ include("header.php");
                         </div>
                     </div>
                     <div class="recherche_avancee_field">
-                        <!--                            <div class="input-select">-->
-<!--                        <select data-trigger="" name="choices-single-defaul">-->
-<!--                            <option placeholder="" value="">SIZE</option>-->
-<!--                            <option>SIZE</option>-->
-<!--                            <option>SUBJECT B</option>-->
-<!--                            <option>SUBJECT C</option>-->
-<!--                        </select>-->
-<!--                        <div class="recherche_avancee_block_choix">Accessoires</div>-->
-                        <input type="text" name="daterange" value="Date" readonly="readonly" />
+
+                        <input type="text" name="daterange" value="Date" readonly="readonly"/>
 
                         <script>$('input[name="daterange"]').daterangepicker({
                                 "singleDatePicker": true,
@@ -662,60 +604,15 @@ include("header.php");
                                 "startDate": moment(),
                                 "endDate": moment(),
                                 "minDate": moment()
-                            }, function(start, end, label) {
+                            }, function (start, end, label) {
                                 console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
                             });
                         </script>
 
 
-
-
                     </div>
                 </div>
 
-<!--                <div class="recherche_avancee_ligne">-->
-<!--                    <div class="recherche_avancee_field">-->
-<!--                        <select data-trigger="" name="choices-single-defaul">-->
-<!--                            <option placeholder="" value="">ACCESSORIES</option>-->
-<!--                            <option>ACCESSORIES</option>-->
-<!--                            <option>SUBJECT B</option>-->
-<!--                            <option>SUBJECT C</option>-->
-<!--                        </select>-->
-<!---->
-<!--                        <div class="recherche_avancee_block_choix">ACCESSOIRES</div>-->
-<!--                        <div class="recherche_avancee_plus">-->
-<!--                            <ul>-->
-<!--                                <li>UN</li>-->
-<!--                                <li>DEUX ICI !</li>-->
-<!---->
-<!--                            </ul>-->
-<!---->
-<!--                        </div>-->
-<!---->
-<!---->
-<!--                    </div>-->
-<!--                    <div class="recherche_avancee_field">-->
-<!--                        <select data-trigger="" name="choices-single-defaul">-->
-<!--                            <option placeholder="" value="">COLOR</option>-->
-<!--                            <option>GREEN</option>-->
-<!--                            <option>SUBJECT B</option>-->
-<!--                            <option>SUBJECT C</option>-->
-<!--                        </select>-->
-<!---->
-<!--                        <div class="recherche_avancee_block_choix">Accessoires</div>-->
-<!---->
-<!--                    </div>-->
-<!--                    <div class="recherche_avancee_field">-->
-<!--                        <select data-trigger="" name="choices-single-defaul">-->
-<!--                            <option placeholder="" value="">SIZE</option>-->
-<!--                            <option>SIZE</option>-->
-<!--                            <option>SUBJECT B</option>-->
-<!--                            <option>SUBJECT C</option>-->
-<!--                        </select>-->
-<!--                        <div class="recherche_avancee_block_choix">Accessoires</div>-->
-<!---->
-<!--                    </div>-->
-<!--                </div>-->
 
                 <input name="lat" id="recherche_avancee_lat">
                 <input name="lng" id="recherche_avancee_lng">
@@ -724,14 +621,13 @@ include("header.php");
                     <span class="recherche_avancee_span">Où ?</span>
                     <div class="recherche_avancee_field recherche_avancee_adresse">
 
-                        <input type="text" name="adresse" id="recherche_avancee_adresse" onkeypress="return event.keyCode != 13;">
+                        <input type="text" name="adresse" id="recherche_avancee_adresse"
+                               onkeypress="return event.keyCode != 13;">
 
                     </div>
                     <img src="images/location2.png" id="geolocate">
 
-<!--                    <span class="recherche_avancee_span">ou</span>-->
                     <div class="recherche_avancee_field">
-                        <!--                            <div class="input-select">-->
                         <select name="rayon" id="recherche_avancee_select_rayon">
                             <option value="partout">Partout</option>
                             <option value="5">5 km</option>
@@ -744,17 +640,16 @@ include("header.php");
                         </div>
                         <div class="recherche_avancee_plus">
                             <ul>
-                                <li class="recherche_avancee_rayon"id="rayon_partout">Partout</li>
+                                <li class="recherche_avancee_rayon" id="rayon_partout">Partout</li>
                                 <li class="recherche_avancee_rayon" id="rayon_5">5 km</li>
-                                <li class="recherche_avancee_rayon"id="rayon_30">30 km</li>
-                                <li class="recherche_avancee_rayon"id="rayon_100">100 km</li>
-                                <li class="recherche_avancee_rayon"id="rayon_300">300 km</li>
+                                <li class="recherche_avancee_rayon" id="rayon_30">30 km</li>
+                                <li class="recherche_avancee_rayon" id="rayon_100">100 km</li>
+                                <li class="recherche_avancee_rayon" id="rayon_300">300 km</li>
 
                             </ul>
 
                         </div>
 
-                        <!--                            </div>-->
                     </div>
 
                 </div>
@@ -765,7 +660,8 @@ include("header.php");
 
                         <button class="btn-search" type="submit">Recherche
                         </button>
-                        <div class="btn-delete" id="delete" onclick="window.location.href='rechercher.php'">Supprimer</div>
+                        <div class="btn-delete" id="delete" onclick="window.location.href='rechercher.php'">Supprimer
+                        </div>
                     </div>
                 </div>
             </div>
@@ -790,20 +686,19 @@ include("header.php");
 <div id="trouver">
 
 
-
     <div class="trouver_categories effect8">
         <ul>
-            <div class='trouver_li_categories'><a href='#'>Biens</a> </div>
+            <div class='trouver_li_categories'><a href='#'>Biens</a></div>
             <?php
             $stmt = $pdo->prepare("SELECT count(*) as cpt FROM biens where categorie = ?");
             foreach ($cat_all as $c) {
                 $stmt->execute([$c['id']]);
                 $res = $stmt->fetch();
 
-                if ($c['path'][0] === 'b' && isset($_GET['categorie']) && $_GET['categorie'] == $c['id'] )
-                    echo "<li><a class='active' href='rechercher.php?type=biens&categorie=" . $c['id'] . "'><div class='rechercher_categorie_compte'>(" .$res['cpt'] .")</div>". $c['nom'] . "</a></li>";
-                else if ($c['path'][0] === 'b' && $c['id']>2)
-                    echo "<li><a href='rechercher.php?type=biens&categorie=" . $c['id'] . "'><div class='rechercher_categorie_compte'>(" .$res['cpt'] .")</div>". $c['nom'] . "</a></li>";
+                if ($c['path'][0] === 'b' && isset($_GET['categorie']) && $_GET['categorie'] == $c['id'])
+                    echo "<li><a class='active' href='rechercher.php?type=biens&categorie=" . $c['id'] . "'><div class='rechercher_categorie_compte'>(" . $res['cpt'] . ")</div>" . $c['nom'] . "</a></li>";
+                else if ($c['path'][0] === 'b' && $c['id'] > 2)
+                    echo "<li><a href='rechercher.php?type=biens&categorie=" . $c['id'] . "'><div class='rechercher_categorie_compte'>(" . $res['cpt'] . ")</div>" . $c['nom'] . "</a></li>";
             }
             echo "<hr>
 <div class='trouver_li_categories'><a href='#'>Services</a> </div>
@@ -814,10 +709,10 @@ include("header.php");
                 $stmt->execute([$c['id']]);
                 $res = $stmt->fetch();
 
-                if ($c['path'][0] === 's' &&  isset($_GET['categorie']) && $_GET['categorie'] == $c['id'])
-                    echo "<li><a class='active' href='rechercher.php?type=services&categorie=" . $c['id'] . "'><div class='rechercher_categorie_compte'>(" .$res['cpt'] .")</div>". $c['nom'] . "</a></li>";
-                else if ($c['path'][0] === 's' && $c['id']>2)
-                    echo "<li><a href='rechercher.php?type=services&categorie=" . $c['id'] . "'><div class='rechercher_categorie_compte'>(" .$res['cpt'] .")</div>". $c['nom'] . "</a></li>";
+                if ($c['path'][0] === 's' && isset($_GET['categorie']) && $_GET['categorie'] == $c['id'])
+                    echo "<li><a class='active' href='rechercher.php?type=services&categorie=" . $c['id'] . "'><div class='rechercher_categorie_compte'>(" . $res['cpt'] . ")</div>" . $c['nom'] . "</a></li>";
+                else if ($c['path'][0] === 's' && $c['id'] > 2)
+                    echo "<li><a href='rechercher.php?type=services&categorie=" . $c['id'] . "'><div class='rechercher_categorie_compte'>(" . $res['cpt'] . ")</div>" . $c['nom'] . "</a></li>";
             }
 
 
@@ -828,101 +723,106 @@ include("header.php");
 
 
     <div data-popbox-id="mypopbox1" class="popbox">
-          <div class="popbox_container">
-<!--               	Popbox content 1-->
+         
+        <div class="popbox_container">
+            <!--               	Popbox content 1-->
 
             <div id="popbox-contenu">
 
-                    <div class="booking-form">
-                        <form name="reservation">
+                <div class="booking-form">
+                    <form name="reservation">
 
 
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <input readonly="readonly" type="hidden" name="reservation_id_emprunte" val=""
+                                           id="reservation_id_emprunte">
+                                    <span class="form-label" id="reservation_id"></span>
+                                </div>
+                            </div>
+                        </div>
 
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <input readonly="readonly" type="hidden" name="reservation_id_emprunte" val="" id="reservation_id_emprunte">
-                                        <span class="form-label" id="reservation_id"></span>
+
+                        <div class="row">
+                            <div class="col-sm-6 reserver_prix_neuf_bloc">
+                                <div class="form-group">
+                                    <span class="form-label reserver_prix_neuf_label">Prix neuf</span>
+                                    <input id="reserver_prix_neuf" class="form-control" readonly="readonly">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <span class="form-label">Déjà emprunté</span>
+                                    <input id="reserver_deja_emprunte" class="form-control" readonly="readonly">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p class="font-weight-light">Vous pouvez faire cet emprunt sur un ou plusieurs jours</p>
+
+                                <div class="form-group">
+                                    <span class="form-label">Dates d'emprunt</span>
+                                    <div id="reserver_dates">
                                     </div>
                                 </div>
                             </div>
-
-
-                            <div class="row">
-                                <div class="col-sm-6 reserver_prix_neuf_bloc">
-                                    <div class="form-group">
-                                        <span class="form-label reserver_prix_neuf_label">Prix neuf</span>
-                                        <input id="reserver_prix_neuf" class="form-control" readonly="readonly">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <span class="form-label">Déjà emprunté</span>
-                                        <input id="reserver_deja_emprunte" class="form-control" readonly="readonly">
-                                    </div>
+                        </div>
+                        <div class="row" id="heuresServices">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <span class="form-label">Heure début</span>
+                                    <input readonly="readonly" name="heureDebut" val="" id="heureDebut"
+                                           class="form-control">
                                 </div>
                             </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <span class="form-label">Heure fin</span>
+                                    <input readonly="readonly" name="heureFin" val="" id="heureFin"
+                                           class="form-control">
 
-
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <p class="font-weight-light">Vous pouvez faire cet emprunt sur un ou plusieurs jours</p>
-
-                                    <div class="form-group">
-                                        <span class="form-label">Dates d'emprunt</span>
-                                        <div id="reserver_dates">
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="row" id="heuresServices">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <span class="form-label">Heure début</span>
-                                        <input readonly="readonly" name="heureDebut" val="" id="heureDebut" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <span class="form-label">Heure fin</span>
-                                        <input readonly="readonly" name="heureFin" val="" id="heureFin" class="form-control">
+                        </div>
 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row reserver_cout_journalalier_infos">
-                                <div class="col-sm-12">
+                        <div class="row reserver_cout_journalalier_infos">
+                            <div class="col-sm-12">
                                 <span class="form-label">Le coût journalier est: Prix neuf / 150</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <span class="form-label reserver_cout_journalier_label">Coût journalier</span>
+                                    <input id="reserver_cout" class="form-control" readonly="readonly">
                                 </div>
                             </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <span class="form-label">Coût total</span>
+                                    <input id="reserver_cout_total" class="form-control" readonly="readonly">
 
-                            <div class="row">
-
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                            <span class="form-label reserver_cout_journalier_label">Coût journalier</span>
-                                        <input id="reserver_cout" class="form-control" readonly="readonly">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <span class="form-label">Coût total</span>
-                                        <input id="reserver_cout_total" class="form-control" readonly="readonly">
-
-                                    </div>
                                 </div>
                             </div>
-                            <div class="form-btn">
-                                <button class="submit-btn" id="reservation_submit">Réserver</button>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="form-btn">
+                            <button class="submit-btn" id="reservation_submit">Réserver</button>
+                        </div>
+                    </form>
+                </div>
 
             </div>
-<!--               	<button data-popbox-close="mypopbox1">Close</button>-->
-              </div>
-          </div>
+            <!--               	<button data-popbox-close="mypopbox1">Close</button>-->
+             
+        </div>
+         
+    </div>
 
 
     <?php
@@ -931,11 +831,11 @@ include("header.php");
         $titre = $item['titre'];
         $cat = $cat_all[$item['categorie']]['nom'];
 
-        $type = explode('/',$cat_all[$item['categorie']]['path'])[0];
-        $user = new utilisateur($item['id_utilisateur'],$pdo);
+        $type = explode('/', $cat_all[$item['categorie']]['path'])[0];
+        $user = new utilisateur($item['id_utilisateur'], $pdo);
         $pseudo = ucfirst($user->getPrenom()) . " " . ucfirst(substr($user->getNom(), 0, 1)) . ".";
         $avatar = "images/avatars/" . $user->getAvatar();
-            $id = $user->getId();
+        $id = $user->getId();
         $iditem = $item['id'];
         $description = $item['description'];
         $adresse = $item['adresse'];
@@ -949,29 +849,27 @@ include("header.php");
                 $src = "default_bien.png";
             else
                 $src = "default-service2.png";
-        }
-        else
-            $src = $item['id'] .".".$item['image'];
+        } else
+            $src = $item['id'] . "." . $item['image'];
 
         $supp = " ";
 
         // Affichage du bouton de suppression si l'objet appartient à l'utilisateur ou si ce dernier est administrateur
         if (isset($_SESSION['user']) && ($thisuser->getId() === $id || $thisuser->getAdmin()))
-        $supp = "<div class='trouver_supprimer' id='trouver_supprimer_" . $type . "_" . $iditem . "_" .$thisuser->getId()."'><td class='mes_propositions_services_colonne9 mp_supp' id='" . $item['id'] . "'>
+            $supp = "<div class='trouver_supprimer' id='trouver_supprimer_" . $type . "_" . $iditem . "_" . $thisuser->getId() . "'><td class='mes_propositions_services_colonne9 mp_supp' id='" . $item['id'] . "'>
 <a class='trouver_supp' role='button' id='" . $iditem . "'>
 <div class='mes_propositions_supp_helper'>
 <img  src='images/trash.svg' class='trouver_btn_supp'>
 </div> </a></td></div>";
 
 
-
-
-        echo '    <div class="box effect8" id="trouver_' . $type . '_'.$iditem . '_' . $id . '_'.$thisuser->getId().'">
+        $myID = (isset($_SESSION['user'])) ? $thisuser->getId() : '0';
+        echo '    <div class="box effect8" id="trouver_' . $type . '_' . $iditem . '_' . $id . '_' .  $myID . '">
 
         <div class="trouver_container_image">
                         <span class="helper"></span>
 <img src="' . $avatar . '">
-            <br><a href="user.php?id=' . $id . '"> <div class="trouver_container_infos_pseudo" id ="trouver_container_infos_pseudo_' .$iditem . '"> ' . $pseudo . ' </div></a>
+            <br><a href="user.php?id=' . $id . '"> <div class="trouver_container_infos_pseudo" id ="trouver_container_infos_pseudo_' . $iditem . '"> ' . $pseudo . ' </div></a>
 
         </div>
 
@@ -1000,7 +898,7 @@ include("header.php");
 
         <div class="trouver_container_image_bien_service">
             <span class="helper"></span>
-            <img src="uploads/'.$type.'/' . $src . '">
+            <img src="uploads/' . $type . '/' . $src . '">
 
         </div>
         
@@ -1052,8 +950,8 @@ document.getElementById("trouver_container_infos_pseudo_' . $iditem . '").style.
         // map.setZoom(12);
 
         var mc = new MarkerClusterer(map);
-    mc.setMaxZoom(17);
-    mc.setGridSize(33);
+        mc.setMaxZoom(17);
+        mc.setGridSize(33);
 
 
         var card = document.getElementById('pac-card');
@@ -1091,16 +989,16 @@ document.getElementById("trouver_container_infos_pseudo_' . $iditem . '").style.
         $items->execute($sql_array);
         foreach ($items as $item) {
             $scale = 300000;
-            $delta_lat = (mt_rand (0,100) - 50)/$scale;
-            $delta_long = (mt_rand (0,100) - 50)/$scale;
-            echo "var lat = " . ($item['lat']+$delta_lat) . ";";
-            echo "var lng = " . ($item['lng']+$delta_long) . ";";
+            $delta_lat = (mt_rand(0, 100) - 50) / $scale;
+            $delta_long = (mt_rand(0, 100) - 50) / $scale;
+            echo "var lat = " . ($item['lat'] + $delta_lat) . ";";
+            echo "var lng = " . ($item['lng'] + $delta_long) . ";";
             echo "var pos = {lat: lat,lng: lng};";
             echo "var ad ='" . addslashes($item['adresse']) . "';";
-            echo "var titre ='" . addslashes($item['titre']) . "';" ;
+            echo "var titre ='" . addslashes($item['titre']) . "';";
             if ($item['distance'] != 0)
-                echo "titre +='" . "   (" . round($item['distance']/1000,2) ."km)';";
-            echo 'ajouterMarker(pos,false,true,ad,titre,true,"images/markers/marker-editor.svg","'.$cat_all[$item["categorie"]]["nom"].'");';
+                echo "titre +='" . "   (" . round($item['distance'] / 1000, 2) . "km)';";
+            echo 'ajouterMarker(pos,false,true,ad,titre,true,"images/markers/marker-editor.svg","' . $cat_all[$item["categorie"]]["nom"] . '");';
         }
         echo "map.fitBounds(bounds);";
 
@@ -1112,8 +1010,8 @@ document.getElementById("trouver_container_infos_pseudo_' . $iditem . '").style.
                 geocodeLatLng(geocoder, map, infowindow, position);
             }, function () {
                 handleLocationError();
-            });        }
-        else if (GET("adresse") != null && GET('lat')) {
+            });
+        } else if (GET("adresse") != null && GET('lat')) {
             latlng = {lat: parseFloat(GET('lat')), lng: parseFloat(GET('lng'))};
             markerHome.setPosition(latlng);
             // infowindow.open(map, markerHome);
@@ -1129,9 +1027,7 @@ document.getElementById("trouver_container_infos_pseudo_' . $iditem . '").style.
                 infowindowContent.children['place-address'].textContent = GET('adresse');
                 infowindow.open(map, this);
             });
-        }
-        else if (GET('adresse') === null)
-        {
+        } else if (GET('adresse') === null) {
             handleLocationError();
         }
 
@@ -1149,12 +1045,11 @@ document.getElementById("trouver_container_infos_pseudo_' . $iditem . '").style.
                 if (status === 'OK') {
                     if (results[0]) {
                         var address;
-                        if (GET('adresse') === null || resetGeo)
-                        {address = results[0].formatted_address;
-                        resetGeo = false;
+                        if (GET('adresse') === null || resetGeo) {
+                            address = results[0].formatted_address;
+                            resetGeo = false;
 
-                        }
-                        else {
+                        } else {
                             address = GET('adresse');
                         }
                         document.getElementById("recherche_avancee_adresse").value = address;
@@ -1235,15 +1130,15 @@ document.getElementById("trouver_container_infos_pseudo_' . $iditem . '").style.
             });
         });
 
-        function setLatLng(){
+        function setLatLng() {
             document.getElementById("recherche_avancee_lat").value = markerHome.position.lat();
             document.getElementById("recherche_avancee_lng").value = markerHome.position.lng();
-            localStorage.setItem("lat",markerHome.position.lat());
-            localStorage.setItem("lng",markerHome.position.lng());
+            localStorage.setItem("lat", markerHome.position.lat());
+            localStorage.setItem("lng", markerHome.position.lng());
         }
 
         var geoLocateBtn = document.getElementById('geolocate');
-        geoLocateBtn.addEventListener('click', function() {
+        geoLocateBtn.addEventListener('click', function () {
 
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
@@ -1264,7 +1159,7 @@ document.getElementById("trouver_container_infos_pseudo_' . $iditem . '").style.
                 });
             }
 
-            }, false);
+        }, false);
 
 
         function ajouterMarker(pos, afficherFenetre, bounce, adresse, titre, afficherLabel, image, categorie) {
@@ -1298,14 +1193,12 @@ document.getElementById("trouver_container_infos_pseudo_' . $iditem . '").style.
             bounds.extend(pos);
 
 
-
-
             // oms.addMarker(marker);
             mc.addMarker(marker);
 
         }
 
-        $("#reset_state").click(function() {
+        $("#reset_state").click(function () {
             infowindow.close();
             map.fitBounds(bounds);
         })
@@ -1326,50 +1219,43 @@ document.getElementById("trouver_container_infos_pseudo_' . $iditem . '").style.
 
 $script = "<script>";
 
-    if (isset($_GET['categorie']) && $_GET['categorie'] != "CATEGORIE")
-        $script .= '$("#recherche_avancee_block_choix_cat").text("'.$cat_all[$_GET["categorie"]]['nom'] .'");
-$("#recherche_avancee_select_cat").val("'. $_GET['categorie'] .'");';
-    else
-        $script .= '$("#recherche_avancee_block_choix_cat").text("CATEGORIE");';
-
-    if (isset($_GET['type']))
-    {
-        $script .= '$("#recherche_avancee_' . $_GET["type"] . '_radio").prop("checked", true);';
-    }
-
-    if (isset($_GET['keywords']) && $_GET['keywords']!= "")
-    {
-        $script .= '$("#search").val("'.$_GET["keywords"] .'");';
-    }
-    else
-        $script .= '$("#search").attr("placeholder","Rechercher ...");';
-
-    if (isset($_GET['adresse']))
-    {
-        $script .= '$("#recherche_avancee_adresse").val("'.$_GET["adresse"] .'");';
-    }
-
-    if (isset($_GET['lat']))
-    {
-        $script .= '$("#recherche_avancee_lat").val("'.$_GET["lat"] .'");';
-        $script .= '$("#recherche_avancee_lng").val("'.$_GET["lng"] .'");';
-    }
-
-if (isset($_GET['rayon']) && $_GET['rayon'] != "partout")
-{
-    $script .= '$("#recherche_avancee_block_choix_rayon").text("'.$_GET["rayon"] .' km");
-    $("#recherche_avancee_select_rayon").val("'. $_GET['rayon'] .'");';
-}
+if (isset($_GET['categorie']) && $_GET['categorie'] != "CATEGORIE")
+    $script .= '$("#recherche_avancee_block_choix_cat").text("' . $cat_all[$_GET["categorie"]]['nom'] . '");
+$("#recherche_avancee_select_cat").val("' . $_GET['categorie'] . '");';
 else
+    $script .= '$("#recherche_avancee_block_choix_cat").text("CATEGORIE");';
+
+if (isset($_GET['type'])) {
+    $script .= '$("#recherche_avancee_' . $_GET["type"] . '_radio").prop("checked", true);';
+}
+
+if (isset($_GET['keywords']) && $_GET['keywords'] != "") {
+    $script .= '$("#search").val("' . $_GET["keywords"] . '");';
+} else
+    $script .= '$("#search").attr("placeholder","Rechercher ...");';
+
+if (isset($_GET['adresse'])) {
+    $script .= '$("#recherche_avancee_adresse").val("' . $_GET["adresse"] . '");';
+}
+
+if (isset($_GET['lat'])) {
+    $script .= '$("#recherche_avancee_lat").val("' . $_GET["lat"] . '");';
+    $script .= '$("#recherche_avancee_lng").val("' . $_GET["lng"] . '");';
+}
+
+if (isset($_GET['rayon']) && $_GET['rayon'] != "partout") {
+    $script .= '$("#recherche_avancee_block_choix_rayon").text("' . $_GET["rayon"] . ' km");
+    $("#recherche_avancee_select_rayon").val("' . $_GET['rayon'] . '");';
+} else
     $script .= '$("#recherche_avancee_block_choix_rayon").text("Dans un rayon de...");';
 
 
 $resultats = $items->rowCount();
-    $script .= 'document.getElementById("rechercher_resultats_nb_nb").innerHTML = "'.$resultats.'";';
+$script .= 'document.getElementById("rechercher_resultats_nb_nb").innerHTML = "' . $resultats . '";';
 
 $script .= "</script>";
 
-    echo $script;
+echo $script;
 
 
 ?>

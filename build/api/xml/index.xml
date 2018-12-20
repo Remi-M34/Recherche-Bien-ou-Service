@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html">
+  <namespace name="">
+    <class name="enum" src="class/enum.php" xml="classes/enum.xml"/>
+    <class name="notification" src="class/notification.php" description="Created by PhpStorm." xml="classes/notification.xml"/>
+    <class name="type" src="class/type.php" xml="classes/type.xml"/>
+    <class name="utilisateur" src="class/utilisateur.php" xml="classes/utilisateur.xml"/>
+  </namespace>
+</index>

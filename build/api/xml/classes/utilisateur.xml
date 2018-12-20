@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="utilisateur" namespace="" name="utilisateur" abstract="false" final="false" start="5" end="383">
+  <file path="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/class" file="utilisateur.php" realpath="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/class/utilisateur.php" size="8754" time="2018-12-19T20:36:27+00:00" unixtime="1545251787" sha1="cc21053b2bb3e7d812b1be5f33deb3109f1888c3" relative="class/utilisateur.php"/>
+  <member name="id" visibility="private" static="false" line="7"/>
+  <member name="email" visibility="private" static="false" line="10"/>
+  <member name="nom" visibility="private" static="false" line="11"/>
+  <member name="prenom" visibility="private" static="false" line="12"/>
+  <member name="password" visibility="private" static="false" line="13"/>
+  <member name="adresse" visibility="private" static="false" line="14"/>
+  <member name="avatar" visibility="private" static="false" line="15"/>
+  <member name="telephone" visibility="private" static="false" line="16"/>
+  <member name="date" visibility="private" static="false" line="17"/>
+  <member name="admin" visibility="private" static="false" line="18"/>
+  <member name="existe" visibility="private" static="false" line="19"/>
+  <member name="emprunts" visibility="private" static="false" line="20"/>
+  <member name="propositions" visibility="private" static="false" line="21"/>
+  <member name="solde" visibility="private" static="false" line="22"/>
+  <constructor name="__construct" start="32" end="35" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="utilisateur constructor. On passe la connexion à la BDD en argument pour éviter une nouvelle connexion inutile, et on ne la stocke pas dans la classe afin d'éviter d'être empéché de la serializer"/>
+      <param variable="$id"/>
+      <param variable="$pdo"/>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+    <parameter name="pdo" byreference="false" type="{unknown}"/>
+  </constructor>
+  <method name="getUserWithPdo" start="43" end="95" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$id"/>
+      <param variable="$pdo"/>
+      <return description="initialise l'utilisateur avec les données de la BDD" type="string"/>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+    <parameter name="pdo" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="non trouvé, ou plusieurs (normalement impossible)" line="94"/>
+    </inline>
+  </method>
+  <method name="setByEmail" start="103" end="119" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$email"/>
+      <param variable="$password"/>
+      <return description="Inscrit l'utilisateur" type="string"/>
+    </docblock>
+    <parameter name="email" byreference="false" type="{unknown}"/>
+    <parameter name="password" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Inscrit le membre via son email et pass" line="103"/>
+    </inline>
+  </method>
+  <method name="updateUser" start="125" end="132" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="met à jour les données de l'utilisateur"/>
+    </docblock>
+  </method>
+  <method name="updatePassword" start="134" end="140" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="checkEmail" start="149" end="163" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Vérifie si l'email n'est pas déjà utilisée par quelqu'un d'autre"/>
+      <param description="L'email à vérifier" type="string" variable="$email"/>
+      <return description="ok ou erreur" type="string"/>
+    </docblock>
+    <parameter name="email" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getTelephone" start="168" end="171" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setTelephone" start="176" end="179" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$telephone"/>
+    </docblock>
+    <parameter name="telephone" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getId" start="185" end="188" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setId" start="193" end="196" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$id"/>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getEmail" start="201" end="204" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setEmail" start="209" end="212" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$email"/>
+    </docblock>
+    <parameter name="email" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getNom" start="217" end="220" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setNom" start="225" end="228" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$nom"/>
+    </docblock>
+    <parameter name="nom" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getPrenom" start="233" end="236" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setPrenom" start="241" end="244" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$prenom"/>
+    </docblock>
+    <parameter name="prenom" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getPassword" start="249" end="252" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setPassword" start="257" end="260" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$password"/>
+    </docblock>
+    <parameter name="password" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getAdresse" start="265" end="268" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setAdresse" start="273" end="276" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$adresse"/>
+    </docblock>
+    <parameter name="adresse" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getAvatar" start="281" end="284" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setAvatar" start="289" end="292" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$avatar"/>
+    </docblock>
+    <parameter name="avatar" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getPropositions" start="295" end="298" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="setPropositions" start="303" end="306" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$avatar"/>
+    </docblock>
+    <parameter name="p" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getDate" start="308" end="311" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="getAdmin" start="316" end="319" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setAdmin" start="324" end="327" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$admin"/>
+    </docblock>
+    <parameter name="admin" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getExiste" start="332" end="335" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setExiste" start="340" end="343" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$existe"/>
+    </docblock>
+    <parameter name="existe" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getEmprunts" start="353" end="356" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setEmprunts" start="361" end="364" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$emprunts"/>
+    </docblock>
+    <parameter name="emprunts" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getSolde" start="369" end="372" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setSolde" start="377" end="380" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$solde"/>
+    </docblock>
+    <parameter name="solde" byreference="false" type="{unknown}"/>
+  </method>
+</class>

@@ -19,8 +19,8 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Remi
- * Date: 24/10/2018
+ * User: Remi MATTEI
+ * Numéro étudiant: 21516143 * Date: 24/10/2018
  * Time: 23:38
  */
 session_start();

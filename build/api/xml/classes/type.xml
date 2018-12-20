@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="type" namespace="" name="type" abstract="true" final="false" start="10" end="16">
+  <file path="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/class" file="type.php" realpath="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/class/type.php" size="299" time="2018-10-28T19:54:35+00:00" unixtime="1540756475" sha1="39c4a79fb49cb893d4487b7a2c5804dfa2b49887" relative="class/type.php"/>
+  <extends full="enum" namespace="" name="enum"/>
+  <constant type="integer" name="notice_success" value="0"/>
+  <constant type="integer" name="notice_info" value="1"/>
+  <constant type="integer" name="notice_warning" value="2"/>
+  <constant type="integer" name="notice_danger" value="3"/>
+  <parent full="enum" namespace="" name="enum">
+    <method name="isValidName" start="27" end="36" abstract="false" final="false" static="true" visibility="public">
+      <parameter name="name" byreference="false" type="{unknown}"/>
+      <parameter name="strict" byreference="false" type="boolean" default="false"/>
+    </method>
+    <method name="isValidValue" start="38" end="41" abstract="false" final="false" static="true" visibility="public">
+      <parameter name="value" byreference="false" type="{unknown}"/>
+      <parameter name="strict" byreference="false" type="boolean" default="true"/>
+    </method>
+  </parent>
+</class>

@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Created by PhpStorm.
+ * User: Remi MATTEI
+ * Numéro étudiant: 21516143
+ */
+
 // Classe utilisateur
 
 class utilisateur{
@@ -24,7 +30,8 @@ class utilisateur{
 
 
     /**
-     * utilisateur constructor. On passe la connexion à la BDD en argument pour éviter une nouvelle connexion inutile
+     * utilisateur constructor. On passe la connexion à la BDD en argument pour éviter une nouvelle connexion inutile,
+     * et on ne la stocke pas dans la classe afin d'éviter d'être empéché de la serializer
      * @param $id
      * @param $pdo
      */
@@ -34,50 +41,11 @@ class utilisateur{
     }
 
 
-
-//    public function getUser($id){ // On cherche l'utilisateur qui a l'id du paramètre OU l'email si on le cherche par son email
-//
-//        $sql = "SELECT *, DATE_FORMAT(date_inscription,'%d/%m/%Y') AS date FROM utilisateur WHERE id = ? OR login = ?";
-//        $pdo = new PDO('mysql:host=mysql-5.nextwab.com;dbname=PL_7783_db;charset=UTF8', "PL7783_admin", "HlinPass");
-//        $stmt = $pdo->prepare($sql);
-//        $stmt->execute([$id, $id]);
-//
-//        if ($stmt->rowCount() == 1)
-//        {
-//            $row = $stmt->fetch();
-//            $this->id = $row['id'];
-//            $this->email =  $row['login'];
-//            $this->nom =  $row['nom'];
-//            $this->prenom =  $row['prenom'];
-//            $this->password =  $row['password'];
-//            $this->adresse =  $row['adresse'];
-//            $this->avatar =  $row['avatar'];
-//            $this->telephone =  $row['telephone'];
-//            $this->propositions =  $row['propositions'];
-//            $this->date =  $row['date'];
-//            $this->existe = true;
-//            $this->emprunts =  $row['emprunts'];
-//            $this->solde =  $row['solde'];
-//
-//            $sql = "SELECT id_utilisateur FROM droits WHERE id_utilisateur = ?";
-//            $stmt = $pdo->prepare($sql);
-//            $stmt->execute([$id]);
-//
-//            if ($stmt->rowCount() > 0)
-//                $this->admin = true;
-//            else
-//                $this->admin = false;
-//
-//
-//            return "succes"; // trouvé
-//        }
-//        else {
-//            $this->existe = false;
-//            return "erreur";
-//        }// non trouvé, ou plusieurs (?, censé être impossible)
-//    }
-
-
+    /**
+     * @param $id
+     * @param $pdo
+     * @return string initialise l'utilisateur avec les données de la BDD
+     */
     public function getUserWithPdo($id,$pdo)
     {
         $sql = "SELECT *, DATE_FORMAT(date_inscription,'%d/%m/%Y') AS date FROM utilisateur WHERE id = ? OR login = ?";
@@ -129,10 +97,15 @@ class utilisateur{
         else {
             $this->existe = false;
             return "erreur";
-        }// non trouvé, ou plusieurs (?, censé être impossible)
+        }// non trouvé, ou plusieurs (normalement impossible)
     }
 
 
+    /**
+     * @param $email
+     * @param $password
+     * @return string Inscrit l'utilisateur
+     */
     public function setByEmail($email,$password){ // Inscrit le membre via son email et pass
 
         try{
@@ -152,6 +125,9 @@ class utilisateur{
     }
 
 
+    /**
+     * met à jour les données de l'utilisateur
+     */
     public function updateUser(){
         $pdo = new PDO('mysql:host=mysql-5.nextwab.com;dbname=PL_7783_db;charset=UTF8', "PL7783_admin", "HlinPass");
         $stmt = $pdo->prepare("UPDATE utilisateur SET login = ?, nom = ?, prenom = ?, adresse = ?, telephone = ?, avatar = ?
@@ -171,8 +147,9 @@ WHERE id=?");
 
 
     /**
+     *
      * Vérifie si l'email n'est pas déjà utilisée par quelqu'un d'autre
-     * @param $email L'email à vérifier
+     * @param string $email L'email à vérifier
      * @return string ok ou erreur
      */
     public function checkEmail($email){

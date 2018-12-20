@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="enum" namespace="" name="enum" abstract="true" final="false" start="10" end="43">
+  <file path="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/class" file="enum.php" realpath="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/class/enum.php" size="1199" time="2018-10-28T18:31:31+00:00" unixtime="1540751491" sha1="9cf66364d0b9afa58399cb12c0b0c598b9e27c32" relative="class/enum.php"/>
+  <member name="constCacheArray" default="NULL" visibility="private" static="true" line="13"/>
+  <method name="getConstants" start="15" end="25" abstract="false" final="false" static="true" visibility="private"/>
+  <method name="isValidName" start="27" end="36" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="name" byreference="false" type="{unknown}"/>
+    <parameter name="strict" byreference="false" type="boolean" default="false"/>
+  </method>
+  <method name="isValidValue" start="38" end="41" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="value" byreference="false" type="{unknown}"/>
+    <parameter name="strict" byreference="false" type="boolean" default="true"/>
+  </method>
+  <extenders>
+    <extender full="type" namespace="" name="type"/>
+  </extenders>
+</class>

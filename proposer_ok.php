@@ -1,7 +1,8 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Remi
+ * User: Remi MATTEI
+ * Numéro étudiant: 21516143
  * Date: 24/10/2018
  * Time: 20:27
  */
@@ -97,9 +98,7 @@ include("header.php");
             } else {
                 if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
 //                    echo $target_file;
-                    $thisuser = unserialize($_SESSION['user']);
-                    $thisuser->setPropositions($thisuser->getPropositions()+1);
-                    $_SESSION['user'] = serialize($thisuser);
+
 
                 } else {
                     $notif = new notification("Erreur lors de l'upload de l'image", "notice_warning");
@@ -148,6 +147,9 @@ values (?, ?, ?, ?, ?, ?, ? ,?, ?, ?, ?, ?, ?, ? ,?, ?, ?, ?, ?, ?, ? ,?,?)");
             print_r($pdo->errorInfo());
         }
 
+        $thisuser = unserialize($_SESSION['user']);
+        $thisuser->setPropositions($thisuser->getPropositions()+1);
+        $_SESSION['user'] = serialize($thisuser);
 
         // Afin d'éviter le rafraichissement de la page
         unset($_SESSION['verif_proposer']);

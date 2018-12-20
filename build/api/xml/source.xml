@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html">
+    <file name="api.php" size="519" time="2018-11-20T22:36:56+00:00" unixtime="1542753416" sha1="6f31d9ce27317e4c08f579fb87cd3abaf39aad97" xml="tokens/api.php.xml"/>
+    <dir name="class">
+      <file name="enum.php" size="1199" time="2018-10-28T18:31:31+00:00" unixtime="1540751491" sha1="9cf66364d0b9afa58399cb12c0b0c598b9e27c32" xml="tokens/class/enum.php.xml"/>
+      <file name="notification.php" size="1958" time="2018-12-19T20:37:27+00:00" unixtime="1545251847" sha1="d783c994416ce36e77acb9ce6f1feb6fa5c436f1" xml="tokens/class/notification.php.xml"/>
+      <file name="type.php" size="299" time="2018-10-28T19:54:35+00:00" unixtime="1540756475" sha1="39c4a79fb49cb893d4487b7a2c5804dfa2b49887" xml="tokens/class/type.php.xml"/>
+      <file name="utilisateur.php" size="8754" time="2018-12-19T20:36:27+00:00" unixtime="1545251787" sha1="cc21053b2bb3e7d812b1be5f33deb3109f1888c3" xml="tokens/class/utilisateur.php.xml"/>
+    </dir>
+    <dir name="controllers">
+      <file name="api.php" size="519" time="2018-10-21T23:16:56+00:00" unixtime="1540163816" sha1="6f31d9ce27317e4c08f579fb87cd3abaf39aad97" xml="tokens/controllers/api.php.xml"/>
+      <file name="bien_maj.php" size="1437" time="2018-12-19T20:40:32+00:00" unixtime="1545252032" sha1="c64f16276d14d25aef2f4ca4df9729b1c06993b8" xml="tokens/controllers/bien_maj.php.xml"/>
+      <file name="config.php" size="710" time="2018-12-19T20:42:36+00:00" unixtime="1545252156" sha1="6fbc96c6fb9a53b1ccd6ea502ed6cbd341df9091" xml="tokens/controllers/config.php.xml"/>
+      <file name="connect.php" size="1446" time="2018-12-19T20:43:59+00:00" unixtime="1545252239" sha1="ea4a4704a6fb5ae11db95bcf6214e1f44eaa71c5" xml="tokens/controllers/connect.php.xml"/>
+      <file name="disconnect.php" size="273" time="2018-12-19T20:43:58+00:00" unixtime="1545252238" sha1="9d1aea3a25bd5fc7b504a67a9edff772d9a54665" xml="tokens/controllers/disconnect.php.xml"/>
+      <file name="mes_propositions_maj.php" size="1351" time="2018-12-19T20:45:18+00:00" unixtime="1545252318" sha1="383afe600e21c0794e8cc516443070e12127e1ab" xml="tokens/controllers/mes_propositions_maj.php.xml"/>
+      <file name="reservation.php" size="1713" time="2018-12-19T16:45:18+00:00" unixtime="1545237918" sha1="293bf1b8f8cd883ac68e605947ff94b96ea580a8" xml="tokens/controllers/reservation.php.xml"/>
+      <file name="reserver.php" size="2184" time="2018-12-19T20:50:23+00:00" unixtime="1545252623" sha1="cf38083b3b9854df9f508b6c77cdc5af8a0021ca" xml="tokens/controllers/reserver.php.xml"/>
+    </dir>
+    <file name="demander.php" size="8299" time="2018-11-25T23:07:27+00:00" unixtime="1543187247" sha1="1f9f76e0c87ef464bf850757d3c2aa6d5aa572d0" xml="tokens/demander.php.xml"/>
+    <file name="demandes.php" size="96" time="2018-10-21T22:38:42+00:00" unixtime="1540161522" sha1="31509af38d3a0d0adc9dfa1ccc5870b0c749de99" xml="tokens/demandes.php.xml"/>
+    <file name="header.php" size="4266" time="2018-12-19T20:21:24+00:00" unixtime="1545250884" sha1="b19b4f74716203cec79c0fc122f5f2f4a987321d" xml="tokens/header.php.xml"/>
+    <file name="index.php" size="26643" time="2018-12-19T20:34:15+00:00" unixtime="1545251655" sha1="c7a6e2fb15096ab80ba8b6174ac5a296640df6c5" xml="tokens/index.php.xml"/>
+    <file name="inscription.php" size="2727" time="2018-12-18T16:24:35+00:00" unixtime="1545150275" sha1="db90d49263bbb28077b7a4d8f9e1123070cb7d58" xml="tokens/inscription.php.xml"/>
+    <file name="mesdemandes.php" size="13698" time="2018-11-25T23:07:27+00:00" unixtime="1543187247" sha1="779fa3cbf2cf74ea391cbb7b3733c68fcb344eec" xml="tokens/mesdemandes.php.xml"/>
+    <file name="mesemprunts.php" size="5130" time="2018-12-18T15:25:20+00:00" unixtime="1545146720" sha1="27f841ad6246e397f0d6760d18448c3950f7e6bb" xml="tokens/mesemprunts.php.xml"/>
+    <file name="mes_propositions.php" size="28396" time="2018-12-19T02:34:27+00:00" unixtime="1545186867" sha1="c7697e60666ed5f1127009bc6d007762b177cc77" xml="tokens/mes_propositions.php.xml"/>
+    <file name="profile.php" size="7343" time="2018-12-18T16:24:07+00:00" unixtime="1545150247" sha1="f039dd1da82e9ca0e69f6b1a03475dcd395eb20b" xml="tokens/profile.php.xml"/>
+    <file name="proposer.php" size="20293" time="2018-12-19T14:44:16+00:00" unixtime="1545230656" sha1="ba9ab52ca5b6cd553aad923f2a904286eb995b2a" xml="tokens/proposer.php.xml"/>
+    <file name="proposer_ok.php" size="6553" time="2018-12-19T14:39:28+00:00" unixtime="1545230368" sha1="80247949211d10a47ee0ecb7aa0b16694b71bc9a" xml="tokens/proposer_ok.php.xml"/>
+    <file name="rechercher.php" size="51912" time="2018-12-19T20:32:48+00:00" unixtime="1545251568" sha1="7c65748facd691e3de33eecba4ba852cf009160a" xml="tokens/rechercher.php.xml"/>
+    <file name="test.php" size="924" time="2018-10-29T23:29:24+00:00" unixtime="1540855764" sha1="f82a24ef82bb2b792230ae1cb3ec82846912033b" xml="tokens/test.php.xml"/>
+    <file name="user.php" size="1890" time="2018-12-18T17:41:52+00:00" unixtime="1545154912" sha1="982e5b940e4a76c0b89ec36f986b5ae63fa0038e" xml="tokens/user.php.xml"/>
+  </dir>
+</source>

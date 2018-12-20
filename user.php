@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>Profil</title>
+    <title>Utilisateur</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,8 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Remi
+ * User: Remi MATTEI
+ * Numéro étudiant: 21516143
  * Date: 05/12/2018
  * Time: 03:50
  */

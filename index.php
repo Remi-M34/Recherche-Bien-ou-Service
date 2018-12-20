@@ -1,16 +1,17 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Remi MATTEI
+ * Numéro étudiant: 21516143
+ * Date: 15/11/2018
+ * Time: 15:58
+ */
 
-//include("class/utilisateur.php");
 require_once("controllers/config.php");
 session_start();
 
 
-/**
- * Created by PhpStorm.
- * User: Remi
- * Date: 15/11/2018
- * Time: 15:58
- */
+
 
 $sql = "SELECT * FROM biens ORDER BY date_debut DESC LIMIT 10";
 
@@ -19,10 +20,6 @@ $GLOBALS['items']->execute($sql_array);
 $_SESSION['requete'] = serialize($sql);
 $_SESSION['sql_array'] = serialize($sql_array);
 
-//echo $sql;
-//echo print_r($sql_array);
-
-//$thisuser = unserialize($_SESSION['user']);
 
 $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->fetchAll(PDO::FETCH_UNIQUE);
 ?>
@@ -33,8 +30,6 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
 <head>
 
     <title>Accueil</title>
-    <!--    <link rel="stylesheet" type="text/css" href="css/booking.css" />-->
-    <!--    <link rel="stylesheet" type="text/css" href="css/popbox.css" />-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
@@ -45,14 +40,10 @@ $cat_all = $pdo->query("SELECT id, nom, path, id FROM categorie ORDER BY nom")->
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 
-    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier/1.0.3/oms.min.js"></script>-->
-
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/markerclusterer.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/daterangepicker.js"></script>
-    <!--    <script type="text/javascript" src="js/popbox.js"></script>-->
-
 
     <script>
 
@@ -255,8 +246,8 @@ include("header.php");
                                 "endDate": moment(),
                                 "minDate": moment()
                             }, function (start, end, label) {
-                                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-                            });
+                            //     console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+                            // });
                         </script>
 
 

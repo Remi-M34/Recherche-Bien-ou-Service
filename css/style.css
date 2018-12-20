@@ -39,8 +39,8 @@ header {
     display: inline-block;
     vertical-align: top;
     line-height: 25px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    /*padding-bottom: 10px;*/
+    /*margin-bottom: 10px;*/
     float: left;
 
 }
@@ -117,7 +117,6 @@ header {
 .titre {
     margin-top: 8px;
     float: left;
-    /*font-family: FontAwesome;*/
     /*color: #fff;*/
     font-size: 19px;
     font-weight: 900;
@@ -1102,7 +1101,7 @@ div#form-edit-profile input[type=submit]:hover {
 
 
 .table100-head th{
-    font-family: OpenSans-Regular;
+    /*font-family: OpenSans-Regular;*/
     font-size: 18px;
     color: #fff;
     line-height: 1.2;
@@ -1116,8 +1115,8 @@ div#form-edit-profile input[type=submit]:hover {
 }
 
 .mes_propositions tbody tr {
-    font-family: OpenSans-Regular;
-    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
     color: #808080;
     line-height: 1.2;
     font-weight: unset;
@@ -1303,15 +1302,11 @@ div#form-edit-profile input[type=submit]:hover {
 /*padding-right: 62px;*/
 /*}*/
 
-@font-face {
-    font-family: OpenSans-Regular;
-    src: url('fonts/OpenSans/OpenSans-Regular.ttf');
-}
+/*@font-face {*/
+    /*font-family: OpenSans-Regular;*/
+    /*src: url('fonts/OpenSans/OpenSans-Regular.ttf');*/
+/*}*/
 
-@font-face {
-    font-family: FontAwesome;
-    src: url('fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg');
-}
 
 
 fieldset {

@@ -1,10 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Remi
+ * User: Remi MATTEI
+ * Numéro étudiant: 21516143
  * Date: 26/11/2018
  * Time: 03:01
  */
+
 session_start();
 require_once("controllers/config.php");
 
@@ -24,7 +26,6 @@ require_once("controllers/config.php");
     <script src="../js/jquery-3.3.1.js"></script>
 
 
-
 </head>
 <body>
 
@@ -40,17 +41,10 @@ if (isset($_SESSION['user'])) {
 
 ?>
 
-<!--<div class="login-page-container">-->
 <div class="login-page-page">
 <div class="login-page">
     <div class="login-page-form">
-<!--        <form class="login-page-register-form">-->
-<!--            <input type="text" name="username" placeholder="name"/>-->
-<!--            <input type="password" name="password" placeholder="password"/>-->
-<!--            <input type="text" placeholder="email address"/>-->
-<!--            <button>create</button>-->
-<!--            <p class="message">Already registered? <a href="#">Sign In</a></p>-->
-<!--        </form>-->
+
         <form class="login-page-login-form" method="post" action="controllers/connect.php">
             <input type="text"  name="username" placeholder="adresse email" minlength=3 />
             <input type="password"  name="password" placeholder="mot de passe" minlength=3 />
@@ -60,7 +54,6 @@ if (isset($_SESSION['user'])) {
     </div>
 </div>
 </div>
-<!--</div>-->
 <script type="text/javascript">
     $('.message a').click(function(){
         $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
@@ -68,7 +61,8 @@ if (isset($_SESSION['user'])) {
 
     document.forms[0].addEventListener('submit', function (evt) {
 
-        if ($('[name="username"]').val().length < 3 ||$('[name="password"]').val().length < 3) // Si l'utilisateur n'a pas sélectionné une adresse correcte, erreur
+        if ($('[name="username"]').val().length < 3 ||$('[name="password"]').val().length < 3)
+            // Si l'utilisateur n'a pas sélectionné une adresse correcte, erreur
         {
             evt.preventDefault();
             document.getElementById('warning').innerHTML = "<br>Erreur! Valeurs inférieures à 3";

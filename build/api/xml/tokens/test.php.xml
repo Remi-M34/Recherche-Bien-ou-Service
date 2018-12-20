@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html" file="test.php" realpath="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/test.php" size="924" time="2018-10-29T23:29:24+00:00" unixtime="1540855764" sha1="f82a24ef82bb2b792230ae1cb3ec82846912033b" relative="test.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="3">
+    <token name="T_DOC_COMMENT"> * Created by PhpStorm.</token>
+  </line>
+  <line no="4">
+    <token name="T_DOC_COMMENT"> * User: Remi</token>
+  </line>
+  <line no="5">
+    <token name="T_DOC_COMMENT"> * Date: 30/10/2018</token>
+  </line>
+  <line no="6">
+    <token name="T_DOC_COMMENT"> * Time: 00:28</token>
+  </line>
+  <line no="7">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="8">
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="9"/>
+  <line no="10">
+    <token name="T_INLINE_HTML">&lt;!DOCTYPE html&gt;</token>
+  </line>
+  <line no="11">
+    <token name="T_INLINE_HTML">&lt;html lang="en" &gt;</token>
+  </line>
+  <line no="12"/>
+  <line no="13">
+    <token name="T_INLINE_HTML">&lt;head&gt;</token>
+  </line>
+  <line no="14">
+    <token name="T_INLINE_HTML">  &lt;meta charset="UTF-8"&gt;</token>
+  </line>
+  <line no="15">
+    <token name="T_INLINE_HTML">  &lt;title&gt;jQuery Time Range Slider&lt;/title&gt;</token>
+  </line>
+  <line no="16"/>
+  <line no="17"/>
+  <line no="18">
+    <token name="T_INLINE_HTML">  &lt;link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'&gt;</token>
+  </line>
+  <line no="19"/>
+  <line no="20">
+    <token name="T_INLINE_HTML">      &lt;link rel="stylesheet" href="css/plages_horaires.css"&gt;</token>
+  </line>
+  <line no="21"/>
+  <line no="22"/>
+  <line no="23">
+    <token name="T_INLINE_HTML">&lt;/head&gt;</token>
+  </line>
+  <line no="24"/>
+  <line no="25">
+    <token name="T_INLINE_HTML">&lt;body&gt;</token>
+  </line>
+  <line no="26"/>
+  <line no="27">
+    <token name="T_INLINE_HTML">  &lt;div id="time-range"&gt;</token>
+  </line>
+  <line no="28">
+    <token name="T_INLINE_HTML">    &lt;p&gt;Time Range: &lt;span class="slider-time"&gt;9:00 AM&lt;/span&gt; - &lt;span class="slider-time2"&gt;5:00 PM&lt;/span&gt;</token>
+  </line>
+  <line no="29"/>
+  <line no="30">
+    <token name="T_INLINE_HTML">    &lt;/p&gt;</token>
+  </line>
+  <line no="31">
+    <token name="T_INLINE_HTML">    &lt;div class="sliders_step1"&gt;</token>
+  </line>
+  <line no="32">
+    <token name="T_INLINE_HTML">        &lt;div id="slider-range"&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="33">
+    <token name="T_INLINE_HTML">    &lt;/div&gt;</token>
+  </line>
+  <line no="34">
+    <token name="T_INLINE_HTML">&lt;/div&gt;</token>
+  </line>
+  <line no="35">
+    <token name="T_INLINE_HTML">  &lt;script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="36">
+    <token name="T_INLINE_HTML">&lt;script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="37"/>
+  <line no="38"/>
+  <line no="39"/>
+  <line no="40">
+    <token name="T_INLINE_HTML">    &lt;script  src="js/index.js"&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="41"/>
+  <line no="42"/>
+  <line no="43"/>
+  <line no="44"/>
+  <line no="45">
+    <token name="T_INLINE_HTML">&lt;/body&gt;</token>
+  </line>
+  <line no="46"/>
+  <line no="47">
+    <token name="T_INLINE_HTML">&lt;/html&gt;</token>
+  </line>
+  <line no="48"/>
+</source>

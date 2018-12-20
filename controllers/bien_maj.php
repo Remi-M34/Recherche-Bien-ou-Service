@@ -1,13 +1,15 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Remi
+ * User: Remi MATTEI
+ * Numéro étudiant: 21516143
  * Date: 31/10/2018
  * Time: 02:43
+ *
+ * Met à jour le bien ou le service depuis les nouvelles données de mes_propositions.php
  */
 
 include("config.php");
-//error_log("id:" . $_POST['id'] . "--------- colonne : " . $_POST['colonne'] . "--------val:" . $_POST['valeur']);
 $stmt = "";
 
 
@@ -32,7 +34,6 @@ else if (isset($_POST['update']) && $_POST['update'] == "maj") {
         $stmt = $pdo->prepare("UPDATE {$_POST['type']} SET {$_POST['colonne']} = ? WHERE id=?");
     }
     $stmt->execute([$_POST['valeur'], $_POST['id']]);
-
 }
 
 

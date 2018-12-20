@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html" file="demandes.php" realpath="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/demandes.php" size="96" time="2018-10-21T22:38:42+00:00" unixtime="1540161522" sha1="31509af38d3a0d0adc9dfa1ccc5870b0c749de99" relative="demandes.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="3">
+    <token name="T_DOC_COMMENT"> * Created by PhpStorm.</token>
+  </line>
+  <line no="4">
+    <token name="T_DOC_COMMENT"> * User: Remi</token>
+  </line>
+  <line no="5">
+    <token name="T_DOC_COMMENT"> * Date: 22/10/2018</token>
+  </line>
+  <line no="6">
+    <token name="T_DOC_COMMENT"> * Time: 00:38</token>
+  </line>
+  <line no="7">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="8"/>
+  <line no="9"/>
+</source>

@@ -1,0 +1,1360 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html" file="proposer.php" realpath="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/proposer.php" size="20293" time="2018-12-19T14:44:16+00:00" unixtime="1545230656" sha1="ba9ab52ca5b6cd553aad923f2a904286eb995b2a" relative="proposer.php"/>
+  <line no="1">
+    <token name="T_INLINE_HTML">&lt;!DOCTYPE html&gt;</token>
+  </line>
+  <line no="2">
+    <token name="T_INLINE_HTML">&lt;html&gt;</token>
+  </line>
+  <line no="3">
+    <token name="T_INLINE_HTML">&lt;head&gt;</token>
+  </line>
+  <line no="4">
+    <token name="T_INLINE_HTML">    &lt;title&gt;Proposer&lt;/title&gt;</token>
+  </line>
+  <line no="5">
+    <token name="T_INLINE_HTML">    &lt;link rel="stylesheet" href="css/style.css"&gt;</token>
+  </line>
+  <line no="6">
+    <token name="T_INLINE_HTML">    &lt;link rel="stylesheet" href="css/plages_horaires.css"&gt;</token>
+  </line>
+  <line no="7">
+    <token name="T_INLINE_HTML">    &lt;link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /&gt;</token>
+  </line>
+  <line no="8"/>
+  <line no="9">
+    <token name="T_INLINE_HTML">    &lt;link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"&gt;</token>
+  </line>
+  <line no="10">
+    <token name="T_INLINE_HTML">    &lt;meta name="viewport" content="initial-scale=1.0, user-scalable=no"&gt;</token>
+  </line>
+  <line no="11">
+    <token name="T_INLINE_HTML">    &lt;meta charset="utf-8"&gt;</token>
+  </line>
+  <line no="12">
+    <token name="T_INLINE_HTML">    &lt;link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css'&gt;</token>
+  </line>
+  <line no="13"/>
+  <line no="14">
+    <token name="T_INLINE_HTML">    &lt;link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/jquery-ui.css" rel="stylesheet"</token>
+  </line>
+  <line no="15">
+    <token name="T_INLINE_HTML">          type="text/css"/&gt;</token>
+  </line>
+  <line no="16">
+    <token name="T_INLINE_HTML">    &lt;script src="js/jquery-3.3.1.js"&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="17">
+    <token name="T_INLINE_HTML">    &lt;!--    &lt;script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"&gt;&lt;/script&gt;--&gt;</token>
+  </line>
+  <line no="18">
+    <token name="T_INLINE_HTML">    &lt;script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="19">
+    <token name="T_INLINE_HTML">&lt;/head&gt;</token>
+  </line>
+  <line no="20">
+    <token name="T_INLINE_HTML">&lt;body&gt;</token>
+  </line>
+  <line no="21"/>
+  <line no="22"/>
+  <line no="23">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="24">
+    <token name="T_STRING">session_start</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="25">
+    <token name="T_INCLUDE">include</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"header.php"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="26">
+    <token name="T_REQUIRE_ONCE">require_once</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"controllers/config.php"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="27"/>
+  <line no="28">
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_EXCLAMATION_MARK">!</token>
+    <token name="T_ISSET">isset</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$_SESSION</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="29">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_STRING">header</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Location: inscription.php"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="30">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_EXIT">exit</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="31">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="32"/>
+  <line no="33"/>
+  <line no="34">
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="35"/>
+  <line no="36"/>
+  <line no="37">
+    <token name="T_INLINE_HTML">&lt;div class="proposer_map_form_container" id="page"&gt;</token>
+  </line>
+  <line no="38">
+    <token name="T_INLINE_HTML">    &lt;div class="formulaire_proposer"&gt;</token>
+  </line>
+  <line no="39">
+    <token name="T_INLINE_HTML">        &lt;h1&gt;Ajout d'une proposition&lt;span&gt;Ajoutez un bien ou un service!&lt;/span&gt;&lt;/h1&gt;</token>
+  </line>
+  <line no="40">
+    <token name="T_INLINE_HTML">        &lt;form name="form" method="post" action="proposer_ok.php" onkeypress="return event.keyCode != 13;"</token>
+  </line>
+  <line no="41">
+    <token name="T_INLINE_HTML">              enctype="multipart/form-data"&gt;</token>
+  </line>
+  <line no="42">
+    <token name="T_INLINE_HTML">            &lt;!--         Pour eviter que le formulaire soit envoy&#xE9; quand l'utilisateur appuie sur entr&#xE9;e--&gt;</token>
+  </line>
+  <line no="43"/>
+  <line no="44">
+    <token name="T_INLINE_HTML">            &lt;div class="section"&gt;&lt;span&gt;1&lt;/span&gt;Type de bien&lt;/div&gt;</token>
+  </line>
+  <line no="45">
+    <token name="T_INLINE_HTML">            &lt;div class="formulaire_proposer_rubrique" id="un"&gt;</token>
+  </line>
+  <line no="46"/>
+  <line no="47"/>
+  <line no="48">
+    <token name="T_INLINE_HTML">                &lt;label for="bien"&gt;Vous proposez :&lt;/label&gt;</token>
+  </line>
+  <line no="49">
+    <token name="T_INLINE_HTML">                &lt;fieldset&gt;</token>
+  </line>
+  <line no="50"/>
+  <line no="51">
+    <token name="T_INLINE_HTML">                    &lt;div class="proposer_type"&gt;</token>
+  </line>
+  <line no="52">
+    <token name="T_INLINE_HTML">                        &lt;label for="bien"&gt;&lt;input type="radio" name="type" value="bien" id="bien" required="required"&gt;</token>
+  </line>
+  <line no="53">
+    <token name="T_INLINE_HTML">                            Un bien&lt;/label&gt;</token>
+  </line>
+  <line no="54">
+    <token name="T_INLINE_HTML">                        &lt;label for="service"&gt;&lt;input type="radio" name="type" value="service" id="service"&gt;</token>
+  </line>
+  <line no="55">
+    <token name="T_INLINE_HTML">                            Un service&lt;/label&gt;</token>
+  </line>
+  <line no="56">
+    <token name="T_INLINE_HTML">                    &lt;/div&gt;</token>
+  </line>
+  <line no="57">
+    <token name="T_INLINE_HTML">                &lt;/fieldset&gt;</token>
+  </line>
+  <line no="58"/>
+  <line no="59"/>
+  <line no="60">
+    <token name="T_INLINE_HTML">            &lt;/div&gt;</token>
+  </line>
+  <line no="61">
+    <token name="T_INLINE_HTML">            &lt;div class="section" id="localisation-texte"&gt;&lt;span&gt;2&lt;/span&gt;Localisation&lt;/div&gt;</token>
+  </line>
+  <line no="62"/>
+  <line no="63">
+    <token name="T_INLINE_HTML">            &lt;input id="lat-hidden" name="lat" type="hidden"&gt;</token>
+  </line>
+  <line no="64">
+    <token name="T_INLINE_HTML">            &lt;input id="lng-hidden" name="lng" type="hidden"&gt;</token>
+  </line>
+  <line no="65"/>
+  <line no="66"/>
+  <line no="67">
+    <token name="T_INLINE_HTML">            &lt;div class="formulaire_proposer_rubrique" id="deux"&gt;</token>
+  </line>
+  <line no="68">
+    <token name="T_INLINE_HTML">                &lt;label for="pac-input"&gt;Adresse&lt;input id="pac-input" required="required" type="text"</token>
+  </line>
+  <line no="69">
+    <token name="T_INLINE_HTML">                                                     name="adresse"/&gt;&lt;/label&gt;</token>
+  </line>
+  <line no="70">
+    <token name="T_INLINE_HTML">            &lt;/div&gt;</token>
+  </line>
+  <line no="71"/>
+  <line no="72"/>
+  <line no="73">
+    <token name="T_INLINE_HTML">            &lt;div class="section"&gt;&lt;span&gt;3&lt;/span&gt;Cat&#xE9;gorie, description...&lt;/div&gt;</token>
+  </line>
+  <line no="74">
+    <token name="T_INLINE_HTML">            &lt;div class="formulaire_proposer_rubrique" id="trois"&gt;</token>
+  </line>
+  <line no="75"/>
+  <line no="76">
+    <token name="T_INLINE_HTML">                &lt;label&gt;S&#xE9;lectionnez une cat&#xE9;gorie                &lt;span id="choisir"&gt;&lt;br&gt;&lt;br&gt;Vous devez d'abord pr&#xE9;ciser le type de proposition !&lt;/span&gt;</token>
+  </line>
+  <line no="77">
+    <token name="T_INLINE_HTML">                &lt;/label&gt;</token>
+  </line>
+  <line no="78">
+    <token name="T_INLINE_HTML">                &lt;select id="select-categorie-biens" name="select-categorie-biens"&gt;</token>
+  </line>
+  <line no="79">
+    <token name="T_INLINE_HTML">                    &lt;optgroup label="Biens"&gt;</token>
+  </line>
+  <line no="80">
+    <token name="T_INLINE_HTML">                    </token>
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="81"/>
+  <line no="82">
+    <token name="T_WHITESPACE">                    </token>
+    <token name="T_VARIABLE">$sql</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"SELECT nom, path, id FROM categorie where path like 'biens%' AND id &gt; 2"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="83">
+    <token name="T_WHITESPACE">                    </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$pdo</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">query</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$sql</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$ligne</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="84">
+    <token name="T_WHITESPACE">                        </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$ligne</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="85">
+    <token name="T_WHITESPACE">                        </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">&lt;option value='</token>
+    <token name="T_CURLY_OPEN">{</token>
+    <token name="T_VARIABLE">$ligne</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">'&gt;</token>
+    <token name="T_CURLY_OPEN">{</token>
+    <token name="T_VARIABLE">$ligne</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'nom'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">&lt;/option&gt;</token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="86">
+    <token name="T_WHITESPACE">                    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="87">
+    <token name="T_WHITESPACE">                    </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="88">
+    <token name="T_INLINE_HTML">                &lt;/select&gt;</token>
+  </line>
+  <line no="89">
+    <token name="T_INLINE_HTML">                &lt;select id="select-categorie-services"name="select-categorie-services"&gt;</token>
+  </line>
+  <line no="90">
+    <token name="T_INLINE_HTML">                    &lt;optgroup label="Services"&gt;</token>
+  </line>
+  <line no="91">
+    <token name="T_INLINE_HTML">                    </token>
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="92">
+    <token name="T_WHITESPACE">                    </token>
+    <token name="T_VARIABLE">$sql</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"SELECT nom, id, path FROM categorie where path like 'services%' AND ID &gt; 2"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="93">
+    <token name="T_WHITESPACE">                    </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$pdo</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">query</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$sql</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$ligne</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="94">
+    <token name="T_WHITESPACE">                        </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">&lt;option value='</token>
+    <token name="T_CURLY_OPEN">{</token>
+    <token name="T_VARIABLE">$ligne</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">'&gt;</token>
+    <token name="T_CURLY_OPEN">{</token>
+    <token name="T_VARIABLE">$ligne</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'nom'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">&lt;/option&gt;</token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="95">
+    <token name="T_WHITESPACE">                    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="96">
+    <token name="T_WHITESPACE">                    </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="97">
+    <token name="T_INLINE_HTML">                &lt;/select&gt;</token>
+  </line>
+  <line no="98"/>
+  <line no="99">
+    <token name="T_INLINE_HTML">                &lt;br&gt;&lt;br&gt;</token>
+  </line>
+  <line no="100"/>
+  <line no="101"/>
+  <line no="102"/>
+  <line no="103"/>
+  <line no="104"/>
+  <line no="105"/>
+  <line no="106"/>
+  <line no="107"/>
+  <line no="108"/>
+  <line no="109"/>
+  <line no="110"/>
+  <line no="111"/>
+  <line no="112"/>
+  <line no="113"/>
+  <line no="114"/>
+  <line no="115">
+    <token name="T_INLINE_HTML">                &lt;label&gt;Donnez un titre &#xE0; votre proposition&lt;br&gt;</token>
+  </line>
+  <line no="116">
+    <token name="T_INLINE_HTML">                    &lt;input type="texte" name="titre" required="required" maxlength="30"&gt;&lt;/label&gt;</token>
+  </line>
+  <line no="117"/>
+  <line no="118">
+    <token name="T_INLINE_HTML">                &lt;label&gt;... et une description !&lt;br&gt;</token>
+  </line>
+  <line no="119">
+    <token name="T_INLINE_HTML">                    &lt;textarea  id="proposer-description" class="text" minlength="0" rows="7"</token>
+  </line>
+  <line no="120">
+    <token name="T_INLINE_HTML">                              name="description" maxlength="125"</token>
+  </line>
+  <line no="121">
+    <token name="T_INLINE_HTML">                              placeholder="Vous pouvez r&#xE9;diger une description"&gt;&lt;/textarea&gt;&lt;/label&gt;</token>
+  </line>
+  <line no="122">
+    <token name="T_INLINE_HTML">                &lt;label&gt;Mots cl&#xE9;s&lt;br&gt;</token>
+  </line>
+  <line no="123">
+    <token name="T_INLINE_HTML">                    &lt;input type="texte" name="mots"&gt;&lt;/label&gt;</token>
+  </line>
+  <line no="124"/>
+  <line no="125"/>
+  <line no="126"/>
+  <line no="127">
+    <token name="T_INLINE_HTML">                &lt;div id="proposer_prix_neuf" &gt;</token>
+  </line>
+  <line no="128">
+    <token name="T_INLINE_HTML">                    &lt;label&gt;Prix neuf de l'objet&lt;br&gt;</token>
+  </line>
+  <line no="129">
+    <token name="T_INLINE_HTML">                        &lt;input type="number" id="prix" name="prix" min="0" &gt;&lt;/label&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="130"/>
+  <line no="131"/>
+  <line no="132">
+    <token name="T_INLINE_HTML">                &lt;br&gt;</token>
+  </line>
+  <line no="133"/>
+  <line no="134">
+    <token name="T_INLINE_HTML">                &lt;div id="proposer_plages_horaires"&gt;</token>
+  </line>
+  <line no="135">
+    <token name="T_INLINE_HTML">                    &lt;label&gt;D&#xE9;finissez les jours et horaires auxquels vous proposez votre service&lt;/label&gt;</token>
+  </line>
+  <line no="136"/>
+  <line no="137"/>
+  <line no="138">
+    <token name="T_INLINE_HTML">                    &lt;div&gt;</token>
+  </line>
+  <line no="139">
+    <token name="T_INLINE_HTML">                        Tous les jours &lt;strong&gt; De &lt;/strong&gt;&lt;strong id="amount" class="amount"&gt;&lt;/strong&gt; &lt;span</token>
+  </line>
+  <line no="140">
+    <token name="T_INLINE_HTML">                                id="proposer_afficher_jours"&gt;Plus...&lt;/span&gt;</token>
+  </line>
+  <line no="141"/>
+  <line no="142">
+    <token name="T_INLINE_HTML">                    &lt;/div&gt;</token>
+  </line>
+  <line no="143">
+    <token name="T_INLINE_HTML">                    &lt;div id="slider" class="slider"&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="144"/>
+  <line no="145">
+    <token name="T_INLINE_HTML">                    &lt;input type="hidden" value="08:00" id="ph_d"/&gt;</token>
+  </line>
+  <line no="146">
+    <token name="T_INLINE_HTML">                    &lt;input type='hidden' value="17:00" id="ph_f"/&gt;</token>
+  </line>
+  <line no="147"/>
+  <line no="148"/>
+  <line no="149">
+    <token name="T_INLINE_HTML">                    &lt;div id="proposer_plages_horaires_jours"&gt;</token>
+  </line>
+  <line no="150">
+    <token name="T_INLINE_HTML">                        &lt;div&gt;</token>
+  </line>
+  <line no="151">
+    <token name="T_INLINE_HTML">                            &lt;span class="proposer_jour"&gt;Lundi&lt;/span&gt;&lt;span</token>
+  </line>
+  <line no="152">
+    <token name="T_INLINE_HTML">                                    class="proposer_horaires"&gt;&lt;strong&gt;De &lt;/strong&gt;&lt;strong id="amount1"</token>
+  </line>
+  <line no="153">
+    <token name="T_INLINE_HTML">                                                                                          class="amount1"&gt;&lt;/strong&gt;&lt;/span&gt;</token>
+  </line>
+  <line no="154">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="155">
+    <token name="T_INLINE_HTML">                        &lt;div id="slider1"&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="156"/>
+  <line no="157">
+    <token name="T_INLINE_HTML">                        &lt;input type="hidden" value="08:00" id="ph1_d" name="ph1_d"/&gt;</token>
+  </line>
+  <line no="158">
+    <token name="T_INLINE_HTML">                        &lt;input type='hidden' value="17:00" id="ph1_f" name="ph1_f"/&gt;</token>
+  </line>
+  <line no="159"/>
+  <line no="160">
+    <token name="T_INLINE_HTML">                        &lt;div&gt;</token>
+  </line>
+  <line no="161">
+    <token name="T_INLINE_HTML">                            &lt;span class="proposer_jour"&gt; Mardi&lt;/span&gt;&lt;span</token>
+  </line>
+  <line no="162">
+    <token name="T_INLINE_HTML">                                    class="proposer_horaires"&gt;&lt;strong&gt;De &lt;/strong&gt;&lt;strong id="amount2"</token>
+  </line>
+  <line no="163">
+    <token name="T_INLINE_HTML">                                                                                          class="amount2"&gt;&lt;/strong&gt;&lt;/span&gt;</token>
+  </line>
+  <line no="164">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="165">
+    <token name="T_INLINE_HTML">                        &lt;div id="slider2"&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="166"/>
+  <line no="167">
+    <token name="T_INLINE_HTML">                        &lt;input type="hidden" value="08:00" id="ph2_d" name="ph2_d"/&gt;</token>
+  </line>
+  <line no="168">
+    <token name="T_INLINE_HTML">                        &lt;input type='hidden' value="17:00" id="ph2_f" name="ph2_f"/&gt;</token>
+  </line>
+  <line no="169"/>
+  <line no="170"/>
+  <line no="171">
+    <token name="T_INLINE_HTML">                        &lt;div&gt;</token>
+  </line>
+  <line no="172">
+    <token name="T_INLINE_HTML">                            &lt;span class="proposer_jour"&gt; Mercredi&lt;/span&gt;&lt;span class="proposer_horaires"&gt;&lt;strong&gt;De &lt;/strong&gt;&lt;strong</token>
+  </line>
+  <line no="173">
+    <token name="T_INLINE_HTML">                                        id="amount3" class="amount3"&gt;&lt;/strong&gt;&lt;/span&gt;</token>
+  </line>
+  <line no="174">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="175">
+    <token name="T_INLINE_HTML">                        &lt;div id="slider3"&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="176"/>
+  <line no="177">
+    <token name="T_INLINE_HTML">                        &lt;input type="hidden" value="08:00" id="ph3_d"  name="ph3_d"/&gt;</token>
+  </line>
+  <line no="178">
+    <token name="T_INLINE_HTML">                        &lt;input type='hidden' value="17:00" id="ph3_f"  name="ph3_f"/&gt;</token>
+  </line>
+  <line no="179"/>
+  <line no="180"/>
+  <line no="181">
+    <token name="T_INLINE_HTML">                        &lt;div&gt;</token>
+  </line>
+  <line no="182">
+    <token name="T_INLINE_HTML">                            &lt;span class="proposer_jour"&gt; Jeudi&lt;/span&gt;&lt;span</token>
+  </line>
+  <line no="183">
+    <token name="T_INLINE_HTML">                                    class="proposer_horaires"&gt;&lt;strong&gt;De &lt;/strong&gt;&lt;strong id="amount4"</token>
+  </line>
+  <line no="184">
+    <token name="T_INLINE_HTML">                                                                                          class="amount4"&gt;&lt;/strong&gt;&lt;/span&gt;</token>
+  </line>
+  <line no="185">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="186">
+    <token name="T_INLINE_HTML">                        &lt;div id="slider4"&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="187"/>
+  <line no="188">
+    <token name="T_INLINE_HTML">                        &lt;input type="hidden" value="08:00" id="ph4_d" name="ph4_d"/&gt;</token>
+  </line>
+  <line no="189">
+    <token name="T_INLINE_HTML">                        &lt;input type='hidden' value="17:00" id="ph4_f" name="ph4_f"/&gt;</token>
+  </line>
+  <line no="190"/>
+  <line no="191"/>
+  <line no="192">
+    <token name="T_INLINE_HTML">                        &lt;div&gt;</token>
+  </line>
+  <line no="193">
+    <token name="T_INLINE_HTML">                            &lt;span class="proposer_jour"&gt; Vendredi&lt;/span&gt;&lt;span</token>
+  </line>
+  <line no="194">
+    <token name="T_INLINE_HTML">                                    class="proposer_horaires"&gt; &lt;strong&gt;De &lt;/strong&gt;&lt;strong id="amount5"</token>
+  </line>
+  <line no="195">
+    <token name="T_INLINE_HTML">                                                                                           class="amount5"&gt;&lt;/strong&gt;&lt;/span&gt;</token>
+  </line>
+  <line no="196">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="197">
+    <token name="T_INLINE_HTML">                        &lt;div id="slider5"&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="198"/>
+  <line no="199">
+    <token name="T_INLINE_HTML">                        &lt;input type="hidden" value="08:00" id="ph5_d" name="ph5_d"/&gt;</token>
+  </line>
+  <line no="200">
+    <token name="T_INLINE_HTML">                        &lt;input type='hidden' value="17:00" id="ph5_f" name="ph5_f"/&gt;</token>
+  </line>
+  <line no="201"/>
+  <line no="202"/>
+  <line no="203">
+    <token name="T_INLINE_HTML">                        &lt;div&gt;</token>
+  </line>
+  <line no="204">
+    <token name="T_INLINE_HTML">                            &lt;span class="proposer_jour"&gt; Samedi&lt;/span&gt; &lt;span</token>
+  </line>
+  <line no="205">
+    <token name="T_INLINE_HTML">                                    class="proposer_horaires"&gt;&lt;strong&gt;De &lt;/strong&gt;&lt;strong id="amount6"</token>
+  </line>
+  <line no="206">
+    <token name="T_INLINE_HTML">                                                                                          class="amount6"&gt;&lt;/strong&gt;&lt;/span&gt;</token>
+  </line>
+  <line no="207">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="208">
+    <token name="T_INLINE_HTML">                        &lt;div id="slider6"&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="209"/>
+  <line no="210">
+    <token name="T_INLINE_HTML">                        &lt;input type="hidden" value="08:00" id="ph6_d" name="ph6_d"/&gt;</token>
+  </line>
+  <line no="211">
+    <token name="T_INLINE_HTML">                        &lt;input type='hidden' value="17:00" id="ph6_f" name="ph6_f"/&gt;</token>
+  </line>
+  <line no="212"/>
+  <line no="213"/>
+  <line no="214">
+    <token name="T_INLINE_HTML">                        &lt;div&gt;</token>
+  </line>
+  <line no="215">
+    <token name="T_INLINE_HTML">                            &lt;span class="proposer_jour"&gt;Dimanche&lt;/span&gt;&lt;span</token>
+  </line>
+  <line no="216">
+    <token name="T_INLINE_HTML">                                    class="proposer_horaires"&gt;&lt;strong&gt;De &lt;/strong&gt;&lt;strong id="amount7"</token>
+  </line>
+  <line no="217">
+    <token name="T_INLINE_HTML">                                                                                          class="amount7"&gt;&lt;/strong&gt;&lt;/span&gt;</token>
+  </line>
+  <line no="218">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="219">
+    <token name="T_INLINE_HTML">                        &lt;div id="slider7"&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="220"/>
+  <line no="221">
+    <token name="T_INLINE_HTML">                        &lt;input type="hidden" value="08:00" id="ph7_d" name="ph7_d"/&gt;</token>
+  </line>
+  <line no="222">
+    <token name="T_INLINE_HTML">                        &lt;input type='hidden' value="17:00" id="ph7_f" name="ph7_f"/&gt;</token>
+  </line>
+  <line no="223">
+    <token name="T_INLINE_HTML">                    &lt;/div&gt;</token>
+  </line>
+  <line no="224">
+    <token name="T_INLINE_HTML">                &lt;/div&gt;</token>
+  </line>
+  <line no="225"/>
+  <line no="226"/>
+  <line no="227"/>
+  <line no="228"/>
+  <line no="229"/>
+  <line no="230"/>
+  <line no="231"/>
+  <line no="232"/>
+  <line no="233"/>
+  <line no="234"/>
+  <line no="235"/>
+  <line no="236"/>
+  <line no="237"/>
+  <line no="238">
+    <token name="T_INLINE_HTML">            &lt;/div&gt;</token>
+  </line>
+  <line no="239"/>
+  <line no="240"/>
+  <line no="241"/>
+  <line no="242"/>
+  <line no="243">
+    <token name="T_INLINE_HTML">            &lt;div class="section"&gt;&lt;span&gt;4&lt;/span&gt;Image&lt;/div&gt;</token>
+  </line>
+  <line no="244">
+    <token name="T_INLINE_HTML">            &lt;div class="formulaire_proposer_rubrique" id="quatre"&gt;</token>
+  </line>
+  <line no="245">
+    <token name="T_INLINE_HTML">                Vous pouvez &#xE9;galement ajouter une image (jpeg, png)&lt;br&gt;&lt;br&gt;</token>
+  </line>
+  <line no="246">
+    <token name="T_INLINE_HTML">                &lt;input class="inputfile" type="file" id="image" name="image" accept="image/png, image/jpeg, image/jpg"/&gt;</token>
+  </line>
+  <line no="247">
+    <token name="T_INLINE_HTML">                &lt;label class="labelinputfile" for="image"&gt;&lt;/label&gt;</token>
+  </line>
+  <line no="248">
+    <token name="T_INLINE_HTML">            &lt;/div&gt;</token>
+  </line>
+  <line no="249"/>
+  <line no="250"/>
+  <line no="251">
+    <token name="T_INLINE_HTML">            &lt;div class="button-section"&gt;</token>
+  </line>
+  <line no="252">
+    <token name="T_INLINE_HTML">                &lt;input type="submit" name="submit"/&gt;</token>
+  </line>
+  <line no="253">
+    <token name="T_INLINE_HTML">            &lt;/div&gt;</token>
+  </line>
+  <line no="254">
+    <token name="T_INLINE_HTML">        &lt;/form&gt;</token>
+  </line>
+  <line no="255">
+    <token name="T_INLINE_HTML">    &lt;/div&gt;</token>
+  </line>
+  <line no="256"/>
+  <line no="257"/>
+  <line no="258">
+    <token name="T_INLINE_HTML">    &lt;script&gt;</token>
+  </line>
+  <line no="259"/>
+  <line no="260">
+    <token name="T_INLINE_HTML">        $("#proposer_afficher_jours").on("click", function (e) {</token>
+  </line>
+  <line no="261">
+    <token name="T_INLINE_HTML">            var block = document.getElementById("proposer_plages_horaires_jours");</token>
+  </line>
+  <line no="262">
+    <token name="T_INLINE_HTML">            if (block.style.display == "block") {</token>
+  </line>
+  <line no="263">
+    <token name="T_INLINE_HTML">                block.style.display = "none";</token>
+  </line>
+  <line no="264">
+    <token name="T_INLINE_HTML">                document.getElementById("proposer_afficher_jours").innerHTML = "Plus...";</token>
+  </line>
+  <line no="265">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="266">
+    <token name="T_INLINE_HTML">            else {</token>
+  </line>
+  <line no="267">
+    <token name="T_INLINE_HTML">                block.style.display = "block";</token>
+  </line>
+  <line no="268">
+    <token name="T_INLINE_HTML">                document.getElementById("proposer_afficher_jours").innerHTML = "Moins...";</token>
+  </line>
+  <line no="269">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="270"/>
+  <line no="271"/>
+  <line no="272">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="273"/>
+  <line no="274"/>
+  <line no="275">
+    <token name="T_INLINE_HTML">        $('input[name="type"]').on("click", function (e) {</token>
+  </line>
+  <line no="276">
+    <token name="T_INLINE_HTML">            document.getElementById("choisir").style.display = "none";</token>
+  </line>
+  <line no="277">
+    <token name="T_INLINE_HTML">            if (document.getElementById('service').checked) {</token>
+  </line>
+  <line no="278">
+    <token name="T_INLINE_HTML">                document.getElementById("localisation-texte").innerHTML = "&lt;span&gt;2&lt;/span&gt;Localisation du Service";</token>
+  </line>
+  <line no="279">
+    <token name="T_INLINE_HTML">                document.getElementById("select-categorie-biens").style.display = "none";</token>
+  </line>
+  <line no="280">
+    <token name="T_INLINE_HTML">                document.getElementById("select-categorie-services").style.display = "inline-block";</token>
+  </line>
+  <line no="281">
+    <token name="T_INLINE_HTML">                document.getElementById("select-categorie-biens").attributes["required"] = "";</token>
+  </line>
+  <line no="282">
+    <token name="T_INLINE_HTML">                document.getElementById("select-categorie-services").attributes["required"] = "required";</token>
+  </line>
+  <line no="283"/>
+  <line no="284">
+    <token name="T_INLINE_HTML">                document.getElementById("proposer_prix_neuf").style.display = "none";</token>
+  </line>
+  <line no="285">
+    <token name="T_INLINE_HTML">                document.getElementById("proposer_plages_horaires").style.display = "inline-block";</token>
+  </line>
+  <line no="286">
+    <token name="T_INLINE_HTML">                // document.getElementById("prix").attributes["required"] = "";</token>
+  </line>
+  <line no="287"/>
+  <line no="288">
+    <token name="T_INLINE_HTML">            } else if (document.getElementById('bien').checked) {</token>
+  </line>
+  <line no="289">
+    <token name="T_INLINE_HTML">                document.getElementById("localisation-texte").innerHTML = "&lt;span&gt;2&lt;/span&gt;Localisation du Bien";</token>
+  </line>
+  <line no="290">
+    <token name="T_INLINE_HTML">                document.getElementById("select-categorie-services").style.display = "none";</token>
+  </line>
+  <line no="291">
+    <token name="T_INLINE_HTML">                document.getElementById("select-categorie-biens").style.display = "inline-block";</token>
+  </line>
+  <line no="292">
+    <token name="T_INLINE_HTML">                document.getElementById("proposer_prix_neuf").style.display = "inline-block";</token>
+  </line>
+  <line no="293">
+    <token name="T_INLINE_HTML">                document.getElementById("proposer_plages_horaires").style.display = "none";</token>
+  </line>
+  <line no="294">
+    <token name="T_INLINE_HTML">                // document.getElementById("prix").attributes["required"] = "required";</token>
+  </line>
+  <line no="295">
+    <token name="T_INLINE_HTML">                document.getElementById("select-categorie-biens").attributes["required"] = "required";</token>
+  </line>
+  <line no="296">
+    <token name="T_INLINE_HTML">                document.getElementById("select-categorie-services").attributes["required"] = "";</token>
+  </line>
+  <line no="297"/>
+  <line no="298"/>
+  <line no="299">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="300"/>
+  <line no="301">
+    <token name="T_INLINE_HTML">            document.getElementById("deux").style.display = "block";</token>
+  </line>
+  <line no="302">
+    <token name="T_INLINE_HTML">        })</token>
+  </line>
+  <line no="303"/>
+  <line no="304">
+    <token name="T_INLINE_HTML">    &lt;/script&gt;</token>
+  </line>
+  <line no="305"/>
+  <line no="306"/>
+  <line no="307">
+    <token name="T_INLINE_HTML">    &lt;div class="map-container"&gt;</token>
+  </line>
+  <line no="308">
+    <token name="T_INLINE_HTML">        &lt;h1&gt;Localisation&lt;/h1&gt;</token>
+  </line>
+  <line no="309">
+    <token name="T_INLINE_HTML">        &lt;div id="map"&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="310">
+    <token name="T_INLINE_HTML">        &lt;div id="infowindow-content"&gt;</token>
+  </line>
+  <line no="311">
+    <token name="T_INLINE_HTML">            &lt;img src="images/geocode-71.png" width="16" height="16" id="place-icon"&gt;</token>
+  </line>
+  <line no="312">
+    <token name="T_INLINE_HTML">            &lt;span id="place-name" class="title"&gt;&lt;/span&gt;&lt;br&gt;</token>
+  </line>
+  <line no="313">
+    <token name="T_INLINE_HTML">            &lt;span id="place-address"&gt;&lt;/span&gt;</token>
+  </line>
+  <line no="314">
+    <token name="T_INLINE_HTML">        &lt;/div&gt;</token>
+  </line>
+  <line no="315">
+    <token name="T_INLINE_HTML">    &lt;/div&gt;</token>
+  </line>
+  <line no="316">
+    <token name="T_INLINE_HTML">&lt;/div&gt;</token>
+  </line>
+  <line no="317">
+    <token name="T_INLINE_HTML">&lt;script type="text/javascript"&gt;</token>
+  </line>
+  <line no="318">
+    <token name="T_INLINE_HTML">    // This example requires the Places library. Include the libraries=places</token>
+  </line>
+  <line no="319">
+    <token name="T_INLINE_HTML">    // parameter when you first load the API. For example:</token>
+  </line>
+  <line no="320">
+    <token name="T_INLINE_HTML">    // &lt;script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;libraries=places"&gt;</token>
+  </line>
+  <line no="321"/>
+  <line no="322">
+    <token name="T_INLINE_HTML">    var adress = "";</token>
+  </line>
+  <line no="323"/>
+  <line no="324">
+    <token name="T_INLINE_HTML">    function initMap() {</token>
+  </line>
+  <line no="325"/>
+  <line no="326"/>
+  <line no="327">
+    <token name="T_INLINE_HTML">        var map = new google.maps.Map(document.getElementById('map'), {</token>
+  </line>
+  <line no="328">
+    <token name="T_INLINE_HTML">            center: {lat: 43.623118, lng: 3.870869},</token>
+  </line>
+  <line no="329">
+    <token name="T_INLINE_HTML">            zoom: 9</token>
+  </line>
+  <line no="330">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="331">
+    <token name="T_INLINE_HTML">        var card = document.getElementById('pac-card');</token>
+  </line>
+  <line no="332">
+    <token name="T_INLINE_HTML">        var input = document.getElementById('pac-input');</token>
+  </line>
+  <line no="333">
+    <token name="T_INLINE_HTML">        // var types = document.getElementById('type-selector');</token>
+  </line>
+  <line no="334">
+    <token name="T_INLINE_HTML">        // var strictBounds = document.getElementById('strict-bounds-selector');</token>
+  </line>
+  <line no="335"/>
+  <line no="336">
+    <token name="T_INLINE_HTML">        var infowindow = new google.maps.InfoWindow();</token>
+  </line>
+  <line no="337"/>
+  <line no="338"/>
+  <line no="339">
+    <token name="T_INLINE_HTML">        if (navigator.geolocation) {</token>
+  </line>
+  <line no="340">
+    <token name="T_INLINE_HTML">            navigator.geolocation.getCurrentPosition(function (position) {</token>
+  </line>
+  <line no="341">
+    <token name="T_INLINE_HTML">                var pos = {</token>
+  </line>
+  <line no="342">
+    <token name="T_INLINE_HTML">                    lat: position.coords.latitude,</token>
+  </line>
+  <line no="343">
+    <token name="T_INLINE_HTML">                    lng: position.coords.longitude</token>
+  </line>
+  <line no="344">
+    <token name="T_INLINE_HTML">                };</token>
+  </line>
+  <line no="345"/>
+  <line no="346"/>
+  <line no="347">
+    <token name="T_INLINE_HTML">                // infowindow.setPosition(pos);</token>
+  </line>
+  <line no="348">
+    <token name="T_INLINE_HTML">                // infowindow.setContent('Location found.');</token>
+  </line>
+  <line no="349">
+    <token name="T_INLINE_HTML">                // infowindow.open(map);</token>
+  </line>
+  <line no="350">
+    <token name="T_INLINE_HTML">                map.setCenter(pos);</token>
+  </line>
+  <line no="351">
+    <token name="T_INLINE_HTML">                marker = new google.maps.Marker({</token>
+  </line>
+  <line no="352">
+    <token name="T_INLINE_HTML">                    map: map,</token>
+  </line>
+  <line no="353">
+    <token name="T_INLINE_HTML">                    anchorPoint: new google.maps.Point(0, -29)</token>
+  </line>
+  <line no="354">
+    <token name="T_INLINE_HTML">                });</token>
+  </line>
+  <line no="355">
+    <token name="T_INLINE_HTML">                marker.setPosition(pos);</token>
+  </line>
+  <line no="356">
+    <token name="T_INLINE_HTML">                marker.setVisible(true);</token>
+  </line>
+  <line no="357"/>
+  <line no="358">
+    <token name="T_INLINE_HTML">                //Geocoder</token>
+  </line>
+  <line no="359">
+    <token name="T_INLINE_HTML">                var geocoder = new google.maps.Geocoder;</token>
+  </line>
+  <line no="360">
+    <token name="T_INLINE_HTML">                geocodeLatLng(geocoder, map, infowindow, position);</token>
+  </line>
+  <line no="361"/>
+  <line no="362">
+    <token name="T_INLINE_HTML">            }, function () {</token>
+  </line>
+  <line no="363">
+    <token name="T_INLINE_HTML">                handleLocationError();</token>
+  </line>
+  <line no="364">
+    <token name="T_INLINE_HTML">            });</token>
+  </line>
+  <line no="365">
+    <token name="T_INLINE_HTML">        } else {</token>
+  </line>
+  <line no="366">
+    <token name="T_INLINE_HTML">            handleLocationError();</token>
+  </line>
+  <line no="367"/>
+  <line no="368">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="369"/>
+  <line no="370"/>
+  <line no="371">
+    <token name="T_INLINE_HTML">        function handleLocationError() {</token>
+  </line>
+  <line no="372">
+    <token name="T_INLINE_HTML">            document.getElementById('warning').innerHTML = "La g&#xE9;olocalisation n'a pas fonctionn&#xE9;e.";</token>
+  </line>
+  <line no="373"/>
+  <line no="374">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="375"/>
+  <line no="376"/>
+  <line no="377">
+    <token name="T_INLINE_HTML">        var marker = "";</token>
+  </line>
+  <line no="378"/>
+  <line no="379"/>
+  <line no="380">
+    <token name="T_INLINE_HTML">        function geocodeLatLng(geocoder, map, infowindow, position) {</token>
+  </line>
+  <line no="381">
+    <token name="T_INLINE_HTML">            // var input = document.getElementById('pac-input').value;</token>
+  </line>
+  <line no="382">
+    <token name="T_INLINE_HTML">            // var latlngStr = input.split(',', 2);</token>
+  </line>
+  <line no="383">
+    <token name="T_INLINE_HTML">            var latlng = {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)};</token>
+  </line>
+  <line no="384">
+    <token name="T_INLINE_HTML">            geocoder.geocode({'location': latlng}, function (results, status) {</token>
+  </line>
+  <line no="385">
+    <token name="T_INLINE_HTML">                if (status === 'OK') {</token>
+  </line>
+  <line no="386">
+    <token name="T_INLINE_HTML">                    if (results[0]) {</token>
+  </line>
+  <line no="387"/>
+  <line no="388">
+    <token name="T_INLINE_HTML">                        document.getElementById("pac-input").value = results[0].formatted_address;</token>
+  </line>
+  <line no="389">
+    <token name="T_INLINE_HTML">                        infowindowContent.children['place-name'].textContent = results[0].formatted_address;</token>
+  </line>
+  <line no="390">
+    <token name="T_INLINE_HTML">                        map.setZoom(15);</token>
+  </line>
+  <line no="391"/>
+  <line no="392">
+    <token name="T_INLINE_HTML">                        infowindow.open(map, marker);</token>
+  </line>
+  <line no="393"/>
+  <line no="394">
+    <token name="T_INLINE_HTML">                        document.getElementById("lat-hidden").value = position.coords.latitude.toString();</token>
+  </line>
+  <line no="395">
+    <token name="T_INLINE_HTML">                        document.getElementById("lng-hidden").value = position.coords.longitude.toString();</token>
+  </line>
+  <line no="396"/>
+  <line no="397">
+    <token name="T_INLINE_HTML">                    } else {</token>
+  </line>
+  <line no="398">
+    <token name="T_INLINE_HTML">                        window.alert('No results found');</token>
+  </line>
+  <line no="399">
+    <token name="T_INLINE_HTML">                    }</token>
+  </line>
+  <line no="400">
+    <token name="T_INLINE_HTML">                } else {</token>
+  </line>
+  <line no="401">
+    <token name="T_INLINE_HTML">                    window.alert('Geocoder failed due to: ' + status);</token>
+  </line>
+  <line no="402">
+    <token name="T_INLINE_HTML">                }</token>
+  </line>
+  <line no="403">
+    <token name="T_INLINE_HTML">            });</token>
+  </line>
+  <line no="404">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="405"/>
+  <line no="406"/>
+  <line no="407">
+    <token name="T_INLINE_HTML">        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);</token>
+  </line>
+  <line no="408"/>
+  <line no="409">
+    <token name="T_INLINE_HTML">        var autocomplete = new google.maps.places.Autocomplete(input);</token>
+  </line>
+  <line no="410"/>
+  <line no="411">
+    <token name="T_INLINE_HTML">        autocomplete.bindTo('bounds', map);</token>
+  </line>
+  <line no="412"/>
+  <line no="413">
+    <token name="T_INLINE_HTML">        autocomplete.setFields(</token>
+  </line>
+  <line no="414">
+    <token name="T_INLINE_HTML">            ['address_components', 'geometry', 'icon', 'name']);</token>
+  </line>
+  <line no="415"/>
+  <line no="416">
+    <token name="T_INLINE_HTML">        var infowindowContent = document.getElementById('infowindow-content');</token>
+  </line>
+  <line no="417">
+    <token name="T_INLINE_HTML">        infowindow.setContent(infowindowContent);</token>
+  </line>
+  <line no="418">
+    <token name="T_INLINE_HTML">        marker = new google.maps.Marker({</token>
+  </line>
+  <line no="419">
+    <token name="T_INLINE_HTML">            map: map,</token>
+  </line>
+  <line no="420">
+    <token name="T_INLINE_HTML">            anchorPoint: new google.maps.Point(0, -29)</token>
+  </line>
+  <line no="421">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="422"/>
+  <line no="423"/>
+  <line no="424">
+    <token name="T_INLINE_HTML">        autocomplete.addListener('place_changed', function () {</token>
+  </line>
+  <line no="425">
+    <token name="T_INLINE_HTML">            infowindow.close();</token>
+  </line>
+  <line no="426">
+    <token name="T_INLINE_HTML">            marker.setVisible(false);</token>
+  </line>
+  <line no="427"/>
+  <line no="428">
+    <token name="T_INLINE_HTML">            var place = autocomplete.getPlace();</token>
+  </line>
+  <line no="429"/>
+  <line no="430"/>
+  <line no="431">
+    <token name="T_INLINE_HTML">            if (!place.geometry) {</token>
+  </line>
+  <line no="432">
+    <token name="T_INLINE_HTML">                window.alert("Pas de details disponibles pour: '" + place.name + "'");</token>
+  </line>
+  <line no="433">
+    <token name="T_INLINE_HTML">                return;</token>
+  </line>
+  <line no="434">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="435"/>
+  <line no="436">
+    <token name="T_INLINE_HTML">            if (place.geometry.viewport) {</token>
+  </line>
+  <line no="437">
+    <token name="T_INLINE_HTML">                map.fitBounds(place.geometry.viewport);</token>
+  </line>
+  <line no="438">
+    <token name="T_INLINE_HTML">            } else {</token>
+  </line>
+  <line no="439">
+    <token name="T_INLINE_HTML">                map.setCenter(place.geometry.location);</token>
+  </line>
+  <line no="440">
+    <token name="T_INLINE_HTML">                map.setZoom(17);</token>
+  </line>
+  <line no="441">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="442">
+    <token name="T_INLINE_HTML">            marker.setPosition(place.geometry.location);</token>
+  </line>
+  <line no="443">
+    <token name="T_INLINE_HTML">            marker.setVisible(true);</token>
+  </line>
+  <line no="444">
+    <token name="T_INLINE_HTML">            document.getElementById("lat-hidden").value = autocomplete.getPlace().geometry.location.lat();</token>
+  </line>
+  <line no="445">
+    <token name="T_INLINE_HTML">            document.getElementById("lng-hidden").value = autocomplete.getPlace().geometry.location.lng();</token>
+  </line>
+  <line no="446"/>
+  <line no="447"/>
+  <line no="448">
+    <token name="T_INLINE_HTML">            var address = '';</token>
+  </line>
+  <line no="449">
+    <token name="T_INLINE_HTML">            if (place.address_components) {</token>
+  </line>
+  <line no="450">
+    <token name="T_INLINE_HTML">                address = [</token>
+  </line>
+  <line no="451">
+    <token name="T_INLINE_HTML">                    (place.address_components[0] &amp;&amp; place.address_components[0].short_name || ''),</token>
+  </line>
+  <line no="452">
+    <token name="T_INLINE_HTML">                    (place.address_components[1] &amp;&amp; place.address_components[1].short_name || ''),</token>
+  </line>
+  <line no="453">
+    <token name="T_INLINE_HTML">                    (place.address_components[2] &amp;&amp; place.address_components[2].short_name || '')</token>
+  </line>
+  <line no="454">
+    <token name="T_INLINE_HTML">                ].join(' ');</token>
+  </line>
+  <line no="455">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="456"/>
+  <line no="457">
+    <token name="T_INLINE_HTML">            infowindowContent.children['place-icon'].src = place.icon;</token>
+  </line>
+  <line no="458">
+    <token name="T_INLINE_HTML">            infowindowContent.children['place-name'].textContent = place.name;</token>
+  </line>
+  <line no="459">
+    <token name="T_INLINE_HTML">            infowindowContent.children['place-address'].textContent = address;</token>
+  </line>
+  <line no="460">
+    <token name="T_INLINE_HTML">            infowindow.open(map, marker);</token>
+  </line>
+  <line no="461"/>
+  <line no="462"/>
+  <line no="463">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="464"/>
+  <line no="465">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="466"/>
+  <line no="467"/>
+  <line no="468">
+    <token name="T_INLINE_HTML">    // V&#xE9;rification du formulaire avant envoi</token>
+  </line>
+  <line no="469">
+    <token name="T_INLINE_HTML">    /**</token>
+  </line>
+  <line no="470">
+    <token name="T_INLINE_HTML">     *</token>
+  </line>
+  <line no="471">
+    <token name="T_INLINE_HTML">     */</token>
+  </line>
+  <line no="472">
+    <token name="T_INLINE_HTML">    document.forms[0].addEventListener('submit', function (evt) {</token>
+  </line>
+  <line no="473">
+    <token name="T_INLINE_HTML">        var file = document.getElementById('image').files[0];</token>
+  </line>
+  <line no="474">
+    <token name="T_INLINE_HTML">        var pos = document.forms["form"]["lat"].value;</token>
+  </line>
+  <line no="475"/>
+  <line no="476">
+    <token name="T_INLINE_HTML">        document.getElementById('warning').innerHTML = "";</token>
+  </line>
+  <line no="477"/>
+  <line no="478">
+    <token name="T_INLINE_HTML">        if (pos == "") // Si l'utilisateur n'a pas s&#xE9;lectionn&#xE9; une adresse correcte, erreur</token>
+  </line>
+  <line no="479">
+    <token name="T_INLINE_HTML">        {</token>
+  </line>
+  <line no="480">
+    <token name="T_INLINE_HTML">            evt.preventDefault();</token>
+  </line>
+  <line no="481">
+    <token name="T_INLINE_HTML">            document.getElementById('warning').innerHTML += "&lt;br&gt;L'adresse doit &#xEA;tre correcte et propos&#xE9;e par Google";</token>
+  </line>
+  <line no="482">
+    <token name="T_INLINE_HTML">            window.scrollTo(0, 0);</token>
+  </line>
+  <line no="483">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="484">
+    <token name="T_INLINE_HTML">        else if (file &amp;&amp; file.size &gt; 5000000) { // si l'utilisateur tente d'uploaded une image sup&#xE9;rieur &#xE0; 5Mo</token>
+  </line>
+  <line no="485">
+    <token name="T_INLINE_HTML">            evt.preventDefault();</token>
+  </line>
+  <line no="486">
+    <token name="T_INLINE_HTML">            document.getElementById('warning').innerHTML += "&lt;br&gt;Fichier trop gros";</token>
+  </line>
+  <line no="487">
+    <token name="T_INLINE_HTML">            window.scrollTo(0, 0);</token>
+  </line>
+  <line no="488">
+    <token name="T_INLINE_HTML">        } else {</token>
+  </line>
+  <line no="489">
+    <token name="T_INLINE_HTML">            // On valide le formulaire et attribue une valeure en session afin d'&#xE9;viter le raffraichissement de la page proposer_ok et l'ajout multiple de biens/services dans la BDD</token>
+  </line>
+  <line no="490">
+    <token name="T_INLINE_HTML">            </token>
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="491">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$_SESSION</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'verif_proposer'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">true</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="492">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="493"/>
+  <line no="494">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="495"/>
+  <line no="496"/>
+  <line no="497">
+    <token name="T_INLINE_HTML">    }, false);</token>
+  </line>
+  <line no="498"/>
+  <line no="499"/>
+  <line no="500">
+    <token name="T_INLINE_HTML">&lt;/script&gt;</token>
+  </line>
+  <line no="501"/>
+  <line no="502"/>
+  <line no="503">
+    <token name="T_INLINE_HTML">&lt;script src="js/plages_horaires.js"&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="504"/>
+  <line no="505">
+    <token name="T_INLINE_HTML">&lt;script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwQxOi8hCzeOA9TfWU9wOq7DEG26kyuHk&amp;libraries=places&amp;callback=initMap"</token>
+  </line>
+  <line no="506">
+    <token name="T_INLINE_HTML">        async defer&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="507"/>
+  <line no="508"/>
+  <line no="509">
+    <token name="T_INLINE_HTML">&lt;/body&gt;</token>
+  </line>
+  <line no="510">
+    <token name="T_INLINE_HTML">&lt;/html&gt;</token>
+  </line>
+  <line no="511"/>
+  <line no="512"/>
+  <line no="513"/>
+</source>

@@ -1,0 +1,2148 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html" file="index.php" realpath="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/index.php" size="26643" time="2018-12-19T20:34:15+00:00" unixtime="1545251655" sha1="c7a6e2fb15096ab80ba8b6174ac5a296640df6c5" relative="index.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_REQUIRE_ONCE">require_once</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"controllers/config.php"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="4">
+    <token name="T_STRING">session_start</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="5"/>
+  <line no="6"/>
+  <line no="7">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="8">
+    <token name="T_DOC_COMMENT"> * Created by PhpStorm.</token>
+  </line>
+  <line no="9">
+    <token name="T_DOC_COMMENT"> * User: Remi</token>
+  </line>
+  <line no="10">
+    <token name="T_DOC_COMMENT"> * Date: 15/11/2018</token>
+  </line>
+  <line no="11">
+    <token name="T_DOC_COMMENT"> * Time: 15:58</token>
+  </line>
+  <line no="12">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="13"/>
+  <line no="14">
+    <token name="T_VARIABLE">$sql</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"SELECT * FROM biens ORDER BY date_debut DESC LIMIT 10"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="15"/>
+  <line no="16">
+    <token name="T_VARIABLE">$GLOBALS</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'items'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$pdo</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">prepare</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$sql</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="17">
+    <token name="T_VARIABLE">$GLOBALS</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'items'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">execute</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$sql_array</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="18">
+    <token name="T_VARIABLE">$_SESSION</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'requete'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">serialize</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$sql</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="19">
+    <token name="T_VARIABLE">$_SESSION</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'sql_array'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">serialize</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$sql_array</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="20"/>
+  <line no="21"/>
+  <line no="22">
+    <token name="T_VARIABLE">$cat_all</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$pdo</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">query</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"SELECT id, nom, path, id FROM categorie ORDER BY nom"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">fetchAll</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">PDO</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">FETCH_UNIQUE</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="23">
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="24"/>
+  <line no="25"/>
+  <line no="26">
+    <token name="T_INLINE_HTML">&lt;!DOCTYPE html&gt;</token>
+  </line>
+  <line no="27">
+    <token name="T_INLINE_HTML">&lt;html&gt;</token>
+  </line>
+  <line no="28">
+    <token name="T_INLINE_HTML">&lt;head&gt;</token>
+  </line>
+  <line no="29"/>
+  <line no="30">
+    <token name="T_INLINE_HTML">    &lt;title&gt;Accueil&lt;/title&gt;</token>
+  </line>
+  <line no="31">
+    <token name="T_INLINE_HTML">    &lt;link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"&gt;</token>
+  </line>
+  <line no="32">
+    <token name="T_INLINE_HTML">    &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;</token>
+  </line>
+  <line no="33">
+    <token name="T_INLINE_HTML">    &lt;link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/&gt;</token>
+  </line>
+  <line no="34">
+    <token name="T_INLINE_HTML">    &lt;link rel="stylesheet" type="text/css" href="css/pretty-checkbox.css"&gt;</token>
+  </line>
+  <line no="35">
+    <token name="T_INLINE_HTML">    &lt;link rel="stylesheet" type="text/css" href="css/daterangepicker.css"/&gt;</token>
+  </line>
+  <line no="36"/>
+  <line no="37">
+    <token name="T_INLINE_HTML">    &lt;link rel="icon" href="favicon.ico"/&gt;</token>
+  </line>
+  <line no="38">
+    <token name="T_INLINE_HTML">    &lt;meta name="viewport" content="initial-scale=1.0, user-scalable=no"&gt;</token>
+  </line>
+  <line no="39">
+    <token name="T_INLINE_HTML">    &lt;meta charset="utf-8"&gt;</token>
+  </line>
+  <line no="40"/>
+  <line no="41">
+    <token name="T_INLINE_HTML">    &lt;script src="js/jquery-3.3.1.js"&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="42">
+    <token name="T_INLINE_HTML">    &lt;script src="js/markerclusterer.js" type="text/javascript"&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="43">
+    <token name="T_INLINE_HTML">    &lt;script type="text/javascript" src="js/moment.min.js"&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="44">
+    <token name="T_INLINE_HTML">    &lt;script type="text/javascript" src="js/daterangepicker.js"&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="45"/>
+  <line no="46">
+    <token name="T_INLINE_HTML">    &lt;script&gt;</token>
+  </line>
+  <line no="47"/>
+  <line no="48"/>
+  <line no="49">
+    <token name="T_INLINE_HTML">        $(document).ready(function () {</token>
+  </line>
+  <line no="50"/>
+  <line no="51">
+    <token name="T_INLINE_HTML">            $('.recherche_avancee_field').on('click', afficherMenu);</token>
+  </line>
+  <line no="52">
+    <token name="T_INLINE_HTML">            $('.recherche_avancee_cat').on('click', selectCat);</token>
+  </line>
+  <line no="53">
+    <token name="T_INLINE_HTML">            $('.recherche_avancee_rayon').on('click', selectRayon);</token>
+  </line>
+  <line no="54">
+    <token name="T_INLINE_HTML">            $('.recherche_avancee_plus').on('click', cacherMenu);</token>
+  </line>
+  <line no="55">
+    <token name="T_INLINE_HTML">            $('.recherche_avancee_type').on('click', selectType);</token>
+  </line>
+  <line no="56"/>
+  <line no="57">
+    <token name="T_INLINE_HTML">            $('div:not(.recherche_avancee_block_choix)').on('click', cacherMenu);</token>
+  </line>
+  <line no="58"/>
+  <line no="59">
+    <token name="T_INLINE_HTML">            $('input[name="type"]').change(function () {</token>
+  </line>
+  <line no="60">
+    <token name="T_INLINE_HTML">                if (this.id.includes("bien")) {</token>
+  </line>
+  <line no="61">
+    <token name="T_INLINE_HTML">                    $('.recherche_avancee_biens').css("display", "inline-block");</token>
+  </line>
+  <line no="62">
+    <token name="T_INLINE_HTML">                    $('.recherche_avancee_services').css("display", "none");</token>
+  </line>
+  <line no="63">
+    <token name="T_INLINE_HTML">                } else {</token>
+  </line>
+  <line no="64">
+    <token name="T_INLINE_HTML">                    $('.recherche_avancee_biens').css("display", "none");</token>
+  </line>
+  <line no="65">
+    <token name="T_INLINE_HTML">                    $('.recherche_avancee_services').css("display", "inline-block");</token>
+  </line>
+  <line no="66">
+    <token name="T_INLINE_HTML">                }</token>
+  </line>
+  <line no="67">
+    <token name="T_INLINE_HTML">            })</token>
+  </line>
+  <line no="68"/>
+  <line no="69">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="70"/>
+  <line no="71">
+    <token name="T_INLINE_HTML">    &lt;/script&gt;</token>
+  </line>
+  <line no="72"/>
+  <line no="73">
+    <token name="T_INLINE_HTML">&lt;/head&gt;</token>
+  </line>
+  <line no="74">
+    <token name="T_INLINE_HTML">&lt;body&gt;</token>
+  </line>
+  <line no="75"/>
+  <line no="76"/>
+  <line no="77">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="78">
+    <token name="T_INCLUDE">include</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"header.php"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="79">
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="80"/>
+  <line no="81">
+    <token name="T_INLINE_HTML">&lt;div class="trouver_bloc_recherche rechercher_index"&gt;</token>
+  </line>
+  <line no="82"/>
+  <line no="83"/>
+  <line no="84">
+    <token name="T_INLINE_HTML">    &lt;div class="row"&gt;</token>
+  </line>
+  <line no="85">
+    <token name="T_INLINE_HTML">        &lt;div class="col-md-8 col-md-offset-2  effect6 box3"&gt;</token>
+  </line>
+  <line no="86">
+    <token name="T_INLINE_HTML">            &lt;p&gt;</token>
+  </line>
+  <line no="87">
+    <token name="T_INLINE_HTML">                Bienvenue sur &lt;span&gt;Recherche Bien ou Service.fr&lt;/span&gt;!</token>
+  </line>
+  <line no="88">
+    <token name="T_INLINE_HTML">                &lt;br&gt;Ce site propose des outils permettant l'emprunt et la mise &#xE0; disposition de biens et services dans</token>
+  </line>
+  <line no="89">
+    <token name="T_INLINE_HTML">                une zone g&#xE9;ographique d&#xE9;finie.</token>
+  </line>
+  <line no="90">
+    <token name="T_INLINE_HTML">                &lt;br&gt;</token>
+  </line>
+  <line no="91">
+    <token name="T_INLINE_HTML">            &lt;hr&gt;</token>
+  </line>
+  <line no="92">
+    <token name="T_INLINE_HTML">            </token>
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="93">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_ISSET">isset</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$_SESSION</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'user'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="94">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Chaque nouvel utilisateur dispose d'un solde de 100&#x20AC; permettant l'emprunt de biens ou services.</token>
+  </line>
+  <line no="95">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                    &lt;br&gt;Pour le moment, le solde peut passer en n&#xE9;gatif sans avoir d'incidence sur les emprunts futurs.</token>
+  </line>
+  <line no="96">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                    &lt;br&gt;Il y a en revanche deux restrictions interdisant les emprunts si l'utilisateur a trop demand&#xE9; et pas assez propos&#xE9;, ou si il a simplement effectu&#xE9; un trop grand nombre d'emprunts."</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="97">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ELSE">else</token>
+  </line>
+  <line no="98">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">" Seuls les membres connect&#xE9;s ont acc&#xE8;s &#xE0; toutes les fonctionnalit&#xE9;s, parmi lesquels :</token>
+  </line>
+  <line no="99">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                &lt;ul&gt;</token>
+  </line>
+  <line no="100">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                &lt;li&gt;</token>
+  </line>
+  <line no="101">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                    Mise &#xE0; disposition d'un mat&#xE9;riel ou service</token>
+  </line>
+  <line no="102">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                &lt;/li&gt;</token>
+  </line>
+  <line no="103">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                &lt;li&gt;</token>
+  </line>
+  <line no="104">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                    Pages r&#xE9;pertoriant ses propres emprunts pass&#xE9;s, ses mises &#xE0; dispositions avec possibilit&#xE9; de les &#xE9;diter</token>
+  </line>
+  <line no="105">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                &lt;/li&gt;</token>
+  </line>
+  <line no="106">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                &lt;li&gt;</token>
+  </line>
+  <line no="107">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                    Edition du profil, acc&#xE8;s au solde actuel.</token>
+  </line>
+  <line no="108">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                &lt;/li&gt;</token>
+  </line>
+  <line no="109">
+    <token name="T_CONSTANT_ENCAPSED_STRING">            &lt;/ul&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="110"/>
+  <line no="111">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="112"/>
+  <line no="113">
+    <token name="T_INLINE_HTML">            &lt;/p&gt;</token>
+  </line>
+  <line no="114"/>
+  <line no="115">
+    <token name="T_INLINE_HTML">        &lt;/div&gt;</token>
+  </line>
+  <line no="116">
+    <token name="T_INLINE_HTML">    &lt;/div&gt;</token>
+  </line>
+  <line no="117"/>
+  <line no="118">
+    <token name="T_INLINE_HTML">    &lt;form name="formTrouver" action="rechercher.php"&gt;</token>
+  </line>
+  <line no="119">
+    <token name="T_INLINE_HTML">        &lt;div class="trouver_form_container"&gt;</token>
+  </line>
+  <line no="120">
+    <token name="T_INLINE_HTML">            &lt;div class="recherche_simple"&gt;</token>
+  </line>
+  <line no="121">
+    <token name="T_INLINE_HTML">                &lt;div class="rechercher_input"&gt;</token>
+  </line>
+  <line no="122">
+    <token name="T_INLINE_HTML">                    &lt;div class="rechercher_image_container"&gt;</token>
+  </line>
+  <line no="123">
+    <token name="T_INLINE_HTML">                        &lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"</token>
+  </line>
+  <line no="124">
+    <token name="T_INLINE_HTML">                             viewBox="0 0 20 20"&gt;</token>
+  </line>
+  <line no="125">
+    <token name="T_INLINE_HTML">                            &lt;path d="M18.869 19.162l-5.943-6.484c1.339-1.401 2.075-3.233 2.075-5.178 0-2.003-0.78-3.887-2.197-5.303s-3.3-2.197-5.303-2.197-3.887 0.78-5.303 2.197-2.197 3.3-2.197 5.303 0.78 3.887 2.197 5.303 3.3 2.197 5.303 2.197c1.726 0 3.362-0.579 4.688-1.645l5.943 6.483c0.099 0.108 0.233 0.162 0.369 0.162 0.121 0 0.242-0.043 0.338-0.131 0.204-0.187 0.217-0.503 0.031-0.706zM1 7.5c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5-6.5-2.916-6.5-6.5z"&gt;&lt;/path&gt;</token>
+  </line>
+  <line no="126">
+    <token name="T_INLINE_HTML">                        &lt;/svg&gt;</token>
+  </line>
+  <line no="127">
+    <token name="T_INLINE_HTML">                    &lt;/div&gt;</token>
+  </line>
+  <line no="128">
+    <token name="T_INLINE_HTML">                    &lt;input id="search" type="text" name="keywords" placeholder="Rechercher..."/&gt;</token>
+  </line>
+  <line no="129">
+    <token name="T_INLINE_HTML">                    &lt;!--                    &lt;div class="rechercher_resultats_nb"&gt;--&gt;</token>
+  </line>
+  <line no="130">
+    <token name="T_INLINE_HTML">                    &lt;!--                        &lt;span id="rechercher_resultats_nb_nb"&gt;&lt;/span&gt; r&#xE9;sultats--&gt;</token>
+  </line>
+  <line no="131">
+    <token name="T_INLINE_HTML">                    &lt;!--                    &lt;/div&gt;--&gt;</token>
+  </line>
+  <line no="132">
+    <token name="T_INLINE_HTML">                &lt;/div&gt;</token>
+  </line>
+  <line no="133">
+    <token name="T_INLINE_HTML">            &lt;/div&gt;</token>
+  </line>
+  <line no="134"/>
+  <line no="135"/>
+  <line no="136">
+    <token name="T_INLINE_HTML">            &lt;div class="recherche_avancee"&gt;</token>
+  </line>
+  <line no="137">
+    <token name="T_INLINE_HTML">                &lt;span class="recherche_avancee_texte"&gt;Recherche avanc&#xE9;e&lt;/span&gt;</token>
+  </line>
+  <line no="138">
+    <token name="T_INLINE_HTML">                &lt;div class="recherche_avancee_ligne"&gt;</token>
+  </line>
+  <line no="139">
+    <token name="T_INLINE_HTML">                    &lt;div class="recherche_avancee_field recherche_avancee_type"&gt;</token>
+  </line>
+  <line no="140">
+    <token name="T_INLINE_HTML">                        &lt;span class="recherche_avancee_je_cherche recherche_avancee_span"&gt;Je recherche : &lt;/span&gt;</token>
+  </line>
+  <line no="141">
+    <token name="T_INLINE_HTML">                        &lt;div class="pretty p-icon p-round"&gt;</token>
+  </line>
+  <line no="142">
+    <token name="T_INLINE_HTML">                            &lt;input type="radio" name="type" value="biens" id="recherche_avancee_biens_radio"/&gt;</token>
+  </line>
+  <line no="143">
+    <token name="T_INLINE_HTML">                            &lt;div class="state p-primary"&gt;</token>
+  </line>
+  <line no="144">
+    <token name="T_INLINE_HTML">                                &lt;i class="icon mdi mdi-check"&gt;&lt;/i&gt;</token>
+  </line>
+  <line no="145">
+    <token name="T_INLINE_HTML">                                &lt;label for="recherche_avancee_bien"&gt;Bien&lt;/label&gt;</token>
+  </line>
+  <line no="146">
+    <token name="T_INLINE_HTML">                            &lt;/div&gt;</token>
+  </line>
+  <line no="147">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="148"/>
+  <line no="149">
+    <token name="T_INLINE_HTML">                        &lt;div class="pretty p-icon p-round"&gt;</token>
+  </line>
+  <line no="150">
+    <token name="T_INLINE_HTML">                            &lt;input type="radio" name="type" value="services" id="recherche_avancee_services_radio"/&gt;</token>
+  </line>
+  <line no="151">
+    <token name="T_INLINE_HTML">                            &lt;div class="state p-success"&gt;</token>
+  </line>
+  <line no="152">
+    <token name="T_INLINE_HTML">                                &lt;i class="icon mdi mdi-check"&gt;&lt;/i&gt;</token>
+  </line>
+  <line no="153">
+    <token name="T_INLINE_HTML">                                &lt;label for="recherche_avancee_service"&gt;Service&lt;/label&gt;</token>
+  </line>
+  <line no="154">
+    <token name="T_INLINE_HTML">                            &lt;/div&gt;</token>
+  </line>
+  <line no="155">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="156">
+    <token name="T_INLINE_HTML">                    &lt;/div&gt;</token>
+  </line>
+  <line no="157"/>
+  <line no="158"/>
+  <line no="159">
+    <token name="T_INLINE_HTML">                    &lt;div class="recherche_avancee_field recherche_avancee_categorie"&gt;</token>
+  </line>
+  <line no="160">
+    <token name="T_INLINE_HTML">                        &lt;select name="categorie" id="recherche_avancee_select_cat"&gt;</token>
+  </line>
+  <line no="161">
+    <token name="T_INLINE_HTML">                            &lt;option value="CATEGORIE" selected disabled&gt;&lt;/option&gt;</token>
+  </line>
+  <line no="162">
+    <token name="T_INLINE_HTML">                            </token>
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="163">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$cat_all</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$c</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="164">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;option value='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$c</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;&lt;/option&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="165">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="166">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="167"/>
+  <line no="168">
+    <token name="T_INLINE_HTML">                        &lt;/select&gt;</token>
+  </line>
+  <line no="169"/>
+  <line no="170">
+    <token name="T_INLINE_HTML">                        &lt;div class="recherche_avancee_block_choix" id="recherche_avancee_block_choix_cat"&gt;CATEGORIE</token>
+  </line>
+  <line no="171">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="172">
+    <token name="T_INLINE_HTML">                        &lt;div class="recherche_avancee_plus" id="recherche_avancee_plus"&gt;</token>
+  </line>
+  <line no="173">
+    <token name="T_INLINE_HTML">                            &lt;ul class="recherche_avancee_biens"&gt;</token>
+  </line>
+  <line no="174"/>
+  <line no="175">
+    <token name="T_INLINE_HTML">                                </token>
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="176"/>
+  <line no="177"/>
+  <line no="178">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$cat_all</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$c</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="179">
+    <token name="T_WHITESPACE">                                    </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">strpos</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$c</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'path'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'bien'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">false</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$c</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_GT">&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_LNUMBER">2</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="180">
+    <token name="T_WHITESPACE">                                        </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;li class='recherche_avancee_cat' id='recherche_avancee_cat_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$c</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$c</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'nom'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/li&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="181">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="182">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/ul&gt;&lt;ul class='recherche_avancee_services'&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="183">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$cat_all</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$c</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="184">
+    <token name="T_WHITESPACE">                                    </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">strpos</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$c</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'path'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'service'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">false</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$c</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_GT">&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_LNUMBER">2</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="185">
+    <token name="T_WHITESPACE">                                        </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;li class='recherche_avancee_cat' id='recherche_avancee_cat_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$c</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$c</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'nom'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/li&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="186">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="187">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/ul&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="188">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="189"/>
+  <line no="190"/>
+  <line no="191">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="192">
+    <token name="T_INLINE_HTML">                    &lt;/div&gt;</token>
+  </line>
+  <line no="193">
+    <token name="T_INLINE_HTML">                    &lt;div class="recherche_avancee_field"&gt;</token>
+  </line>
+  <line no="194">
+    <token name="T_INLINE_HTML">                        &lt;input type="text" name="daterange" value="Date" readonly="readonly"/&gt;</token>
+  </line>
+  <line no="195"/>
+  <line no="196">
+    <token name="T_INLINE_HTML">                        &lt;script&gt;$('input[name="daterange"]').daterangepicker({</token>
+  </line>
+  <line no="197">
+    <token name="T_INLINE_HTML">                                "singleDatePicker": true,</token>
+  </line>
+  <line no="198">
+    <token name="T_INLINE_HTML">                                "showWeekNumbers": true,</token>
+  </line>
+  <line no="199">
+    <token name="T_INLINE_HTML">                                "autoApply": true,</token>
+  </line>
+  <line no="200">
+    <token name="T_INLINE_HTML">                                ranges: {</token>
+  </line>
+  <line no="201">
+    <token name="T_INLINE_HTML">                                    'Aujourd\'hui': [moment(), moment()],</token>
+  </line>
+  <line no="202">
+    <token name="T_INLINE_HTML">                                    'Demain': [moment().add(1, 'days'), moment().add(1, 'days')],</token>
+  </line>
+  <line no="203">
+    <token name="T_INLINE_HTML">                                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],</token>
+  </line>
+  <line no="204">
+    <token name="T_INLINE_HTML">                                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],</token>
+  </line>
+  <line no="205">
+    <token name="T_INLINE_HTML">                                    'This Month': [moment().startOf('month'), moment().endOf('month')],</token>
+  </line>
+  <line no="206">
+    <token name="T_INLINE_HTML">                                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]</token>
+  </line>
+  <line no="207">
+    <token name="T_INLINE_HTML">                                },</token>
+  </line>
+  <line no="208">
+    <token name="T_INLINE_HTML">                                "locale": {</token>
+  </line>
+  <line no="209">
+    <token name="T_INLINE_HTML">                                    "format": "DD/MM/YYYY",</token>
+  </line>
+  <line no="210">
+    <token name="T_INLINE_HTML">                                    "separator": " - ",</token>
+  </line>
+  <line no="211">
+    <token name="T_INLINE_HTML">                                    "applyLabel": "Apply",</token>
+  </line>
+  <line no="212">
+    <token name="T_INLINE_HTML">                                    "cancelLabel": "Cancel",</token>
+  </line>
+  <line no="213">
+    <token name="T_INLINE_HTML">                                    "fromLabel": "From",</token>
+  </line>
+  <line no="214">
+    <token name="T_INLINE_HTML">                                    "toLabel": "To",</token>
+  </line>
+  <line no="215">
+    <token name="T_INLINE_HTML">                                    "customRangeLabel": "Custom",</token>
+  </line>
+  <line no="216">
+    <token name="T_INLINE_HTML">                                    "weekLabel": "W",</token>
+  </line>
+  <line no="217">
+    <token name="T_INLINE_HTML">                                    "daysOfWeek": [</token>
+  </line>
+  <line no="218">
+    <token name="T_INLINE_HTML">                                        "Di",</token>
+  </line>
+  <line no="219">
+    <token name="T_INLINE_HTML">                                        "Lu",</token>
+  </line>
+  <line no="220">
+    <token name="T_INLINE_HTML">                                        "Ma",</token>
+  </line>
+  <line no="221">
+    <token name="T_INLINE_HTML">                                        "Me",</token>
+  </line>
+  <line no="222">
+    <token name="T_INLINE_HTML">                                        "Je",</token>
+  </line>
+  <line no="223">
+    <token name="T_INLINE_HTML">                                        "Ve",</token>
+  </line>
+  <line no="224">
+    <token name="T_INLINE_HTML">                                        "Sa"</token>
+  </line>
+  <line no="225">
+    <token name="T_INLINE_HTML">                                    ],</token>
+  </line>
+  <line no="226">
+    <token name="T_INLINE_HTML">                                    "monthNames": [</token>
+  </line>
+  <line no="227">
+    <token name="T_INLINE_HTML">                                        "Janvier",</token>
+  </line>
+  <line no="228">
+    <token name="T_INLINE_HTML">                                        "F&#xE9;vrier",</token>
+  </line>
+  <line no="229">
+    <token name="T_INLINE_HTML">                                        "Mars",</token>
+  </line>
+  <line no="230">
+    <token name="T_INLINE_HTML">                                        "Avril",</token>
+  </line>
+  <line no="231">
+    <token name="T_INLINE_HTML">                                        "Mai",</token>
+  </line>
+  <line no="232">
+    <token name="T_INLINE_HTML">                                        "Juin",</token>
+  </line>
+  <line no="233">
+    <token name="T_INLINE_HTML">                                        "Juillet",</token>
+  </line>
+  <line no="234">
+    <token name="T_INLINE_HTML">                                        "Ao&#xFB;t",</token>
+  </line>
+  <line no="235">
+    <token name="T_INLINE_HTML">                                        "Septembre",</token>
+  </line>
+  <line no="236">
+    <token name="T_INLINE_HTML">                                        "Octobre",</token>
+  </line>
+  <line no="237">
+    <token name="T_INLINE_HTML">                                        "Novembre",</token>
+  </line>
+  <line no="238">
+    <token name="T_INLINE_HTML">                                        "D&#xE9;cembre"</token>
+  </line>
+  <line no="239">
+    <token name="T_INLINE_HTML">                                    ],</token>
+  </line>
+  <line no="240">
+    <token name="T_INLINE_HTML">                                    "firstDay": 1</token>
+  </line>
+  <line no="241">
+    <token name="T_INLINE_HTML">                                },</token>
+  </line>
+  <line no="242">
+    <token name="T_INLINE_HTML">                                "showCustomRangeLabel": false,</token>
+  </line>
+  <line no="243">
+    <token name="T_INLINE_HTML">                                "startDate": moment(),</token>
+  </line>
+  <line no="244">
+    <token name="T_INLINE_HTML">                                "endDate": moment(),</token>
+  </line>
+  <line no="245">
+    <token name="T_INLINE_HTML">                                "minDate": moment()</token>
+  </line>
+  <line no="246">
+    <token name="T_INLINE_HTML">                            }, function (start, end, label) {</token>
+  </line>
+  <line no="247">
+    <token name="T_INLINE_HTML">                            //     console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');</token>
+  </line>
+  <line no="248">
+    <token name="T_INLINE_HTML">                            // });</token>
+  </line>
+  <line no="249">
+    <token name="T_INLINE_HTML">                        &lt;/script&gt;</token>
+  </line>
+  <line no="250"/>
+  <line no="251"/>
+  <line no="252">
+    <token name="T_INLINE_HTML">                    &lt;/div&gt;</token>
+  </line>
+  <line no="253">
+    <token name="T_INLINE_HTML">                &lt;/div&gt;</token>
+  </line>
+  <line no="254"/>
+  <line no="255">
+    <token name="T_INLINE_HTML">                &lt;input name="lat" id="recherche_avancee_lat"&gt;</token>
+  </line>
+  <line no="256">
+    <token name="T_INLINE_HTML">                &lt;input name="lng" id="recherche_avancee_lng"&gt;</token>
+  </line>
+  <line no="257"/>
+  <line no="258">
+    <token name="T_INLINE_HTML">                &lt;div class="recherche_avancee_ligne"&gt;</token>
+  </line>
+  <line no="259">
+    <token name="T_INLINE_HTML">                    &lt;span class="recherche_avancee_span"&gt;O&#xF9; ?&lt;/span&gt;</token>
+  </line>
+  <line no="260">
+    <token name="T_INLINE_HTML">                    &lt;div class="recherche_avancee_field recherche_avancee_adresse"&gt;</token>
+  </line>
+  <line no="261"/>
+  <line no="262">
+    <token name="T_INLINE_HTML">                        &lt;input type="text" name="adresse" id="recherche_avancee_adresse"</token>
+  </line>
+  <line no="263">
+    <token name="T_INLINE_HTML">                               onkeypress="return event.keyCode != 13;"&gt;</token>
+  </line>
+  <line no="264"/>
+  <line no="265">
+    <token name="T_INLINE_HTML">                    &lt;/div&gt;</token>
+  </line>
+  <line no="266">
+    <token name="T_INLINE_HTML">                    &lt;img src="images/location2.png" id="geolocate"&gt;</token>
+  </line>
+  <line no="267"/>
+  <line no="268">
+    <token name="T_INLINE_HTML">                    &lt;!--                    &lt;span class="recherche_avancee_span"&gt;ou&lt;/span&gt;--&gt;</token>
+  </line>
+  <line no="269">
+    <token name="T_INLINE_HTML">                    &lt;div class="recherche_avancee_field"&gt;</token>
+  </line>
+  <line no="270">
+    <token name="T_INLINE_HTML">                        &lt;!--                            &lt;div class="input-select"&gt;--&gt;</token>
+  </line>
+  <line no="271">
+    <token name="T_INLINE_HTML">                        &lt;select name="rayon" id="recherche_avancee_select_rayon"&gt;</token>
+  </line>
+  <line no="272">
+    <token name="T_INLINE_HTML">                            &lt;option value="partout"&gt;Partout&lt;/option&gt;</token>
+  </line>
+  <line no="273">
+    <token name="T_INLINE_HTML">                            &lt;option value="5"&gt;5 km&lt;/option&gt;</token>
+  </line>
+  <line no="274">
+    <token name="T_INLINE_HTML">                            &lt;option value="30"&gt;30 km&lt;/option&gt;</token>
+  </line>
+  <line no="275">
+    <token name="T_INLINE_HTML">                            &lt;option value="100"&gt;100 km&lt;/option&gt;</token>
+  </line>
+  <line no="276">
+    <token name="T_INLINE_HTML">                            &lt;option value="300"&gt;&lt; 300 km&lt;/option&gt;</token>
+  </line>
+  <line no="277">
+    <token name="T_INLINE_HTML">                        &lt;/select&gt;</token>
+  </line>
+  <line no="278"/>
+  <line no="279">
+    <token name="T_INLINE_HTML">                        &lt;div class="recherche_avancee_block_choix" id="recherche_avancee_block_choix_rayon"&gt;Dans un</token>
+  </line>
+  <line no="280">
+    <token name="T_INLINE_HTML">                            rayon de</token>
+  </line>
+  <line no="281">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="282">
+    <token name="T_INLINE_HTML">                        &lt;div class="recherche_avancee_plus"&gt;</token>
+  </line>
+  <line no="283">
+    <token name="T_INLINE_HTML">                            &lt;ul&gt;</token>
+  </line>
+  <line no="284">
+    <token name="T_INLINE_HTML">                                &lt;li class="recherche_avancee_rayon" id="rayon_partout"&gt;Partout&lt;/li&gt;</token>
+  </line>
+  <line no="285">
+    <token name="T_INLINE_HTML">                                &lt;li class="recherche_avancee_rayon" id="rayon_5"&gt;5 km&lt;/li&gt;</token>
+  </line>
+  <line no="286">
+    <token name="T_INLINE_HTML">                                &lt;li class="recherche_avancee_rayon" id="rayon_30"&gt;30 km&lt;/li&gt;</token>
+  </line>
+  <line no="287">
+    <token name="T_INLINE_HTML">                                &lt;li class="recherche_avancee_rayon" id="rayon_100"&gt;100 km&lt;/li&gt;</token>
+  </line>
+  <line no="288">
+    <token name="T_INLINE_HTML">                                &lt;li class="recherche_avancee_rayon" id="rayon_300"&gt;300 km&lt;/li&gt;</token>
+  </line>
+  <line no="289">
+    <token name="T_INLINE_HTML">                            &lt;/ul&gt;</token>
+  </line>
+  <line no="290">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="291">
+    <token name="T_INLINE_HTML">                    &lt;/div&gt;</token>
+  </line>
+  <line no="292">
+    <token name="T_INLINE_HTML">                &lt;/div&gt;</token>
+  </line>
+  <line no="293"/>
+  <line no="294"/>
+  <line no="295">
+    <token name="T_INLINE_HTML">                &lt;div class="recherche_avancee_submit"&gt;</token>
+  </line>
+  <line no="296">
+    <token name="T_INLINE_HTML">                    &lt;div class="input-field"&gt;</token>
+  </line>
+  <line no="297">
+    <token name="T_INLINE_HTML">                        &lt;button class="btn-search" type="submit"&gt;Recherche</token>
+  </line>
+  <line no="298">
+    <token name="T_INLINE_HTML">                        &lt;/button&gt;</token>
+  </line>
+  <line no="299">
+    <token name="T_INLINE_HTML">                        &lt;div class="btn-delete" id="delete" onclick="window.location.href='rechercher.php'"&gt;Supprimer</token>
+  </line>
+  <line no="300">
+    <token name="T_INLINE_HTML">                        &lt;/div&gt;</token>
+  </line>
+  <line no="301">
+    <token name="T_INLINE_HTML">                    &lt;/div&gt;</token>
+  </line>
+  <line no="302">
+    <token name="T_INLINE_HTML">                &lt;/div&gt;</token>
+  </line>
+  <line no="303">
+    <token name="T_INLINE_HTML">            &lt;/div&gt;</token>
+  </line>
+  <line no="304">
+    <token name="T_INLINE_HTML">        &lt;/div&gt;</token>
+  </line>
+  <line no="305">
+    <token name="T_INLINE_HTML">    &lt;/form&gt;</token>
+  </line>
+  <line no="306"/>
+  <line no="307"/>
+  <line no="308">
+    <token name="T_INLINE_HTML">    &lt;div class="row"&gt;</token>
+  </line>
+  <line no="309">
+    <token name="T_INLINE_HTML">        &lt;div class="col-md-12 accueil_derniers_biens_ajout&#xE9;s box4"&gt;</token>
+  </line>
+  <line no="310">
+    <token name="T_INLINE_HTML">            Derniers biens ajout&#xE9;s</token>
+  </line>
+  <line no="311">
+    <token name="T_INLINE_HTML">        &lt;/div&gt;</token>
+  </line>
+  <line no="312">
+    <token name="T_INLINE_HTML">    &lt;/div&gt;</token>
+  </line>
+  <line no="313"/>
+  <line no="314"/>
+  <line no="315">
+    <token name="T_INLINE_HTML">    &lt;div class="trouver_map_container"&gt;</token>
+  </line>
+  <line no="316">
+    <token name="T_INLINE_HTML">        &lt;div id="trouver_map"&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="317">
+    <token name="T_INLINE_HTML">        &lt;div id="infowindow-content"&gt;</token>
+  </line>
+  <line no="318">
+    <token name="T_INLINE_HTML">            &lt;img src="images/geocode-71.png" width="16" height="16" id="place-icon"&gt;</token>
+  </line>
+  <line no="319">
+    <token name="T_INLINE_HTML">            &lt;span id="place-name" class="title"&gt;&lt;/span&gt;&lt;br&gt;</token>
+  </line>
+  <line no="320">
+    <token name="T_INLINE_HTML">            &lt;span id="place-address"&gt;&lt;/span&gt;</token>
+  </line>
+  <line no="321">
+    <token name="T_INLINE_HTML">        &lt;/div&gt;</token>
+  </line>
+  <line no="322">
+    <token name="T_INLINE_HTML">    &lt;/div&gt;</token>
+  </line>
+  <line no="323">
+    <token name="T_INLINE_HTML">    &lt;div id="reset_state" style="font-weight: bold; cursor: pointer;"&gt;R&#xE9;initialiser le zoom&lt;/div&gt;</token>
+  </line>
+  <line no="324">
+    <token name="T_INLINE_HTML">&lt;/div&gt;</token>
+  </line>
+  <line no="325"/>
+  <line no="326"/>
+  <line no="327">
+    <token name="T_INLINE_HTML">&lt;script type="text/javascript"&gt;</token>
+  </line>
+  <line no="328"/>
+  <line no="329"/>
+  <line no="330">
+    <token name="T_INLINE_HTML">    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';</token>
+  </line>
+  <line no="331">
+    <token name="T_INLINE_HTML">    var labelIndex = 0;</token>
+  </line>
+  <line no="332">
+    <token name="T_INLINE_HTML">    var resetGeo = false;</token>
+  </line>
+  <line no="333"/>
+  <line no="334"/>
+  <line no="335">
+    <token name="T_INLINE_HTML">    function initMap() {</token>
+  </line>
+  <line no="336"/>
+  <line no="337">
+    <token name="T_INLINE_HTML">        var bounds = new google.maps.LatLngBounds();</token>
+  </line>
+  <line no="338"/>
+  <line no="339">
+    <token name="T_INLINE_HTML">        var map = new google.maps.Map(document.getElementById('trouver_map'), {</token>
+  </line>
+  <line no="340">
+    <token name="T_INLINE_HTML">            center: {lat: 43.623118, lng: 3.870869},</token>
+  </line>
+  <line no="341">
+    <token name="T_INLINE_HTML">            zoom: 10</token>
+  </line>
+  <line no="342">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="343"/>
+  <line no="344">
+    <token name="T_INLINE_HTML">        // map.setZoom(12);</token>
+  </line>
+  <line no="345"/>
+  <line no="346">
+    <token name="T_INLINE_HTML">        var mc = new MarkerClusterer(map);</token>
+  </line>
+  <line no="347">
+    <token name="T_INLINE_HTML">        mc.setMaxZoom(17);</token>
+  </line>
+  <line no="348">
+    <token name="T_INLINE_HTML">        mc.setGridSize(33);</token>
+  </line>
+  <line no="349"/>
+  <line no="350"/>
+  <line no="351">
+    <token name="T_INLINE_HTML">        var card = document.getElementById('pac-card');</token>
+  </line>
+  <line no="352">
+    <token name="T_INLINE_HTML">        var input = document.getElementById('recherche_avancee_adresse');</token>
+  </line>
+  <line no="353"/>
+  <line no="354">
+    <token name="T_INLINE_HTML">        var infowindow = new google.maps.InfoWindow();</token>
+  </line>
+  <line no="355">
+    <token name="T_INLINE_HTML">        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);</token>
+  </line>
+  <line no="356"/>
+  <line no="357">
+    <token name="T_INLINE_HTML">        var autocomplete = new google.maps.places.Autocomplete(input);</token>
+  </line>
+  <line no="358"/>
+  <line no="359">
+    <token name="T_INLINE_HTML">        autocomplete.bindTo('bounds', map);</token>
+  </line>
+  <line no="360"/>
+  <line no="361">
+    <token name="T_INLINE_HTML">        autocomplete.setFields(</token>
+  </line>
+  <line no="362">
+    <token name="T_INLINE_HTML">            ['address_components', 'geometry', 'icon', 'name']);</token>
+  </line>
+  <line no="363"/>
+  <line no="364">
+    <token name="T_INLINE_HTML">        var infowindowContent = document.getElementById('infowindow-content');</token>
+  </line>
+  <line no="365">
+    <token name="T_INLINE_HTML">        infowindow.setContent(infowindowContent);</token>
+  </line>
+  <line no="366"/>
+  <line no="367">
+    <token name="T_INLINE_HTML">        var markerHome = new google.maps.Marker({</token>
+  </line>
+  <line no="368">
+    <token name="T_INLINE_HTML">            animation: google.maps.Animation.DROP,</token>
+  </line>
+  <line no="369">
+    <token name="T_INLINE_HTML">            map: map,</token>
+  </line>
+  <line no="370">
+    <token name="T_INLINE_HTML">            zoom: 11,</token>
+  </line>
+  <line no="371">
+    <token name="T_INLINE_HTML">            anchorPoint: new google.maps.Point(0, -29),</token>
+  </line>
+  <line no="372">
+    <token name="T_INLINE_HTML">            icon: {</token>
+  </line>
+  <line no="373">
+    <token name="T_INLINE_HTML">                size: new google.maps.Size(40, 50),</token>
+  </line>
+  <line no="374">
+    <token name="T_INLINE_HTML">                scaledSize: new google.maps.Size(40, 50),</token>
+  </line>
+  <line no="375">
+    <token name="T_INLINE_HTML">                url: "images/markers/house-location.svg"</token>
+  </line>
+  <line no="376">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="377">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="378"/>
+  <line no="379"/>
+  <line no="380">
+    <token name="T_INLINE_HTML">        // Ajout des markers. Positions l&#xE9;g&#xE8;rement modifi&#xE9;es pour &#xE9;viter la superposition de markers sur la map</token>
+  </line>
+  <line no="381">
+    <token name="T_INLINE_HTML">        </token>
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="382">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$items</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$pdo</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">prepare</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$sql</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="383">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$items</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">execute</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$sql_array</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="384">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$items</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$item</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="385">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$scale</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_LNUMBER">300000</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="386">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$delta_lat</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">mt_rand</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_LNUMBER">0</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_LNUMBER">100</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_MINUS">-</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_LNUMBER">50</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DIV">/</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$scale</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="387">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$delta_long</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">mt_rand</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_LNUMBER">0</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_LNUMBER">100</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_MINUS">-</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_LNUMBER">50</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DIV">/</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$scale</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="388">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"var lat = "</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$item</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'lat'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_PLUS">+</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$delta_lat</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">";"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="389">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"var lng = "</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$item</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'lng'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_PLUS">+</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$delta_long</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">";"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="390">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"var pos = {lat: lat,lng: lng};"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="391">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"var ad ='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$item</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'adresse'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"';"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="392">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"var titre ='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$item</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'titre'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"';"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="393">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$item</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'distance'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_EQUAL">!=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_LNUMBER">0</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="394">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"titre +='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"   ("</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">round</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$item</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'distance'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DIV">/</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_LNUMBER">1000</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_LNUMBER">2</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"km)';"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="395">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'ajouterMarker(pos,false,true,ad,titre,true,"images/markers/marker-editor.svg","'</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$cat_all</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_VARIABLE">$item</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"categorie"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"nom"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'");'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="396">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="397">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"map.fitBounds(bounds);"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="398"/>
+  <line no="399">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="400"/>
+  <line no="401">
+    <token name="T_INLINE_HTML">        if (navigator.geolocation) {</token>
+  </line>
+  <line no="402">
+    <token name="T_INLINE_HTML">            navigator.geolocation.getCurrentPosition(function (position) {</token>
+  </line>
+  <line no="403">
+    <token name="T_INLINE_HTML">                var geocoder = new google.maps.Geocoder;</token>
+  </line>
+  <line no="404">
+    <token name="T_INLINE_HTML">                geocodeLatLng(geocoder, map, infowindow, position);</token>
+  </line>
+  <line no="405">
+    <token name="T_INLINE_HTML">            }, function () {</token>
+  </line>
+  <line no="406">
+    <token name="T_INLINE_HTML">                handleLocationError();</token>
+  </line>
+  <line no="407">
+    <token name="T_INLINE_HTML">            });</token>
+  </line>
+  <line no="408">
+    <token name="T_INLINE_HTML">        } else {</token>
+  </line>
+  <line no="409">
+    <token name="T_INLINE_HTML">            handleLocationError();</token>
+  </line>
+  <line no="410">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="411"/>
+  <line no="412"/>
+  <line no="413">
+    <token name="T_INLINE_HTML">        function handleLocationError() {</token>
+  </line>
+  <line no="414">
+    <token name="T_INLINE_HTML">            document.getElementById('warning').innerHTML = "La g&#xE9;olocalisation n'a pas fonctionn&#xE9;e.";</token>
+  </line>
+  <line no="415">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="416"/>
+  <line no="417"/>
+  <line no="418">
+    <token name="T_INLINE_HTML">        function geocodeLatLng(geocoder, map, infowindow, position) {</token>
+  </line>
+  <line no="419">
+    <token name="T_INLINE_HTML">            var latlng = {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)};</token>
+  </line>
+  <line no="420">
+    <token name="T_INLINE_HTML">            geocoder.geocode({'location': latlng}, function (results, status) {</token>
+  </line>
+  <line no="421">
+    <token name="T_INLINE_HTML">                if (status === 'OK') {</token>
+  </line>
+  <line no="422">
+    <token name="T_INLINE_HTML">                    if (results[0]) {</token>
+  </line>
+  <line no="423">
+    <token name="T_INLINE_HTML">                        var address;</token>
+  </line>
+  <line no="424">
+    <token name="T_INLINE_HTML">                        if (GET('adresse') === null || resetGeo) {</token>
+  </line>
+  <line no="425">
+    <token name="T_INLINE_HTML">                            address = results[0].formatted_address;</token>
+  </line>
+  <line no="426">
+    <token name="T_INLINE_HTML">                            resetGeo = false;</token>
+  </line>
+  <line no="427"/>
+  <line no="428">
+    <token name="T_INLINE_HTML">                        } else {</token>
+  </line>
+  <line no="429">
+    <token name="T_INLINE_HTML">                            address = GET('adresse');</token>
+  </line>
+  <line no="430">
+    <token name="T_INLINE_HTML">                        }</token>
+  </line>
+  <line no="431">
+    <token name="T_INLINE_HTML">                        document.getElementById("recherche_avancee_adresse").value = address;</token>
+  </line>
+  <line no="432">
+    <token name="T_INLINE_HTML">                        infowindowContent.children['place-address'].textContent = address;</token>
+  </line>
+  <line no="433"/>
+  <line no="434">
+    <token name="T_INLINE_HTML">                        markerHome.setPosition(latlng);</token>
+  </line>
+  <line no="435">
+    <token name="T_INLINE_HTML">                        // infowindow.open(map, markerHome);</token>
+  </line>
+  <line no="436">
+    <token name="T_INLINE_HTML">                        setLatLng();</token>
+  </line>
+  <line no="437"/>
+  <line no="438">
+    <token name="T_INLINE_HTML">                        infowindowContent.children['place-name'].textContent = 'Vous &#xEA;tes ici';</token>
+  </line>
+  <line no="439"/>
+  <line no="440">
+    <token name="T_INLINE_HTML">                        bounds.extend(latlng);</token>
+  </line>
+  <line no="441">
+    <token name="T_INLINE_HTML">                        map.fitBounds(bounds);</token>
+  </line>
+  <line no="442"/>
+  <line no="443">
+    <token name="T_INLINE_HTML">                        markerHome.addListener('click', function () {</token>
+  </line>
+  <line no="444">
+    <token name="T_INLINE_HTML">                            infowindowContent.children['place-name'].textContent = "Vous &#xEA;tes ici";</token>
+  </line>
+  <line no="445">
+    <token name="T_INLINE_HTML">                            infowindowContent.children['place-address'].textContent = address;</token>
+  </line>
+  <line no="446">
+    <token name="T_INLINE_HTML">                            infowindow.open(map, this);</token>
+  </line>
+  <line no="447">
+    <token name="T_INLINE_HTML">                        });</token>
+  </line>
+  <line no="448"/>
+  <line no="449">
+    <token name="T_INLINE_HTML">                    } else {</token>
+  </line>
+  <line no="450">
+    <token name="T_INLINE_HTML">                        window.alert('Pas de r&#xE9;sultats');</token>
+  </line>
+  <line no="451">
+    <token name="T_INLINE_HTML">                    }</token>
+  </line>
+  <line no="452">
+    <token name="T_INLINE_HTML">                } else {</token>
+  </line>
+  <line no="453">
+    <token name="T_INLINE_HTML">                    window.alert('Geocoder a &#xE9;chou&#xE9; : ' + status);</token>
+  </line>
+  <line no="454">
+    <token name="T_INLINE_HTML">                }</token>
+  </line>
+  <line no="455">
+    <token name="T_INLINE_HTML">            });</token>
+  </line>
+  <line no="456">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="457"/>
+  <line no="458"/>
+  <line no="459">
+    <token name="T_INLINE_HTML">        autocomplete.addListener('place_changed', function () {</token>
+  </line>
+  <line no="460">
+    <token name="T_INLINE_HTML">            infowindow.close();</token>
+  </line>
+  <line no="461">
+    <token name="T_INLINE_HTML">            markerHome.setVisible(false);</token>
+  </line>
+  <line no="462"/>
+  <line no="463">
+    <token name="T_INLINE_HTML">            var place = autocomplete.getPlace();</token>
+  </line>
+  <line no="464"/>
+  <line no="465">
+    <token name="T_INLINE_HTML">            if (!place.geometry) {</token>
+  </line>
+  <line no="466">
+    <token name="T_INLINE_HTML">                window.alert("Pas de details disponibles pour: '" + place.name + "'");</token>
+  </line>
+  <line no="467">
+    <token name="T_INLINE_HTML">                return;</token>
+  </line>
+  <line no="468">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="469">
+    <token name="T_INLINE_HTML">            bounds.extend(place.geometry.location);</token>
+  </line>
+  <line no="470">
+    <token name="T_INLINE_HTML">            map.fitBounds(bounds);</token>
+  </line>
+  <line no="471"/>
+  <line no="472">
+    <token name="T_INLINE_HTML">            markerHome.setPosition(place.geometry.location);</token>
+  </line>
+  <line no="473">
+    <token name="T_INLINE_HTML">            setLatLng();</token>
+  </line>
+  <line no="474"/>
+  <line no="475">
+    <token name="T_INLINE_HTML">            markerHome.setIcon({</token>
+  </line>
+  <line no="476">
+    <token name="T_INLINE_HTML">                size: new google.maps.Size(40, 50),</token>
+  </line>
+  <line no="477">
+    <token name="T_INLINE_HTML">                scaledSize: new google.maps.Size(40, 50),</token>
+  </line>
+  <line no="478">
+    <token name="T_INLINE_HTML">                url: "images/markers/house-location.svg"</token>
+  </line>
+  <line no="479">
+    <token name="T_INLINE_HTML">            });</token>
+  </line>
+  <line no="480"/>
+  <line no="481">
+    <token name="T_INLINE_HTML">            markerHome.setVisible(true);</token>
+  </line>
+  <line no="482"/>
+  <line no="483">
+    <token name="T_INLINE_HTML">            var address = '';</token>
+  </line>
+  <line no="484">
+    <token name="T_INLINE_HTML">            if (place.address_components) {</token>
+  </line>
+  <line no="485">
+    <token name="T_INLINE_HTML">                address = [</token>
+  </line>
+  <line no="486">
+    <token name="T_INLINE_HTML">                    (place.address_components[0] &amp;&amp; place.address_components[0].short_name || ''),</token>
+  </line>
+  <line no="487">
+    <token name="T_INLINE_HTML">                    (place.address_components[1] &amp;&amp; place.address_components[1].short_name || ''),</token>
+  </line>
+  <line no="488">
+    <token name="T_INLINE_HTML">                    (place.address_components[2] &amp;&amp; place.address_components[2].short_name || '')</token>
+  </line>
+  <line no="489">
+    <token name="T_INLINE_HTML">                ].join(' ');</token>
+  </line>
+  <line no="490">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="491"/>
+  <line no="492">
+    <token name="T_INLINE_HTML">            infowindowContent.children['place-icon'].src = place.icon;</token>
+  </line>
+  <line no="493">
+    <token name="T_INLINE_HTML">            infowindowContent.children['place-name'].textContent = "Lieu de d&#xE9;part";</token>
+  </line>
+  <line no="494">
+    <token name="T_INLINE_HTML">            infowindowContent.children['place-address'].textContent = address;</token>
+  </line>
+  <line no="495">
+    <token name="T_INLINE_HTML">            infowindow.open(map, markerHome);</token>
+  </line>
+  <line no="496"/>
+  <line no="497">
+    <token name="T_INLINE_HTML">            markerHome.addListener('click', function () {</token>
+  </line>
+  <line no="498">
+    <token name="T_INLINE_HTML">                infowindowContent.children['place-name'].textContent = "Lieu de d&#xE9;part";</token>
+  </line>
+  <line no="499">
+    <token name="T_INLINE_HTML">                infowindowContent.children['place-address'].textContent = address;</token>
+  </line>
+  <line no="500">
+    <token name="T_INLINE_HTML">                infowindow.open(map, this);</token>
+  </line>
+  <line no="501">
+    <token name="T_INLINE_HTML">            });</token>
+  </line>
+  <line no="502">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="503"/>
+  <line no="504">
+    <token name="T_INLINE_HTML">        function setLatLng() {</token>
+  </line>
+  <line no="505">
+    <token name="T_INLINE_HTML">            document.getElementById("recherche_avancee_lat").value = markerHome.position.lat();</token>
+  </line>
+  <line no="506">
+    <token name="T_INLINE_HTML">            document.getElementById("recherche_avancee_lng").value = markerHome.position.lng();</token>
+  </line>
+  <line no="507">
+    <token name="T_INLINE_HTML">            localStorage.setItem("lat", markerHome.position.lat());</token>
+  </line>
+  <line no="508">
+    <token name="T_INLINE_HTML">            localStorage.setItem("lng", markerHome.position.lng());</token>
+  </line>
+  <line no="509">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="510"/>
+  <line no="511">
+    <token name="T_INLINE_HTML">        var geoLocateBtn = document.getElementById('geolocate');</token>
+  </line>
+  <line no="512">
+    <token name="T_INLINE_HTML">        geoLocateBtn.addEventListener('click', function () {</token>
+  </line>
+  <line no="513"/>
+  <line no="514">
+    <token name="T_INLINE_HTML">            if (navigator.geolocation) {</token>
+  </line>
+  <line no="515">
+    <token name="T_INLINE_HTML">                navigator.geolocation.getCurrentPosition(function (position) {</token>
+  </line>
+  <line no="516">
+    <token name="T_INLINE_HTML">                    var pos = {</token>
+  </line>
+  <line no="517">
+    <token name="T_INLINE_HTML">                        lat: position.coords.latitude,</token>
+  </line>
+  <line no="518">
+    <token name="T_INLINE_HTML">                        lng: position.coords.longitude</token>
+  </line>
+  <line no="519">
+    <token name="T_INLINE_HTML">                    };</token>
+  </line>
+  <line no="520"/>
+  <line no="521">
+    <token name="T_INLINE_HTML">                    //Geocoder</token>
+  </line>
+  <line no="522">
+    <token name="T_INLINE_HTML">                    var geocoder = new google.maps.Geocoder;</token>
+  </line>
+  <line no="523">
+    <token name="T_INLINE_HTML">                    resetGeo = true;</token>
+  </line>
+  <line no="524">
+    <token name="T_INLINE_HTML">                    geocodeLatLng(geocoder, map, infowindow, position);</token>
+  </line>
+  <line no="525">
+    <token name="T_INLINE_HTML">                    map.fitBounds(bounds);</token>
+  </line>
+  <line no="526"/>
+  <line no="527"/>
+  <line no="528">
+    <token name="T_INLINE_HTML">                }, function () {</token>
+  </line>
+  <line no="529">
+    <token name="T_INLINE_HTML">                    handleLocationError();</token>
+  </line>
+  <line no="530">
+    <token name="T_INLINE_HTML">                });</token>
+  </line>
+  <line no="531">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="532"/>
+  <line no="533">
+    <token name="T_INLINE_HTML">        }, false);</token>
+  </line>
+  <line no="534"/>
+  <line no="535"/>
+  <line no="536">
+    <token name="T_INLINE_HTML">        function ajouterMarker(pos, afficherFenetre, bounce, adresse, titre, afficherLabel, image, categorie) {</token>
+  </line>
+  <line no="537">
+    <token name="T_INLINE_HTML">            var label = categorie[0];</token>
+  </line>
+  <line no="538"/>
+  <line no="539">
+    <token name="T_INLINE_HTML">            marker = new google.maps.Marker({</token>
+  </line>
+  <line no="540">
+    <token name="T_INLINE_HTML">                animation: google.maps.Animation.DROP,</token>
+  </line>
+  <line no="541">
+    <token name="T_INLINE_HTML">                map: map,</token>
+  </line>
+  <line no="542">
+    <token name="T_INLINE_HTML">                position: pos,</token>
+  </line>
+  <line no="543">
+    <token name="T_INLINE_HTML">                label: {text: label, color: 'white'},</token>
+  </line>
+  <line no="544">
+    <token name="T_INLINE_HTML">                anchorPoint: new google.maps.Point(0, -33),</token>
+  </line>
+  <line no="545">
+    <token name="T_INLINE_HTML">                icon: {</token>
+  </line>
+  <line no="546">
+    <token name="T_INLINE_HTML">                    // anchor: new google.maps.Point(30, 30.26),</token>
+  </line>
+  <line no="547">
+    <token name="T_INLINE_HTML">                    size: new google.maps.Size(32, 42),</token>
+  </line>
+  <line no="548">
+    <token name="T_INLINE_HTML">                    scaledSize: new google.maps.Size(32, 42),</token>
+  </line>
+  <line no="549">
+    <token name="T_INLINE_HTML">                    url: image</token>
+  </line>
+  <line no="550">
+    <token name="T_INLINE_HTML">                }</token>
+  </line>
+  <line no="551">
+    <token name="T_INLINE_HTML">            });</token>
+  </line>
+  <line no="552"/>
+  <line no="553">
+    <token name="T_INLINE_HTML">            marker.setVisible(true);</token>
+  </line>
+  <line no="554">
+    <token name="T_INLINE_HTML">            marker.addListener('click', function () {</token>
+  </line>
+  <line no="555">
+    <token name="T_INLINE_HTML">                infowindowContent.children['place-name'].textContent = titre;</token>
+  </line>
+  <line no="556">
+    <token name="T_INLINE_HTML">                infowindowContent.children['place-address'].textContent = adresse;</token>
+  </line>
+  <line no="557">
+    <token name="T_INLINE_HTML">                infowindow.open(map, this);</token>
+  </line>
+  <line no="558">
+    <token name="T_INLINE_HTML">            });</token>
+  </line>
+  <line no="559">
+    <token name="T_INLINE_HTML">            bounds.extend(pos);</token>
+  </line>
+  <line no="560"/>
+  <line no="561">
+    <token name="T_INLINE_HTML">            mc.addMarker(marker);</token>
+  </line>
+  <line no="562">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="563"/>
+  <line no="564">
+    <token name="T_INLINE_HTML">        $("#reset_state").click(function () {</token>
+  </line>
+  <line no="565">
+    <token name="T_INLINE_HTML">            infowindow.close();</token>
+  </line>
+  <line no="566">
+    <token name="T_INLINE_HTML">            map.fitBounds(bounds);</token>
+  </line>
+  <line no="567">
+    <token name="T_INLINE_HTML">        })</token>
+  </line>
+  <line no="568">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="569"/>
+  <line no="570"/>
+  <line no="571">
+    <token name="T_INLINE_HTML">    function GET(name, url) {</token>
+  </line>
+  <line no="572">
+    <token name="T_INLINE_HTML">        if (!url) url = window.location.href;</token>
+  </line>
+  <line no="573">
+    <token name="T_INLINE_HTML">        name = name.replace(/[\[\]]/g, '\\$&amp;');</token>
+  </line>
+  <line no="574">
+    <token name="T_INLINE_HTML">        var regex = new RegExp('[?&amp;]' + name + '(=([^&amp;#]*)|&amp;|#|$)'),</token>
+  </line>
+  <line no="575">
+    <token name="T_INLINE_HTML">            results = regex.exec(url);</token>
+  </line>
+  <line no="576">
+    <token name="T_INLINE_HTML">        if (!results) return null;</token>
+  </line>
+  <line no="577">
+    <token name="T_INLINE_HTML">        if (!results[2]) return '';</token>
+  </line>
+  <line no="578">
+    <token name="T_INLINE_HTML">        return decodeURIComponent(results[2].replace(/\+/g, ' '));</token>
+  </line>
+  <line no="579">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="580"/>
+  <line no="581">
+    <token name="T_INLINE_HTML">    var parts = window.location.search.substr(1).split("&amp;");</token>
+  </line>
+  <line no="582">
+    <token name="T_INLINE_HTML">    var $_GET = {};</token>
+  </line>
+  <line no="583">
+    <token name="T_INLINE_HTML">    for (var i = 0; i &lt; parts.length; i++) {</token>
+  </line>
+  <line no="584">
+    <token name="T_INLINE_HTML">        var temp = parts[i].split("=");</token>
+  </line>
+  <line no="585">
+    <token name="T_INLINE_HTML">        $_GET[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]).replace('+', ' ');</token>
+  </line>
+  <line no="586">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="587"/>
+  <line no="588"/>
+  <line no="589">
+    <token name="T_INLINE_HTML">    /**</token>
+  </line>
+  <line no="590">
+    <token name="T_INLINE_HTML">     * On affiche le menu d&#xE9;roulant personnalis&#xE9; correspondant au champ cliqu&#xE9; par l'utilisateur, apr&#xE8;s avoir cach&#xE9; tous les autres</token>
+  </line>
+  <line no="591">
+    <token name="T_INLINE_HTML">     */</token>
+  </line>
+  <line no="592">
+    <token name="T_INLINE_HTML">    function afficherMenu() {</token>
+  </line>
+  <line no="593">
+    <token name="T_INLINE_HTML">        $('div.recherche_avancee_plus').css("display", "none");</token>
+  </line>
+  <line no="594">
+    <token name="T_INLINE_HTML">        $(this).children('div.recherche_avancee_plus').css("display", "inline-block");</token>
+  </line>
+  <line no="595">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="596"/>
+  <line no="597"/>
+  <line no="598">
+    <token name="T_INLINE_HTML">    function selectCat() {</token>
+  </line>
+  <line no="599"/>
+  <line no="600">
+    <token name="T_INLINE_HTML">        $("#recherche_avancee_block_choix_cat").text(this.textContent);</token>
+  </line>
+  <line no="601">
+    <token name="T_INLINE_HTML">        var id = $(this).attr('id').split("_")[3];</token>
+  </line>
+  <line no="602">
+    <token name="T_INLINE_HTML">        $("#recherche_avancee_select_cat").val(id);</token>
+  </line>
+  <line no="603">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="604"/>
+  <line no="605">
+    <token name="T_INLINE_HTML">    function selectType() {</token>
+  </line>
+  <line no="606">
+    <token name="T_INLINE_HTML">        $("#recherche_avancee_block_choix_cat").text("CATEGORIE");</token>
+  </line>
+  <line no="607">
+    <token name="T_INLINE_HTML">        $("#recherche_avancee_select_cat").val("CATEGORIE");</token>
+  </line>
+  <line no="608"/>
+  <line no="609">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="610"/>
+  <line no="611"/>
+  <line no="612">
+    <token name="T_INLINE_HTML">    function selectRayon() {</token>
+  </line>
+  <line no="613">
+    <token name="T_INLINE_HTML">        $("#recherche_avancee_block_choix_rayon").text(this.textContent);</token>
+  </line>
+  <line no="614">
+    <token name="T_INLINE_HTML">        $("#recherche_avancee_select_rayon").val(this.id.split("_")[1]);</token>
+  </line>
+  <line no="615"/>
+  <line no="616">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="617"/>
+  <line no="618"/>
+  <line no="619">
+    <token name="T_INLINE_HTML">    function cacherMenu() {</token>
+  </line>
+  <line no="620">
+    <token name="T_INLINE_HTML">        if (!$(event.target).closest('.recherche_avancee_block_choix').length) {</token>
+  </line>
+  <line no="621">
+    <token name="T_INLINE_HTML">            setTimeout(function () {</token>
+  </line>
+  <line no="622">
+    <token name="T_INLINE_HTML">                $('div.recherche_avancee_plus').css("display", "none");</token>
+  </line>
+  <line no="623">
+    <token name="T_INLINE_HTML">            }, 0);</token>
+  </line>
+  <line no="624">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="625">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="626"/>
+  <line no="627">
+    <token name="T_INLINE_HTML">&lt;/script&gt;</token>
+  </line>
+  <line no="628"/>
+  <line no="629">
+    <token name="T_INLINE_HTML">&lt;script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwQxOi8hCzeOA9TfWU9wOq7DEG26kyuHk&amp;libraries=places&amp;callback=initMap"</token>
+  </line>
+  <line no="630">
+    <token name="T_INLINE_HTML">        async defer&gt;</token>
+  </line>
+  <line no="631">
+    <token name="T_INLINE_HTML">&lt;/script&gt;</token>
+  </line>
+  <line no="632"/>
+  <line no="633"/>
+  <line no="634">
+    <token name="T_INLINE_HTML">&lt;/body&gt;</token>
+  </line>
+  <line no="635">
+    <token name="T_INLINE_HTML">&lt;/html&gt;</token>
+  </line>
+  <line no="636"/>
+</source>

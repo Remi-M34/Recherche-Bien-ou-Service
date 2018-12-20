@@ -1,0 +1,2780 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html" file="mes_propositions.php" realpath="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/mes_propositions.php" size="28396" time="2018-12-19T02:34:27+00:00" unixtime="1545186867" sha1="c7697e60666ed5f1127009bc6d007762b177cc77" relative="mes_propositions.php"/>
+  <line no="1">
+    <token name="T_INLINE_HTML">&lt;!DOCTYPE html&gt;</token>
+  </line>
+  <line no="2">
+    <token name="T_INLINE_HTML">&lt;html&gt;</token>
+  </line>
+  <line no="3">
+    <token name="T_INLINE_HTML">&lt;head&gt;</token>
+  </line>
+  <line no="4">
+    <token name="T_INLINE_HTML">    &lt;title&gt;Proposer&lt;/title&gt;</token>
+  </line>
+  <line no="5">
+    <token name="T_INLINE_HTML">    &lt;link rel="stylesheet" href="css/style.css"&gt;</token>
+  </line>
+  <line no="6">
+    <token name="T_INLINE_HTML">    &lt;link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /&gt;</token>
+  </line>
+  <line no="7"/>
+  <line no="8">
+    <token name="T_INLINE_HTML">    &lt;link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"&gt;</token>
+  </line>
+  <line no="9">
+    <token name="T_INLINE_HTML">    &lt;meta name="viewport" content="initial-scale=1.0, user-scalable=no"&gt;</token>
+  </line>
+  <line no="10">
+    <token name="T_INLINE_HTML">    &lt;meta charset="utf-8"&gt;</token>
+  </line>
+  <line no="11"/>
+  <line no="12">
+    <token name="T_INLINE_HTML">    &lt;link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/jquery-ui.css" rel="stylesheet"</token>
+  </line>
+  <line no="13">
+    <token name="T_INLINE_HTML">          type="text/css"/&gt;</token>
+  </line>
+  <line no="14">
+    <token name="T_INLINE_HTML">    &lt;script src="js/jquery-3.3.1.js"&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="15"/>
+  <line no="16">
+    <token name="T_INLINE_HTML">&lt;/head&gt;</token>
+  </line>
+  <line no="17">
+    <token name="T_INLINE_HTML">&lt;body&gt;</token>
+  </line>
+  <line no="18"/>
+  <line no="19"/>
+  <line no="20">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="21">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="22">
+    <token name="T_DOC_COMMENT"> * Created by PhpStorm.</token>
+  </line>
+  <line no="23">
+    <token name="T_DOC_COMMENT"> * User: Remi</token>
+  </line>
+  <line no="24">
+    <token name="T_DOC_COMMENT"> * Date: 29/10/2018</token>
+  </line>
+  <line no="25">
+    <token name="T_DOC_COMMENT"> * Time: 22:40</token>
+  </line>
+  <line no="26">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="27"/>
+  <line no="28"/>
+  <line no="29">
+    <token name="T_STRING">session_start</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="30">
+    <token name="T_INCLUDE">include</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"header.php"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="31">
+    <token name="T_INCLUDE">include</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"controllers/config.php"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="32"/>
+  <line no="33"/>
+  <line no="34"/>
+  <line no="35">
+    <token name="T_VARIABLE">$biens</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$pdo</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">prepare</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"</token>
+  </line>
+  <line no="36">
+    <token name="T_CONSTANT_ENCAPSED_STRING">SELECT *, DATE_FORMAT(date_debut,'%d/%m/%Y') AS date</token>
+  </line>
+  <line no="37">
+    <token name="T_CONSTANT_ENCAPSED_STRING">FROM biens </token>
+  </line>
+  <line no="38">
+    <token name="T_CONSTANT_ENCAPSED_STRING">WHERE id_utilisateur = ?"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="39">
+    <token name="T_VARIABLE">$biens</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">execute</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_VARIABLE">$_SESSION</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="40"/>
+  <line no="41">
+    <token name="T_VARIABLE">$services</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$pdo</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">prepare</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"</token>
+  </line>
+  <line no="42">
+    <token name="T_CONSTANT_ENCAPSED_STRING">SELECT *, DATE_FORMAT(date_debut,'%d/%m/%Y') AS date</token>
+  </line>
+  <line no="43">
+    <token name="T_CONSTANT_ENCAPSED_STRING">FROM services </token>
+  </line>
+  <line no="44">
+    <token name="T_CONSTANT_ENCAPSED_STRING">WHERE id_utilisateur = ?"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="45">
+    <token name="T_VARIABLE">$services</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">execute</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_VARIABLE">$_SESSION</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="46"/>
+  <line no="47">
+    <token name="T_VARIABLE">$categorie</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$pdo</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">query</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"SELECT id, nom FROM categorie WHERE path LIKE 'biens%'"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">fetchAll</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">PDO</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">FETCH_KEY_PAIR</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="48">
+    <token name="T_VARIABLE">$categorie_services</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$pdo</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">query</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"SELECT id, nom FROM categorie WHERE path LIKE 'services%'"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">fetchAll</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">PDO</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">FETCH_KEY_PAIR</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="49"/>
+  <line no="50"/>
+  <line no="51">
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="52"/>
+  <line no="53">
+    <token name="T_INLINE_HTML">&lt;script type="text/javascript"&gt;</token>
+  </line>
+  <line no="54">
+    <token name="T_INLINE_HTML">    $(document).ready(function () {</token>
+  </line>
+  <line no="55"/>
+  <line no="56">
+    <token name="T_INLINE_HTML">        $('.mp_titre').on('click', changerTitre);</token>
+  </line>
+  <line no="57">
+    <token name="T_INLINE_HTML">        $('.mp_des').on('click', changerDescription);</token>
+  </line>
+  <line no="58">
+    <token name="T_INLINE_HTML">        $('.mp_cat').on('click', changerCategorieBiens);</token>
+  </line>
+  <line no="59">
+    <token name="T_INLINE_HTML">        $('.mp_mots').on('click', changerMots);</token>
+  </line>
+  <line no="60">
+    <token name="T_INLINE_HTML">        $('.mp_prix').on('click', changerPrix);</token>
+  </line>
+  <line no="61">
+    <token name="T_INLINE_HTML">        $('.mp_supp').on('click', supp);</token>
+  </line>
+  <line no="62">
+    <token name="T_INLINE_HTML">        $('.mp_type').on('click', changerType);</token>
+  </line>
+  <line no="63"/>
+  <line no="64">
+    <token name="T_INLINE_HTML">        // Si l'utilisateur appuie sur Entr&#xE9;e, on valide la nouvelle valeur</token>
+  </line>
+  <line no="65">
+    <token name="T_INLINE_HTML">        $('.mp_titre_input').keydown(function (e) {</token>
+  </line>
+  <line no="66">
+    <token name="T_INLINE_HTML">            if (e.keyCode == 13) {</token>
+  </line>
+  <line no="67">
+    <token name="T_INLINE_HTML">                e.preventDefault();</token>
+  </line>
+  <line no="68">
+    <token name="T_INLINE_HTML">                var id = $(this).attr('id').split("_")[3];</token>
+  </line>
+  <line no="69">
+    <token name="T_INLINE_HTML">                var val = $(this).val();</token>
+  </line>
+  <line no="70">
+    <token name="T_INLINE_HTML">            var type = $(this).attr('id').split("_")[0];</token>
+  </line>
+  <line no="71">
+    <token name="T_INLINE_HTML">                maj("titre", val, id, type);</token>
+  </line>
+  <line no="72">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="73">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="74"/>
+  <line no="75"/>
+  <line no="76">
+    <token name="T_INLINE_HTML">        $('.mp_des_input').keydown(function (e) {</token>
+  </line>
+  <line no="77">
+    <token name="T_INLINE_HTML">            if (e.keyCode == 13) {</token>
+  </line>
+  <line no="78">
+    <token name="T_INLINE_HTML">                e.preventDefault();</token>
+  </line>
+  <line no="79">
+    <token name="T_INLINE_HTML">                var id = $(this).attr('id').split("_")[3];</token>
+  </line>
+  <line no="80">
+    <token name="T_INLINE_HTML">                var val = $(this).val();</token>
+  </line>
+  <line no="81">
+    <token name="T_INLINE_HTML">                var type = $(this).attr('id').split("_")[0];</token>
+  </line>
+  <line no="82"/>
+  <line no="83">
+    <token name="T_INLINE_HTML">                maj("description", val, id, type);</token>
+  </line>
+  <line no="84">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="85">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="86"/>
+  <line no="87"/>
+  <line no="88">
+    <token name="T_INLINE_HTML">        $('.mp_cat_select').change(function () {</token>
+  </line>
+  <line no="89">
+    <token name="T_INLINE_HTML">            var id = $(this).attr('id').split("_")[5];</token>
+  </line>
+  <line no="90">
+    <token name="T_INLINE_HTML">            var type = $(this).attr('id').split("_")[0];</token>
+  </line>
+  <line no="91"/>
+  <line no="92">
+    <token name="T_INLINE_HTML">            var valid = "#" + type + "_mes_propositions_select_cat_" + id + " option:selected";</token>
+  </line>
+  <line no="93">
+    <token name="T_INLINE_HTML">            var val = $(valid).html();</token>
+  </line>
+  <line no="94">
+    <token name="T_INLINE_HTML">            var val2 = $(this).val();</token>
+  </line>
+  <line no="95">
+    <token name="T_INLINE_HTML">            var type = $(this).attr('id').split("_")[0];</token>
+  </line>
+  <line no="96"/>
+  <line no="97">
+    <token name="T_INLINE_HTML">            maj("categorie", val2, id,type);</token>
+  </line>
+  <line no="98">
+    <token name="T_INLINE_HTML">            document.getElementById(type + "_cat_span_" + id).innerHTML = val;</token>
+  </line>
+  <line no="99"/>
+  <line no="100">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="101"/>
+  <line no="102"/>
+  <line no="103">
+    <token name="T_INLINE_HTML">        $('.mp_mots_input').keydown(function (e) {</token>
+  </line>
+  <line no="104">
+    <token name="T_INLINE_HTML">            if (e.keyCode == 13) {</token>
+  </line>
+  <line no="105">
+    <token name="T_INLINE_HTML">                e.preventDefault();</token>
+  </line>
+  <line no="106">
+    <token name="T_INLINE_HTML">                var id = $(this).attr('id').split("_")[3];</token>
+  </line>
+  <line no="107">
+    <token name="T_INLINE_HTML">                var val = $(this).val();</token>
+  </line>
+  <line no="108"/>
+  <line no="109">
+    <token name="T_INLINE_HTML">                var type = $(this).attr('id').split("_")[0];</token>
+  </line>
+  <line no="110"/>
+  <line no="111">
+    <token name="T_INLINE_HTML">                maj("mots", val, id, type);</token>
+  </line>
+  <line no="112">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="113">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="114"/>
+  <line no="115"/>
+  <line no="116">
+    <token name="T_INLINE_HTML">        $('.mp_prix_input').keydown(function (e) {</token>
+  </line>
+  <line no="117">
+    <token name="T_INLINE_HTML">            if (e.keyCode == 13) {</token>
+  </line>
+  <line no="118">
+    <token name="T_INLINE_HTML">                e.preventDefault();</token>
+  </line>
+  <line no="119">
+    <token name="T_INLINE_HTML">                var id = $(this).attr('id').split("_")[3];</token>
+  </line>
+  <line no="120">
+    <token name="T_INLINE_HTML">                var val = $(this).val();</token>
+  </line>
+  <line no="121">
+    <token name="T_INLINE_HTML">                var type = $(this).attr('id').split("_")[0];</token>
+  </line>
+  <line no="122">
+    <token name="T_INLINE_HTML">                maj("prix_neuf", val, id,type);</token>
+  </line>
+  <line no="123">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="124">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="125"/>
+  <line no="126"/>
+  <line no="127">
+    <token name="T_INLINE_HTML">    });</token>
+  </line>
+  <line no="128"/>
+  <line no="129">
+    <token name="T_INLINE_HTML">&lt;/script&gt;</token>
+  </line>
+  <line no="130"/>
+  <line no="131"/>
+  <line no="132">
+    <token name="T_INLINE_HTML">&lt;div class="mes_propositions page"&gt;</token>
+  </line>
+  <line no="133"/>
+  <line no="134"/>
+  <line no="135">
+    <token name="T_INLINE_HTML">    &lt;div class="row"&gt;</token>
+  </line>
+  <line no="136">
+    <token name="T_INLINE_HTML">        &lt;div class="col-md-6 col-md-offset-3 mes_propositions_infos effect6 box2"&gt;</token>
+  </line>
+  <line no="137">
+    <token name="T_INLINE_HTML">            &lt;p&gt;Ce tableau r&#xE9;pertorie la liste de toutes vos propositions de biens et services.</token>
+  </line>
+  <line no="138"/>
+  <line no="139">
+    <token name="T_INLINE_HTML">                Pour en modifier un, cliquez sur un champ, &#xE9;ditez-le puis validez avec entr&#xE9;e.&lt;/p&gt;</token>
+  </line>
+  <line no="140"/>
+  <line no="141">
+    <token name="T_INLINE_HTML">        &lt;/div&gt;</token>
+  </line>
+  <line no="142">
+    <token name="T_INLINE_HTML">    &lt;/div&gt;</token>
+  </line>
+  <line no="143"/>
+  <line no="144">
+    <token name="T_INLINE_HTML">    &lt;div class="mes_propositions_choix_container"&gt;</token>
+  </line>
+  <line no="145">
+    <token name="T_INLINE_HTML">        &lt;input type="radio" id="radio1" name="radios" value="biens" class="mes_propositions_choix" checked&gt;</token>
+  </line>
+  <line no="146">
+    <token name="T_INLINE_HTML">        &lt;label for="radio1" class="mp_type" id="mp_choix_biens"&gt;Biens&lt;/label&gt;</token>
+  </line>
+  <line no="147">
+    <token name="T_INLINE_HTML">        &lt;input type="radio" id="radio2" name="radios" value="services" class="mes_propositions_choix"&gt;</token>
+  </line>
+  <line no="148">
+    <token name="T_INLINE_HTML">        &lt;label for="radio2" class="mp_type" id="mp_choix_services"&gt;Services&lt;/label&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="149"/>
+  <line no="150"/>
+  <line no="151">
+    <token name="T_INLINE_HTML">    &lt;div class="mes_propositions_limiter"&gt;</token>
+  </line>
+  <line no="152">
+    <token name="T_INLINE_HTML">        &lt;div class="mes_propositions_container_tableau" id="test" value="tt"&gt;</token>
+  </line>
+  <line no="153">
+    <token name="T_INLINE_HTML">            &lt;div class="mes_propositions_wrap_tableau"&gt;</token>
+  </line>
+  <line no="154">
+    <token name="T_INLINE_HTML">                &lt;div class="mes_propositions_tableau"&gt;</token>
+  </line>
+  <line no="155">
+    <token name="T_INLINE_HTML">                    &lt;table id="mp_table_biens"&gt;</token>
+  </line>
+  <line no="156">
+    <token name="T_INLINE_HTML">                        &lt;thead&gt;</token>
+  </line>
+  <line no="157">
+    <token name="T_INLINE_HTML">                        &lt;tr class="table100-head"&gt;</token>
+  </line>
+  <line no="158">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_image_th c"&gt;Image&lt;/th&gt;</token>
+  </line>
+  <line no="159">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_titre_th"&gt;Titre&lt;/th&gt;</token>
+  </line>
+  <line no="160">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_description_th l"&gt;Description&lt;/th&gt;</token>
+  </line>
+  <line no="161">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_categorie_th"&gt;Cat&#xE9;gorie&lt;/th&gt;</token>
+  </line>
+  <line no="162">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_mots_th"&gt;Mots cl&#xE9;s&lt;/th&gt;</token>
+  </line>
+  <line no="163">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_prix_th c"&gt;Prix neuf&lt;/th&gt;</token>
+  </line>
+  <line no="164">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_lieu_th c" &gt;Lieu&lt;/th&gt;</token>
+  </line>
+  <line no="165">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_date_th c"&gt;Date&lt;/th&gt;</token>
+  </line>
+  <line no="166">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_supp_th"&gt;Supp&lt;/th&gt;</token>
+  </line>
+  <line no="167">
+    <token name="T_INLINE_HTML">                        &lt;/tr&gt;</token>
+  </line>
+  <line no="168">
+    <token name="T_INLINE_HTML">                        &lt;/thead&gt;</token>
+  </line>
+  <line no="169">
+    <token name="T_INLINE_HTML">                        &lt;tbody&gt;</token>
+  </line>
+  <line no="170"/>
+  <line no="171"/>
+  <line no="172">
+    <token name="T_INLINE_HTML">                        </token>
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="173"/>
+  <line no="174">
+    <token name="T_WHITESPACE">                        </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$biens</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="175"/>
+  <line no="176">
+    <token name="T_COMMENT">//                            $cat = $pdo-&gt;query("SELECT nom FROM categorie WHERE id=" . $row['categorie'])-&gt;fetch();</token>
+  </line>
+  <line no="177">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;tr id='biens_tr_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;&lt;td class='mes_propositions_biens_colonne1 mp_image'&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="178">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_VARIABLE">$id</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="179">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_VARIABLE">$im</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'image'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="180">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'image'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_EQUAL">==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">NULL</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="181">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_VARIABLE">$id</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"default_bien"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="182">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_VARIABLE">$im</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"png"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="183">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="184">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">&lt;img class='mes_propositions_image mp_image' src='uploads/biens/</token>
+    <token name="T_CURLY_OPEN">{</token>
+    <token name="T_VARIABLE">$id</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">.</token>
+    <token name="T_CURLY_OPEN">{</token>
+    <token name="T_VARIABLE">$im</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">'&gt;&lt;/td&gt;</token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="185"/>
+  <line no="186">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_biens_colonne2 mp_titre' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="187">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;span id='biens_titre_span_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"titre"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/span&gt;</token>
+  </line>
+  <line no="188">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;input class='biens_titre_input mp_titre_input' value='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"titre"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'  onfocus='this.value = this.value;' id='biens_titre_input_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;&lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="189"/>
+  <line no="190">
+    <token name="T_COMMENT">//                            echo  "&lt;td class='mes_propositions_biens_colonne3'&gt;" . $row["description"] . "&lt;/td&gt;";</token>
+  </line>
+  <line no="191"/>
+  <line no="192">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_biens_colonne3 mp_des' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="193">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;span id='biens_des_span_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"description"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/span&gt;</token>
+  </line>
+  <line no="194">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;textarea class='biens_des_input mp_des_input'  rows='5' value='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"description"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'  id='biens_des_input_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'description'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/textarea&gt;&lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="195"/>
+  <line no="196"/>
+  <line no="197">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_biens_colonne4 mp_cat' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="198">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;span id='biens_cat_span_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$categorie</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'categorie'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/span&gt;</token>
+  </line>
+  <line no="199">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                &lt;select id='biens_mes_propositions_select_cat_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"' name='categorie' class='biens_cat_select mp_cat_select'&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="200"/>
+  <line no="201"/>
+  <line no="202">
+    <token name="T_COMMENT">//&lt;!--                    $sql = "SELECT nom, path, id FROM categorie where path like 'biens%'";--&gt;</token>
+  </line>
+  <line no="203">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$categorie</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$key</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$value</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="204">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$key</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_EQUAL">==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'categorie'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="205">
+    <token name="T_WHITESPACE">                                    </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">&lt;option value='</token>
+    <token name="T_CURLY_OPEN">{</token>
+    <token name="T_VARIABLE">$key</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">' selected&gt;</token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$value</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/option&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="206">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ELSE">else</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="207">
+    <token name="T_WHITESPACE">                                    </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">&lt;option value='</token>
+    <token name="T_CURLY_OPEN">{</token>
+    <token name="T_VARIABLE">$key</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">'&gt;</token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$value</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/option&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="208">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="209">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="210">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/select&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="211"/>
+  <line no="212"/>
+  <line no="213">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_biens_colonne5 mp_mots' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="214">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;span id='biens_mots_span_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"mots"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/span&gt;</token>
+  </line>
+  <line no="215">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;input class='biens_mots_input mp_mots_input' value='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"mots"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'  onfocus='this.value = this.value;' id='biens_mots_input_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;&lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="216"/>
+  <line no="217"/>
+  <line no="218">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_biens_colonne6 mp_prix' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="219">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;span id='biens_prix_span_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"prix_neuf"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">" &#x20AC;&lt;/span&gt;</token>
+  </line>
+  <line no="220">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;input min='0' type='number' class='biens_prix_input mp_prix_input' value='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"prix_neuf"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'  onfocus='this.value = this.value;' id='biens_prix_input_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;&lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="221"/>
+  <line no="222"/>
+  <line no="223">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_biens_colonne7' id='adresse_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;                            &lt;img class='mes_propositions_map' src='https://maps.googleapis.com/maps/api/staticmap</token>
+  </line>
+  <line no="224">
+    <token name="T_CONSTANT_ENCAPSED_STRING">?size=220x75&amp;scale=2&amp;center="</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'lat'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">","</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'lng'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&amp;zoom=11</token>
+  </line>
+  <line no="225">
+    <token name="T_CONSTANT_ENCAPSED_STRING">&amp;path=fillcolor:0xAA000033%7Ccolor:0xFFFFFF00%7Cenc:}zswFtikbMjJzZ%7CRdPfZ}DxWvBjWpF~IvJnEvBrMvIvUpGtQpFhOQdKpz@bIx{A%7CPfYlvApz@bl@tcAdTpGpVwQtX}i@%7CGen@lCeAda@bjA%60q@v}@rfAbjA%7CEwBpbAd_@he@hDbu@uIzWcWtZoTdImTdIwu@tDaOXw_@fc@st@~VgQ%7C[uPzNtA%60LlEvHiYyLs^nPhCpG}SzCNwHpz@cEvXg@bWdG%60]lL~MdTmEnCwJ[iJhOae@nCm[%60Aq]qE_pAaNiyBuDurAuB}}Ay%60@%7CEKv_@?%7C[qGji@lAhYyH%60@Xiw@tBerAs@q]jHohAYkSmW?aNoaAbR}LnPqNtMtIbRyRuDef@eT_z@mW_Nm%7CB~j@zC~hAyUyJ_U{Z??cPvg@}s@sHsc@_z@cj@kp@YePoNyYyb@_iAyb@gBw^bOokArcA}GwJuzBre@i\tf@sZnd@oElb@hStW{]vv@??kz@~vAcj@zKa%60Atf@uQj_Aee@pU_UrcA</token>
+  </line>
+  <line no="226">
+    <token name="T_CONSTANT_ENCAPSED_STRING">&amp;key=AIzaSyBwQxOi8hCzeOA9TfWU9wOq7DEG26kyuHk&amp;markers=color:blue' title='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'adresse'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;&lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="227"/>
+  <line no="228"/>
+  <line no="229">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_biens_colonne8 mp_date'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'date'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="230"/>
+  <line no="231">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_biens_colonne9 mp_supp' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="232">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;a class='mes_propositions_supp' role='button' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="233">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;div class='mes_propositions_supp_helper'&gt;</token>
+  </line>
+  <line no="234">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;img  src='images/trash.svg' class='mes_propositions_btn_supp'&gt;</token>
+  </line>
+  <line no="235">
+    <token name="T_CONSTANT_ENCAPSED_STRING">	                         &lt;/div&gt; &lt;/a&gt;&lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="236">
+    <token name="T_WHITESPACE">                        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="237"/>
+  <line no="238">
+    <token name="T_WHITESPACE">                        </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="239"/>
+  <line no="240">
+    <token name="T_INLINE_HTML">                        &lt;/tbody&gt;&lt;/table&gt;</token>
+  </line>
+  <line no="241"/>
+  <line no="242"/>
+  <line no="243"/>
+  <line no="244">
+    <token name="T_INLINE_HTML">                    &lt;table id="mp_table_services"&gt;</token>
+  </line>
+  <line no="245">
+    <token name="T_INLINE_HTML">                        &lt;thead&gt;</token>
+  </line>
+  <line no="246">
+    <token name="T_INLINE_HTML">                        &lt;tr class="table100-head"&gt;</token>
+  </line>
+  <line no="247">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_image_th c"&gt;Image&lt;/th&gt;</token>
+  </line>
+  <line no="248">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_titre_th"&gt;Titre&lt;/th&gt;</token>
+  </line>
+  <line no="249">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_description_th l"&gt;Description&lt;/th&gt;</token>
+  </line>
+  <line no="250">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_categorie_th"&gt;Cat&#xE9;gorie&lt;/th&gt;</token>
+  </line>
+  <line no="251">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_mots_th"&gt;Mots cl&#xE9;s&lt;/th&gt;</token>
+  </line>
+  <line no="252">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_ph_th c"&gt;Plages Horaires&lt;/th&gt;</token>
+  </line>
+  <line no="253">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_lieu_th c" &gt;Lieu&lt;/th&gt;</token>
+  </line>
+  <line no="254">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_date_th c"&gt;Date&lt;/th&gt;</token>
+  </line>
+  <line no="255">
+    <token name="T_INLINE_HTML">                            &lt;th class="mp_supp_th"&gt;Supp&lt;/th&gt;</token>
+  </line>
+  <line no="256">
+    <token name="T_INLINE_HTML">                        &lt;/tr&gt;</token>
+  </line>
+  <line no="257">
+    <token name="T_INLINE_HTML">                        &lt;/thead&gt;</token>
+  </line>
+  <line no="258">
+    <token name="T_INLINE_HTML">                        &lt;tbody&gt;</token>
+  </line>
+  <line no="259"/>
+  <line no="260"/>
+  <line no="261">
+    <token name="T_INLINE_HTML">                        </token>
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="262"/>
+  <line no="263"/>
+  <line no="264"/>
+  <line no="265">
+    <token name="T_WHITESPACE">                        </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$services</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="266"/>
+  <line no="267">
+    <token name="T_COMMENT">//                            $cat = $pdo-&gt;query("SELECT nom FROM categorie WHERE id=" . $row['categorie'])-&gt;fetch();</token>
+  </line>
+  <line no="268">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;tr id='services_tr_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;&lt;td class='mes_propositions_services_colonne1 mp_image'&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="269">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_VARIABLE">$id</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="270">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_VARIABLE">$im</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'image'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="271">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'image'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_EQUAL">==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">NULL</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="272">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_VARIABLE">$id</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"default-service2"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="273">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_VARIABLE">$im</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"png"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="274">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="275">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">&lt;img class='mes_propositions_image' src='uploads/services/</token>
+    <token name="T_CURLY_OPEN">{</token>
+    <token name="T_VARIABLE">$id</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">.</token>
+    <token name="T_CURLY_OPEN">{</token>
+    <token name="T_VARIABLE">$im</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">'&gt;&lt;/td&gt;</token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="276"/>
+  <line no="277">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_services_colonne2 mp_titre' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="278">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;span id='services_titre_span_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"titre"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/span&gt;</token>
+  </line>
+  <line no="279">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;input class='services_titre_input mp_titre_input' value='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"titre"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'  onfocus='this.value = this.value;' id='services_titre_input_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="280">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="281"/>
+  <line no="282">
+    <token name="T_COMMENT">//                            echo  "&lt;td class='mes_propositions_biens_colonne3'&gt;" . $row["description"] . "&lt;/td&gt;";</token>
+  </line>
+  <line no="283"/>
+  <line no="284">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_services_colonne3 mp_des' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="285">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;span id='services_des_span_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"description"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/span&gt;</token>
+  </line>
+  <line no="286">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;textarea class='services_des_input mp_des_input'  rows='5' value='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"description"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'  id='services_des_input_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'description'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/textarea&gt;&lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="287"/>
+  <line no="288"/>
+  <line no="289">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_services_colonne4 mp_cat' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="290">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;span id='services_cat_span_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$categorie_services</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'categorie'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/span&gt;</token>
+  </line>
+  <line no="291">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                &lt;select id='services_mes_propositions_select_cat_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"' name='categorie' class='services_cat_select mp_cat_select'&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="292"/>
+  <line no="293"/>
+  <line no="294"/>
+  <line no="295"/>
+  <line no="296"/>
+  <line no="297"/>
+  <line no="298">
+    <token name="T_COMMENT">//&lt;!--                    $sql = "SELECT nom, path, id FROM categorie where path like 'biens%'";--&gt;</token>
+  </line>
+  <line no="299">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$categorie_services</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$key</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$value</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="300">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$key</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_EQUAL">==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'categorie'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="301">
+    <token name="T_WHITESPACE">                                    </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">&lt;option value='</token>
+    <token name="T_CURLY_OPEN">{</token>
+    <token name="T_VARIABLE">$key</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">' selected&gt;</token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$value</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/option&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="302">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ELSE">else</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="303">
+    <token name="T_WHITESPACE">                                    </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">&lt;option value='</token>
+    <token name="T_CURLY_OPEN">{</token>
+    <token name="T_VARIABLE">$key</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">'&gt;</token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$value</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/option&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="304">
+    <token name="T_WHITESPACE">                                </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="305">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="306">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/select&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="307"/>
+  <line no="308"/>
+  <line no="309">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_services_colonne5 mp_mots' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="310">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;span id='services_mots_span_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"mots"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/span&gt;</token>
+  </line>
+  <line no="311">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;input class='services_mots_input mp_mots_input' value='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"mots"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'  onfocus='this.value = this.value;' id='services_mots_input_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;&lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="312"/>
+  <line no="313"/>
+  <line no="314">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_services_colonne6 mp_ph' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="315">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;span id='services_prix_span_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;A venir&lt;/span&gt;</token>
+  </line>
+  <line no="316"/>
+  <line no="317">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="318"/>
+  <line no="319">
+    <token name="T_COMMENT">//                            &lt;input type='number' class='services_prix_input' value='" . $row["lun_d"] . "'  onfocus='this.value = this.value;' id='services_prix_input_" . $row['id'] . "'&gt;</token>
+  </line>
+  <line no="320"/>
+  <line no="321"/>
+  <line no="322"/>
+  <line no="323">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_biens_colonne7 mp_map' id='adresse_"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;                            &lt;img class='mes_propositions_map' src='https://maps.googleapis.com/maps/api/staticmap</token>
+  </line>
+  <line no="324">
+    <token name="T_CONSTANT_ENCAPSED_STRING">?size=220x75&amp;scale=2&amp;center="</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'lat'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">","</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'lng'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&amp;zoom=11</token>
+  </line>
+  <line no="325">
+    <token name="T_CONSTANT_ENCAPSED_STRING">&amp;path=fillcolor:0xAA000033%7Ccolor:0xFFFFFF00%7Cenc:}zswFtikbMjJzZ%7CRdPfZ}DxWvBjWpF~IvJnEvBrMvIvUpGtQpFhOQdKpz@bIx{A%7CPfYlvApz@bl@tcAdTpGpVwQtX}i@%7CGen@lCeAda@bjA%60q@v}@rfAbjA%7CEwBpbAd_@he@hDbu@uIzWcWtZoTdImTdIwu@tDaOXw_@fc@st@~VgQ%7C[uPzNtA%60LlEvHiYyLs^nPhCpG}SzCNwHpz@cEvXg@bWdG%60]lL~MdTmEnCwJ[iJhOae@nCm[%60Aq]qE_pAaNiyBuDurAuB}}Ay%60@%7CEKv_@?%7C[qGji@lAhYyH%60@Xiw@tBerAs@q]jHohAYkSmW?aNoaAbR}LnPqNtMtIbRyRuDef@eT_z@mW_Nm%7CB~j@zC~hAyUyJ_U{Z??cPvg@}s@sHsc@_z@cj@kp@YePoNyYyb@_iAyb@gBw^bOokArcA}GwJuzBre@i\tf@sZnd@oElb@hStW{]vv@??kz@~vAcj@zKa%60Atf@uQj_Aee@pU_UrcA</token>
+  </line>
+  <line no="326">
+    <token name="T_CONSTANT_ENCAPSED_STRING">&amp;key=AIzaSyBwQxOi8hCzeOA9TfWU9wOq7DEG26kyuHk&amp;markers=color:blue' title='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'adresse'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;&lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="327"/>
+  <line no="328"/>
+  <line no="329">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_services_colonne8 mp_date'&gt;"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'date'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="330"/>
+  <line no="331">
+    <token name="T_WHITESPACE">                            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;td class='mes_propositions_services_colonne9 mp_supp' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="332">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;a class='mes_propositions_supp' role='button' id='"</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$row</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;</token>
+  </line>
+  <line no="333">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;div class='mes_propositions_supp_helper'&gt;</token>
+  </line>
+  <line no="334">
+    <token name="T_CONSTANT_ENCAPSED_STRING">                            &lt;img  src='images/trash.svg' class='mes_propositions_btn_supp'&gt;</token>
+  </line>
+  <line no="335">
+    <token name="T_CONSTANT_ENCAPSED_STRING">	                         &lt;/div&gt; &lt;/a&gt;&lt;/td&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="336">
+    <token name="T_WHITESPACE">                        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="337"/>
+  <line no="338"/>
+  <line no="339">
+    <token name="T_WHITESPACE">                        </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="340"/>
+  <line no="341">
+    <token name="T_INLINE_HTML">                        &lt;/tbody&gt;&lt;/table&gt;</token>
+  </line>
+  <line no="342"/>
+  <line no="343"/>
+  <line no="344"/>
+  <line no="345">
+    <token name="T_INLINE_HTML">                &lt;/div&gt;</token>
+  </line>
+  <line no="346">
+    <token name="T_INLINE_HTML">            &lt;/div&gt;</token>
+  </line>
+  <line no="347">
+    <token name="T_INLINE_HTML">        &lt;/div&gt;</token>
+  </line>
+  <line no="348">
+    <token name="T_INLINE_HTML">    &lt;/div&gt;</token>
+  </line>
+  <line no="349"/>
+  <line no="350"/>
+  <line no="351"/>
+  <line no="352"/>
+  <line no="353"/>
+  <line no="354">
+    <token name="T_INLINE_HTML">&lt;/div&gt;</token>
+  </line>
+  <line no="355"/>
+  <line no="356"/>
+  <line no="357">
+    <token name="T_INLINE_HTML">&lt;script type="text/javascript"&gt;</token>
+  </line>
+  <line no="358">
+    <token name="T_INLINE_HTML">    estVide("biens");</token>
+  </line>
+  <line no="359">
+    <token name="T_INLINE_HTML">    estVide("services");</token>
+  </line>
+  <line no="360"/>
+  <line no="361">
+    <token name="T_INLINE_HTML">    // document.getElementsByClassName("column2").addEventListener("click", GetAddress);</token>
+  </line>
+  <line no="362"/>
+  <line no="363"/>
+  <line no="364">
+    <token name="T_INLINE_HTML">    function changerTitre() {</token>
+  </line>
+  <line no="365">
+    <token name="T_INLINE_HTML">        var id = $(this).attr('id');</token>
+  </line>
+  <line no="366">
+    <token name="T_INLINE_HTML">        var type = $(this).attr('class').split("_")[2];</token>
+  </line>
+  <line no="367">
+    <token name="T_INLINE_HTML">        var inputtitre = type +"_titre_input_" + id;</token>
+  </line>
+  <line no="368">
+    <token name="T_INLINE_HTML">        var spantitre = type +"_titre_span_" + id;</token>
+  </line>
+  <line no="369">
+    <token name="T_INLINE_HTML">        document.getElementById(inputtitre).style.display = "inline-block";</token>
+  </line>
+  <line no="370">
+    <token name="T_INLINE_HTML">        document.getElementById(spantitre).style.display = "none";</token>
+  </line>
+  <line no="371">
+    <token name="T_INLINE_HTML">        document.getElementById(inputtitre).focus();</token>
+  </line>
+  <line no="372">
+    <token name="T_INLINE_HTML">        document.getElementById(inputtitre).select();</token>
+  </line>
+  <line no="373">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="374"/>
+  <line no="375"/>
+  <line no="376">
+    <token name="T_INLINE_HTML">    function changerDescription() {</token>
+  </line>
+  <line no="377">
+    <token name="T_INLINE_HTML">        var id = $(this).attr('id');</token>
+  </line>
+  <line no="378">
+    <token name="T_INLINE_HTML">        var type = $(this).attr('class').split("_")[2];</token>
+  </line>
+  <line no="379"/>
+  <line no="380">
+    <token name="T_INLINE_HTML">        var inputdes = type +"_des_input_" + id;</token>
+  </line>
+  <line no="381">
+    <token name="T_INLINE_HTML">        var spandes = type +"_des_span_" + id;</token>
+  </line>
+  <line no="382">
+    <token name="T_INLINE_HTML">        document.getElementById(inputdes).style.display = "inline-block";</token>
+  </line>
+  <line no="383">
+    <token name="T_INLINE_HTML">        document.getElementById(spandes).style.display = "none";</token>
+  </line>
+  <line no="384">
+    <token name="T_INLINE_HTML">        document.getElementById(inputdes).focus();</token>
+  </line>
+  <line no="385">
+    <token name="T_INLINE_HTML">        // document.getElementById(inputdes).value = document.getElementById(inputdes).val();</token>
+  </line>
+  <line no="386">
+    <token name="T_INLINE_HTML">        document.getElementById(inputdes).select();</token>
+  </line>
+  <line no="387">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="388"/>
+  <line no="389"/>
+  <line no="390">
+    <token name="T_INLINE_HTML">    function changerCategorieBiens() {</token>
+  </line>
+  <line no="391">
+    <token name="T_INLINE_HTML">        var id = $(this).attr('id');</token>
+  </line>
+  <line no="392">
+    <token name="T_INLINE_HTML">        var type = $(this).attr('class').split("_")[2];</token>
+  </line>
+  <line no="393"/>
+  <line no="394">
+    <token name="T_INLINE_HTML">        var inputcat = type +"_mes_propositions_select_cat_" + id;</token>
+  </line>
+  <line no="395">
+    <token name="T_INLINE_HTML">        var spancat = type + "_cat_span_" + id;</token>
+  </line>
+  <line no="396">
+    <token name="T_INLINE_HTML">        document.getElementById(inputcat).style.display = "inline-block";</token>
+  </line>
+  <line no="397">
+    <token name="T_INLINE_HTML">        document.getElementById(spancat).style.display = "none";</token>
+  </line>
+  <line no="398">
+    <token name="T_INLINE_HTML">        document.getElementById(inputcat).focus();</token>
+  </line>
+  <line no="399">
+    <token name="T_INLINE_HTML">        // document.getElementById(inputdes).value = document.getElementById(inputdes).val();</token>
+  </line>
+  <line no="400">
+    <token name="T_INLINE_HTML">        // document.getElementById(inputcat).select();</token>
+  </line>
+  <line no="401">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="402"/>
+  <line no="403"/>
+  <line no="404">
+    <token name="T_INLINE_HTML">    function changerMots() {</token>
+  </line>
+  <line no="405">
+    <token name="T_INLINE_HTML">        var id = $(this).attr('id');</token>
+  </line>
+  <line no="406">
+    <token name="T_INLINE_HTML">        var type = $(this).attr('class').split("_")[2];</token>
+  </line>
+  <line no="407"/>
+  <line no="408">
+    <token name="T_INLINE_HTML">        var inputtitre = type + "_mots_input_" + id;</token>
+  </line>
+  <line no="409">
+    <token name="T_INLINE_HTML">        var spantitre = type + "_mots_span_" + id;</token>
+  </line>
+  <line no="410">
+    <token name="T_INLINE_HTML">        document.getElementById(inputtitre).style.display = "inline-block";</token>
+  </line>
+  <line no="411">
+    <token name="T_INLINE_HTML">        document.getElementById(spantitre).style.display = "none";</token>
+  </line>
+  <line no="412">
+    <token name="T_INLINE_HTML">        document.getElementById(inputtitre).focus();</token>
+  </line>
+  <line no="413">
+    <token name="T_INLINE_HTML">        document.getElementById(inputtitre).select();</token>
+  </line>
+  <line no="414">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="415"/>
+  <line no="416"/>
+  <line no="417">
+    <token name="T_INLINE_HTML">    function changerPrix() {</token>
+  </line>
+  <line no="418">
+    <token name="T_INLINE_HTML">        var id = $(this).attr('id');</token>
+  </line>
+  <line no="419">
+    <token name="T_INLINE_HTML">        var type = $(this).attr('class').split("_")[2];</token>
+  </line>
+  <line no="420"/>
+  <line no="421">
+    <token name="T_INLINE_HTML">        var inputtitre = type+"_prix_input_" + id;</token>
+  </line>
+  <line no="422">
+    <token name="T_INLINE_HTML">        var spantitre = type+ "_prix_span_" + id;</token>
+  </line>
+  <line no="423">
+    <token name="T_INLINE_HTML">        document.getElementById(inputtitre).style.display = "inline-block";</token>
+  </line>
+  <line no="424">
+    <token name="T_INLINE_HTML">        document.getElementById(spantitre).style.display = "none";</token>
+  </line>
+  <line no="425">
+    <token name="T_INLINE_HTML">        document.getElementById(inputtitre).focus();</token>
+  </line>
+  <line no="426">
+    <token name="T_INLINE_HTML">        document.getElementById(inputtitre).select();</token>
+  </line>
+  <line no="427">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="428"/>
+  <line no="429">
+    <token name="T_INLINE_HTML">    function changerType(){</token>
+  </line>
+  <line no="430">
+    <token name="T_INLINE_HTML">        var id = $(this).attr('id');</token>
+  </line>
+  <line no="431">
+    <token name="T_INLINE_HTML">        if (id == "mp_choix_biens")</token>
+  </line>
+  <line no="432">
+    <token name="T_INLINE_HTML">        {</token>
+  </line>
+  <line no="433">
+    <token name="T_INLINE_HTML">            document.getElementById("mp_table_biens").style.display = "block";</token>
+  </line>
+  <line no="434">
+    <token name="T_INLINE_HTML">            document.getElementById("mp_table_services").style.display = "none";</token>
+  </line>
+  <line no="435"/>
+  <line no="436">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="437">
+    <token name="T_INLINE_HTML">        else if (id == "mp_choix_services")</token>
+  </line>
+  <line no="438">
+    <token name="T_INLINE_HTML">        {</token>
+  </line>
+  <line no="439">
+    <token name="T_INLINE_HTML">            document.getElementById("mp_table_biens").style.display = "none";</token>
+  </line>
+  <line no="440">
+    <token name="T_INLINE_HTML">            document.getElementById("mp_table_services").style.display = "block";</token>
+  </line>
+  <line no="441">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="442">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="443"/>
+  <line no="444"/>
+  <line no="445">
+    <token name="T_INLINE_HTML">    function supp() {</token>
+  </line>
+  <line no="446">
+    <token name="T_INLINE_HTML">        var id = $(this).attr('id');</token>
+  </line>
+  <line no="447">
+    <token name="T_INLINE_HTML">        var type = $(this).attr('class').split("_")[2];</token>
+  </line>
+  <line no="448">
+    <token name="T_INLINE_HTML">        var trid = "#" + type + "_tr_" + id;</token>
+  </line>
+  <line no="449">
+    <token name="T_INLINE_HTML">        if (confirm("Supprimer ?")) {</token>
+  </line>
+  <line no="450">
+    <token name="T_INLINE_HTML">            // Suppression de la ligne</token>
+  </line>
+  <line no="451">
+    <token name="T_INLINE_HTML">            $(trid).fadeOut(650, function () {</token>
+  </line>
+  <line no="452">
+    <token name="T_INLINE_HTML">                $(trid).remove();</token>
+  </line>
+  <line no="453">
+    <token name="T_INLINE_HTML">                estVide(type);</token>
+  </line>
+  <line no="454"/>
+  <line no="455"/>
+  <line no="456">
+    <token name="T_INLINE_HTML">                $.ajax({</token>
+  </line>
+  <line no="457">
+    <token name="T_INLINE_HTML">                    type: "POST",</token>
+  </line>
+  <line no="458">
+    <token name="T_INLINE_HTML">                    url: "controllers/mes_propositions_maj.php",</token>
+  </line>
+  <line no="459">
+    <token name="T_INLINE_HTML">                    data: {id: id, 'type': type, update: "supp"},</token>
+  </line>
+  <line no="460">
+    <token name="T_INLINE_HTML">                    success: function (result) {</token>
+  </line>
+  <line no="461">
+    <token name="T_INLINE_HTML">                        notif("Supprim&#xE9;!", id, "notice_success");</token>
+  </line>
+  <line no="462">
+    <token name="T_INLINE_HTML">                    }</token>
+  </line>
+  <line no="463">
+    <token name="T_INLINE_HTML">                });</token>
+  </line>
+  <line no="464">
+    <token name="T_INLINE_HTML">            });</token>
+  </line>
+  <line no="465">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="466">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="467"/>
+  <line no="468"/>
+  <line no="469">
+    <token name="T_INLINE_HTML">    function notif(message, id, type){</token>
+  </line>
+  <line no="470"/>
+  <line no="471">
+    <token name="T_INLINE_HTML">        var notifid = "notification_" + id;</token>
+  </line>
+  <line no="472">
+    <token name="T_INLINE_HTML">        document.getElementById('bloc-de-notifications-non-persistentes').style.display = 'block';</token>
+  </line>
+  <line no="473">
+    <token name="T_INLINE_HTML">        document.getElementById('bloc-de-notifications-non-persistentes').innerHTML += "" +</token>
+  </line>
+  <line no="474">
+    <token name="T_INLINE_HTML">            "&lt;br&gt;&lt;div class='notice-non-persistentes " + type + "' id=" + notifid + "&gt;" + message + "&lt;/div&gt;";</token>
+  </line>
+  <line no="475"/>
+  <line no="476">
+    <token name="T_INLINE_HTML">        // Suppression de la notification</token>
+  </line>
+  <line no="477">
+    <token name="T_INLINE_HTML">        $("#" + notifid).fadeOut(3100, function () {</token>
+  </line>
+  <line no="478">
+    <token name="T_INLINE_HTML">            var liste = document.getElementById('bloc-de-notifications-non-persistentes');</token>
+  </line>
+  <line no="479">
+    <token name="T_INLINE_HTML">            var elements = liste.getElementsByTagName('div');</token>
+  </line>
+  <line no="480">
+    <token name="T_INLINE_HTML">            var br = liste.getElementsByTagName('br');</token>
+  </line>
+  <line no="481">
+    <token name="T_INLINE_HTML">            liste.removeChild(elements[0]);</token>
+  </line>
+  <line no="482">
+    <token name="T_INLINE_HTML">            liste.removeChild(br[0]);</token>
+  </line>
+  <line no="483">
+    <token name="T_INLINE_HTML">        })</token>
+  </line>
+  <line no="484">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="485"/>
+  <line no="486"/>
+  <line no="487">
+    <token name="T_INLINE_HTML">    function maj(colonne, val, id, type) {</token>
+  </line>
+  <line no="488">
+    <token name="T_INLINE_HTML">        $.ajax({</token>
+  </line>
+  <line no="489">
+    <token name="T_INLINE_HTML">            type: "POST",</token>
+  </line>
+  <line no="490">
+    <token name="T_INLINE_HTML">            url: "controllers/mes_propositions_maj.php",</token>
+  </line>
+  <line no="491">
+    <token name="T_INLINE_HTML">            data: {'colonne': colonne, 'valeur': val, 'id': id, update: "maj", 'type': type}</token>
+  </line>
+  <line no="492">
+    <token name="T_INLINE_HTML">        }).done(function (msg) {</token>
+  </line>
+  <line no="493">
+    <token name="T_INLINE_HTML">            if (msg == "ok") {</token>
+  </line>
+  <line no="494">
+    <token name="T_INLINE_HTML">                if (colonne == "titre") {</token>
+  </line>
+  <line no="495">
+    <token name="T_INLINE_HTML">                    document.getElementById(type +"_titre_input_" + id).style.display = "none";</token>
+  </line>
+  <line no="496">
+    <token name="T_INLINE_HTML">                    document.getElementById(type +"_titre_span_" + id).style.display = "block";</token>
+  </line>
+  <line no="497">
+    <token name="T_INLINE_HTML">                    document.getElementById(type +"_titre_span_" + id).innerHTML = val;</token>
+  </line>
+  <line no="498">
+    <token name="T_INLINE_HTML">                }</token>
+  </line>
+  <line no="499">
+    <token name="T_INLINE_HTML">                else if (colonne == "description") {</token>
+  </line>
+  <line no="500">
+    <token name="T_INLINE_HTML">                    document.getElementById(type +"_des_input_" + id).style.display = "none";</token>
+  </line>
+  <line no="501">
+    <token name="T_INLINE_HTML">                    document.getElementById(type +"_des_span_" + id).style.display = "block";</token>
+  </line>
+  <line no="502">
+    <token name="T_INLINE_HTML">                    document.getElementById(type +"_des_span_" + id).innerHTML = val;</token>
+  </line>
+  <line no="503">
+    <token name="T_INLINE_HTML">                }</token>
+  </line>
+  <line no="504">
+    <token name="T_INLINE_HTML">                else if (colonne == "categorie") {</token>
+  </line>
+  <line no="505">
+    <token name="T_INLINE_HTML">                    document.getElementById(type +"_mes_propositions_select_cat_" + id).style.display = "none";</token>
+  </line>
+  <line no="506">
+    <token name="T_INLINE_HTML">                    document.getElementById(type +"_cat_span_" + id).style.display = "block";</token>
+  </line>
+  <line no="507">
+    <token name="T_INLINE_HTML">                }</token>
+  </line>
+  <line no="508">
+    <token name="T_INLINE_HTML">                else if (colonne == "mots") {</token>
+  </line>
+  <line no="509">
+    <token name="T_INLINE_HTML">                    document.getElementById(type +"_mots_input_" + id).style.display = "none";</token>
+  </line>
+  <line no="510">
+    <token name="T_INLINE_HTML">                    document.getElementById(type +"_mots_span_" + id).style.display = "block";</token>
+  </line>
+  <line no="511">
+    <token name="T_INLINE_HTML">                    document.getElementById(type +"_mots_span_" + id).innerHTML = val;</token>
+  </line>
+  <line no="512">
+    <token name="T_INLINE_HTML">                }</token>
+  </line>
+  <line no="513">
+    <token name="T_INLINE_HTML">                else if (colonne == "prix_neuf") {</token>
+  </line>
+  <line no="514">
+    <token name="T_INLINE_HTML">                    document.getElementById(type+"_prix_input_" + id).style.display = "none";</token>
+  </line>
+  <line no="515">
+    <token name="T_INLINE_HTML">                    document.getElementById(type+"_prix_span_" + id).style.display = "block";</token>
+  </line>
+  <line no="516">
+    <token name="T_INLINE_HTML">                    document.getElementById(type+"_prix_span_" + id).innerHTML = val + " &#x20AC;";</token>
+  </line>
+  <line no="517">
+    <token name="T_INLINE_HTML">                }</token>
+  </line>
+  <line no="518">
+    <token name="T_INLINE_HTML">                notif("Mis &#xE0; jour!", id, "notice_success");</token>
+  </line>
+  <line no="519">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="520">
+    <token name="T_INLINE_HTML">            else</token>
+  </line>
+  <line no="521">
+    <token name="T_INLINE_HTML">                notif("Erreur!", id, "notice_warning");</token>
+  </line>
+  <line no="522">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="523">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="524"/>
+  <line no="525"/>
+  <line no="526">
+    <token name="T_INLINE_HTML">    function estVide(type){</token>
+  </line>
+  <line no="527"/>
+  <line no="528">
+    <token name="T_INLINE_HTML">        var cmt = document.getElementById('mp_table_' + type).getElementsByTagName('tr');</token>
+  </line>
+  <line no="529">
+    <token name="T_INLINE_HTML">        var cmt2 = cmt.length;</token>
+  </line>
+  <line no="530">
+    <token name="T_INLINE_HTML">        if (cmt2 == 1)</token>
+  </line>
+  <line no="531">
+    <token name="T_INLINE_HTML">        {</token>
+  </line>
+  <line no="532">
+    <token name="T_INLINE_HTML">            document.getElementById("mp_table_" + type).textContent = "Rien &#xE0; afficher";</token>
+  </line>
+  <line no="533">
+    <token name="T_INLINE_HTML">        }</token>
+  </line>
+  <line no="534"/>
+  <line no="535">
+    <token name="T_INLINE_HTML">    }</token>
+  </line>
+  <line no="536"/>
+  <line no="537"/>
+  <line no="538">
+    <token name="T_INLINE_HTML">    function GetAddress(lat, lng, id) {</token>
+  </line>
+  <line no="539">
+    <token name="T_INLINE_HTML">        // alert(this.innerHTML);</token>
+  </line>
+  <line no="540">
+    <token name="T_INLINE_HTML">        // var lat = parseFloat(document.getElementById("txtLatitude").value);</token>
+  </line>
+  <line no="541">
+    <token name="T_INLINE_HTML">        // var lng = parseFloat(document.getElementById("txtLongitude").value);</token>
+  </line>
+  <line no="542">
+    <token name="T_INLINE_HTML">        var latlng = new google.maps.LatLng(lat, lng);</token>
+  </line>
+  <line no="543">
+    <token name="T_INLINE_HTML">        var geocoder = geocoder = new google.maps.Geocoder();</token>
+  </line>
+  <line no="544">
+    <token name="T_INLINE_HTML">        geocoder.geocode({'latLng': latlng}, function (results, status) {</token>
+  </line>
+  <line no="545">
+    <token name="T_INLINE_HTML">            if (status == google.maps.GeocoderStatus.OK) {</token>
+  </line>
+  <line no="546">
+    <token name="T_INLINE_HTML">                if (results[1]) {</token>
+  </line>
+  <line no="547">
+    <token name="T_INLINE_HTML">                    // echo results[1].formatted_address);</token>
+  </line>
+  <line no="548">
+    <token name="T_INLINE_HTML">                    document.getElementById(id).innerHTML = results[0].formatted_address;</token>
+  </line>
+  <line no="549">
+    <token name="T_INLINE_HTML">                }</token>
+  </line>
+  <line no="550">
+    <token name="T_INLINE_HTML">            }</token>
+  </line>
+  <line no="551">
+    <token name="T_INLINE_HTML">        });</token>
+  </line>
+  <line no="552">
+    <token name="T_INLINE_HTML">    };</token>
+  </line>
+  <line no="553"/>
+  <line no="554">
+    <token name="T_INLINE_HTML">&lt;/script&gt;</token>
+  </line>
+  <line no="555"/>
+  <line no="556"/>
+  <line no="557">
+    <token name="T_INLINE_HTML">&lt;script type="text/javascript"&gt;</token>
+  </line>
+  <line no="558"/>
+  <line no="559"/>
+  <line no="560">
+    <token name="T_INLINE_HTML">    // var map;</token>
+  </line>
+  <line no="561">
+    <token name="T_INLINE_HTML">    // function initMap() {</token>
+  </line>
+  <line no="562">
+    <token name="T_INLINE_HTML">    //     // map = new google.maps.Map(document.getElementById('map'), {</token>
+  </line>
+  <line no="563">
+    <token name="T_INLINE_HTML">    //     //     center: {lat: -34.397, lng: 150.644},</token>
+  </line>
+  <line no="564">
+    <token name="T_INLINE_HTML">    //     //     zoom: 4,</token>
+  </line>
+  <line no="565">
+    <token name="T_INLINE_HTML">    //     //     disableDefaultUI: false,</token>
+  </line>
+  <line no="566">
+    <token name="T_INLINE_HTML">    //     //     scrollwheel: false</token>
+  </line>
+  <line no="567">
+    <token name="T_INLINE_HTML">    //     // });</token>
+  </line>
+  <line no="568">
+    <token name="T_INLINE_HTML">    // }</token>
+  </line>
+  <line no="569">
+    <token name="T_INLINE_HTML">    //</token>
+  </line>
+  <line no="570">
+    <token name="T_INLINE_HTML">    //</token>
+  </line>
+  <line no="571">
+    <token name="T_INLINE_HTML">    //</token>
+  </line>
+  <line no="572">
+    <token name="T_INLINE_HTML">    // var geocoder;</token>
+  </line>
+  <line no="573">
+    <token name="T_INLINE_HTML">    //</token>
+  </line>
+  <line no="574">
+    <token name="T_INLINE_HTML">    // function initialize() {</token>
+  </line>
+  <line no="575">
+    <token name="T_INLINE_HTML">    //     geocoder = new google.maps.Geocoder();</token>
+  </line>
+  <line no="576">
+    <token name="T_INLINE_HTML">    // }</token>
+  </line>
+  <line no="577">
+    <token name="T_INLINE_HTML">    //</token>
+  </line>
+  <line no="578">
+    <token name="T_INLINE_HTML">    // function codeLatLng(lat, lng) {</token>
+  </line>
+  <line no="579">
+    <token name="T_INLINE_HTML">    //     var latlng = new google.maps.LatLng(lat, lng);</token>
+  </line>
+  <line no="580">
+    <token name="T_INLINE_HTML">    //     geocoder.geocode({</token>
+  </line>
+  <line no="581">
+    <token name="T_INLINE_HTML">    //         'latLng': latlng</token>
+  </line>
+  <line no="582">
+    <token name="T_INLINE_HTML">    //     }, function (results, status) {</token>
+  </line>
+  <line no="583">
+    <token name="T_INLINE_HTML">    //         if (status === google.maps.GeocoderStatus.OK) {</token>
+  </line>
+  <line no="584">
+    <token name="T_INLINE_HTML">    //             if (results[1]) {</token>
+  </line>
+  <line no="585">
+    <token name="T_INLINE_HTML">    //                 console.log(results[1]);</token>
+  </line>
+  <line no="586">
+    <token name="T_INLINE_HTML">    //             } else {</token>
+  </line>
+  <line no="587">
+    <token name="T_INLINE_HTML">    //                 alert('No results found');</token>
+  </line>
+  <line no="588">
+    <token name="T_INLINE_HTML">    //             }</token>
+  </line>
+  <line no="589">
+    <token name="T_INLINE_HTML">    //         } else {</token>
+  </line>
+  <line no="590">
+    <token name="T_INLINE_HTML">    //             alert('Geocoder failed due to: ' + status);</token>
+  </line>
+  <line no="591">
+    <token name="T_INLINE_HTML">    //         }</token>
+  </line>
+  <line no="592">
+    <token name="T_INLINE_HTML">    //     });</token>
+  </line>
+  <line no="593">
+    <token name="T_INLINE_HTML">    // }</token>
+  </line>
+  <line no="594">
+    <token name="T_INLINE_HTML">    //</token>
+  </line>
+  <line no="595">
+    <token name="T_INLINE_HTML">    // google.maps.event.addDomListener(window, 'load', initialize);</token>
+  </line>
+  <line no="596">
+    <token name="T_INLINE_HTML">    //</token>
+  </line>
+  <line no="597"/>
+  <line no="598"/>
+  <line no="599">
+    <token name="T_INLINE_HTML">    // function initMap() {</token>
+  </line>
+  <line no="600">
+    <token name="T_INLINE_HTML">    //     var map = new google.maps.Map(document.getElementById('map'), {</token>
+  </line>
+  <line no="601">
+    <token name="T_INLINE_HTML">    //         zoom: 8,</token>
+  </line>
+  <line no="602">
+    <token name="T_INLINE_HTML">    //         center: {lat: 40.731, lng: -73.997}</token>
+  </line>
+  <line no="603">
+    <token name="T_INLINE_HTML">    //     });</token>
+  </line>
+  <line no="604">
+    <token name="T_INLINE_HTML">    //     var geocoder = new google.maps.Geocoder;</token>
+  </line>
+  <line no="605">
+    <token name="T_INLINE_HTML">    //     var infowindow = new google.maps.InfoWindow;</token>
+  </line>
+  <line no="606">
+    <token name="T_INLINE_HTML">    //</token>
+  </line>
+  <line no="607">
+    <token name="T_INLINE_HTML">    //     document.getElementById('column1').addEventListener('click', function() {</token>
+  </line>
+  <line no="608">
+    <token name="T_INLINE_HTML">    //         geocodeLatLng(geocoder, map, infowindow);</token>
+  </line>
+  <line no="609">
+    <token name="T_INLINE_HTML">    //     });</token>
+  </line>
+  <line no="610">
+    <token name="T_INLINE_HTML">    // }</token>
+  </line>
+  <line no="611">
+    <token name="T_INLINE_HTML">    //</token>
+  </line>
+  <line no="612">
+    <token name="T_INLINE_HTML">    // function geocodeLatLng(geocoder, map, infowindow) {</token>
+  </line>
+  <line no="613">
+    <token name="T_INLINE_HTML">    //     var input = document.getElementById('latlng').value;</token>
+  </line>
+  <line no="614">
+    <token name="T_INLINE_HTML">    //     var latlngStr = input.split(',', 2);</token>
+  </line>
+  <line no="615">
+    <token name="T_INLINE_HTML">    //     var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};</token>
+  </line>
+  <line no="616">
+    <token name="T_INLINE_HTML">    //     geocoder.geocode({'location': latlng}, function(results, status) {</token>
+  </line>
+  <line no="617">
+    <token name="T_INLINE_HTML">    //         if (status === 'OK') {</token>
+  </line>
+  <line no="618">
+    <token name="T_INLINE_HTML">    //             if (results[0]) {</token>
+  </line>
+  <line no="619">
+    <token name="T_INLINE_HTML">    //                 // map.setZoom(11);</token>
+  </line>
+  <line no="620">
+    <token name="T_INLINE_HTML">    //                 // var marker = new google.maps.Marker({</token>
+  </line>
+  <line no="621">
+    <token name="T_INLINE_HTML">    //                 //     position: latlng,</token>
+  </line>
+  <line no="622">
+    <token name="T_INLINE_HTML">    //                 //     map: map</token>
+  </line>
+  <line no="623">
+    <token name="T_INLINE_HTML">    //                 // });</token>
+  </line>
+  <line no="624">
+    <token name="T_INLINE_HTML">    //                 // infowindow.setContent(results[0].formatted_address);</token>
+  </line>
+  <line no="625">
+    <token name="T_INLINE_HTML">    //                 // infowindow.open(map, marker);</token>
+  </line>
+  <line no="626">
+    <token name="T_INLINE_HTML">    //                 alert(results[0].formatted_adress);</token>
+  </line>
+  <line no="627">
+    <token name="T_INLINE_HTML">    //             } else {</token>
+  </line>
+  <line no="628">
+    <token name="T_INLINE_HTML">    //                 window.alert('No results found');</token>
+  </line>
+  <line no="629">
+    <token name="T_INLINE_HTML">    //             }</token>
+  </line>
+  <line no="630">
+    <token name="T_INLINE_HTML">    //         } else {</token>
+  </line>
+  <line no="631">
+    <token name="T_INLINE_HTML">    //             window.alert('Geocoder failed due to: ' + status);</token>
+  </line>
+  <line no="632">
+    <token name="T_INLINE_HTML">    //         }</token>
+  </line>
+  <line no="633">
+    <token name="T_INLINE_HTML">    //     });</token>
+  </line>
+  <line no="634">
+    <token name="T_INLINE_HTML">    // }</token>
+  </line>
+  <line no="635"/>
+  <line no="636"/>
+  <line no="637">
+    <token name="T_INLINE_HTML">    // document.getElementsByClassName("column1").onclick =</token>
+  </line>
+  <line no="638"/>
+  <line no="639">
+    <token name="T_INLINE_HTML">&lt;/script&gt;</token>
+  </line>
+  <line no="640"/>
+  <line no="641"/>
+  <line no="642">
+    <token name="T_INLINE_HTML">&lt;script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwQxOi8hCzeOA9TfWU9wOq7DEG26kyuHk&amp;libraries=places"</token>
+  </line>
+  <line no="643">
+    <token name="T_INLINE_HTML">        async defer&gt;&lt;/script&gt;</token>
+  </line>
+  <line no="644"/>
+</source>

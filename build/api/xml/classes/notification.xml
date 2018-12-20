@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="notification" namespace="" name="notification" abstract="false" final="false" start="9" end="109">
+  <file path="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/class" file="notification.php" realpath="/mnt/c/Users/Remi/Documents/Work/HLIN510/Projet/html/class/notification.php" size="1958" time="2018-12-19T20:37:27+00:00" unixtime="1545251847" sha1="d783c994416ce36e77acb9ce6f1feb6fa5c436f1" relative="class/notification.php"/>
+  <docblock>
+    <description compact="Created by PhpStorm.">User: Remi
+Date: 28/10/2018
+Time: 19:23</description>
+  </docblock>
+  <member name="text" visibility="private" static="false" line="12"/>
+  <member name="type" visibility="private" static="false" line="13"/>
+  <member name="id" visibility="private" static="false" line="14"/>
+  <constructor name="__construct" start="19" end="28" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="notification constructor."/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+    <parameter name="type" byreference="false" type="{unknown}"/>
+  </constructor>
+  <method name="afficherNotification" start="34" end="51" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Affiche une notification d'un certain type"/>
+    </docblock>
+  </method>
+  <method name="getText" start="56" end="59" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setText" start="64" end="67" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$text"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getType" start="72" end="75" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setType" start="80" end="83" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="mixed" variable="$type"/>
+    </docblock>
+    <parameter name="type" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getId" start="88" end="91" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="setId" start="96" end="99" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$id"/>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+  </method>
+</class>
