@@ -927,6 +927,9 @@ document.getElementById("trouver_container_infos_pseudo_' . $iditem . '").style.
 
     ?>
 
+    <footer>
+        Site créé par Rémi Mattei
+    </footer>
 </div>
 
 
@@ -1262,5 +1265,6 @@ echo $script;
 
 
 </body>
+
 </html>
 

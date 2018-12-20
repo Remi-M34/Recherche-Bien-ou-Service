@@ -53,6 +53,10 @@ if (isset($_SESSION['user'])) {
         </form>
     </div>
 </div>
+
+    <footer>
+        Site créé par Rémi Mattei
+    </footer>
 </div>
 <script type="text/javascript">
     $('.message a').click(function(){

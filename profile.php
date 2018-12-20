@@ -180,6 +180,10 @@ if (isset($_POST['supprimer-avatar'])) {
                 <button type="submit" name="supprimer-avatar">Supprimer</button>
         </form>
     </div>
+
+    <footer>
+        Site créé par Rémi Mattei
+    </footer>
 </div>
 
 <script>

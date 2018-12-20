@@ -350,6 +350,9 @@ $categorie_services = $pdo->query("SELECT id, nom FROM categorie WHERE path LIKE
 
 
 
+    <footer>
+        Site créé par Rémi Mattei
+    </footer>
 
 </div>
 

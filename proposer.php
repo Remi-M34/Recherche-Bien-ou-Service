@@ -325,6 +325,10 @@ if (!isset($_SESSION['id'])) {
             <span id="place-address"></span>
         </div>
     </div>
+
+    <footer>
+        Site créé par Rémi Mattei
+    </footer>
 </div>
 <script type="text/javascript">
     // This example requires the Places library. Include the libraries=places

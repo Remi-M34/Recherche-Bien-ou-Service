@@ -112,6 +112,7 @@ include("header.php");
 
             ?>
 
+            <br>Compte administrateur: admin@admin
             </p>
 
         </div>
@@ -323,6 +324,11 @@ include("header.php");
         </div>
     </div>
     <div id="reset_state" style="font-weight: bold; cursor: pointer;">Réinitialiser le zoom</div>
+
+    <footer>
+        Site créé par Rémi Mattei
+    </footer>
+
 </div>
 
 
@@ -631,6 +637,8 @@ include("header.php");
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwQxOi8hCzeOA9TfWU9wOq7DEG26kyuHk&libraries=places&callback=initMap"
         async defer>
 </script>
+
+
 
 
 </body>

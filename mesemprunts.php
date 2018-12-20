@@ -119,6 +119,9 @@ include("controllers/config.php");
 
     </table>
 
+    <footer>
+        Site créé par Rémi Mattei
+    </footer>
 </div>
 
 
